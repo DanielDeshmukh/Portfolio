@@ -7,6 +7,7 @@ import Resume from './components/Resume'
 import Contact from './components/Contact'
 import AdminGate from './components/AdminGate'
 import AdminPanel from './components/AdminPanel'
+import { loadProfile } from './utils/loadData'
 
 export default function App(){
   const [adminMode, setAdminMode] = useState(false)
@@ -17,7 +18,7 @@ export default function App(){
     if(local){
       setProfile(JSON.parse(local))
     } else {
-      fetch('/src/data/profile.json').then(r=>r.json()).then(setProfile)
+      loadProfile().then(setProfile)
     }
   },[])
 

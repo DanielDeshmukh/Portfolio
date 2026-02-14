@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import ProjectCard from './ProjectCard'
+import { loadProjects } from '../utils/loadData'
 
 export default function Projects(){
   const [data, setData] = useState(null)
   useEffect(()=>{
-    fetch('/src/data/projects.json').then(r=>r.json()).then(setData)
+    loadProjects().then(setData)
   },[])
 
   if(!data) return null

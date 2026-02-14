@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  color-scheme: dark;
+}
+
+html,body,#root{
+  height:100%;
+}
+
+body{
+  @apply bg-background text-gray-100 font-body;
+}
+
+.card{
+  @apply bg-secondary rounded-lg shadow-md p-6;
+}
+
+.fade-up{
+  animation: fadeIn 600ms ease-out both;
+}

@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "id": "tradex",
+      "name": "TradeX",
+      "description": "Beginner-friendly trading platform for Indian stock market using Dhan API and PPO AI model to generate signals for trader education.",
+      "tech": ["React","Node.js","Python","Supabase","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/TradeX",
+      "live": null,
+      "images": ["tradex-logo.png"]
+    },
+    {
+      "id": "babujichaay",
+      "name": "Babuji Chaay",
+      "description": "Full-stack POS and inventory management system for cafés and tea stalls with real client deployment.",
+      "tech": ["React","Node.js","Express","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/Babuji-Chaay",
+      "live": "https://babujichaai.in/",
+      "images": ["babujichaay-logo.png"]
+    },
+    {
+      "id": "qure",
+      "name": "Qure",
+      "description": "Smart OPD queue management platform enabling remote queue participation without requiring smartphone literacy.",
+      "tech": ["React","Node.js","Express","PostgreSQL","WebSockets"],
+      "github": "https://github.com/DanielDeshmukh/Qure",
+      "live": null,
+      "images": ["qure-logo.png"]
+    }
+  ]
+}

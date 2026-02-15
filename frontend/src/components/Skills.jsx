@@ -76,6 +76,8 @@ export default function Skills({ profile, adminMode, onSave }) {
                 rounded-lg
                 bg-secondary
                 hover:bg-secondary/80
+                border border-gray-700
+                hover:border-primary
                 transition
               "
             >
@@ -135,8 +137,9 @@ export default function Skills({ profile, adminMode, onSave }) {
               rounded-md
               flex-1
               outline-none
-              border border-transparent
+              border border-gray-700
               focus:border-primary
+              transition
             "
           />
 
@@ -151,6 +154,8 @@ export default function Skills({ profile, adminMode, onSave }) {
               hover:opacity-90
               transition
               whitespace-nowrap
+              border border-primary
+              hover:border-primary
             "
           >
             Add Skill

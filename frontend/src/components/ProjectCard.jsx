@@ -14,24 +14,25 @@ function Img({ src, alt }) {
   );
 }
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, onClick }) {
   if (!project) return null;
 
-  // Vite serves public folder from root "/"
-  const imageSrc =
-    project.images && project.images.length > 0
-      ? `/${project.images[0]}`
-      : null;
+  // Handle both old format (string) and new format (object with file and caption)
+  let imageSrc = null;
+  if (project.images && project.images.length > 0) {
+    const firstImage = project.images[0];
+    imageSrc = typeof firstImage === 'string' ? `/${firstImage}` : `/${firstImage.file}`;
+  }
 
   return (
-    <article className="card flex flex-col p-5">
+    <article onClick={onClick} className="card flex flex-col p-5 cursor-pointer border border-gray-700 hover:border-primary transition group">
       {/* Image */}
       <div className="mb-4">
         <Img src={imageSrc} alt={project.name} />
       </div>
 
       {/* Title */}
-      <h3 className="font-heading text-lg">
+      <h3 className="font-heading text-lg group-hover:text-primary transition">
         {project.name}
       </h3>
 
@@ -45,7 +46,7 @@ export default function ProjectCard({ project }) {
         {project.tech?.map((t) => (
           <span
             key={t}
-            className="text-xs px-2 py-1 bg-background/40 rounded"
+            className="text-xs px-2 py-1 bg-background/40 rounded border border-gray-700 group-hover:border-primary transition"
           >
             {t}
           </span>
@@ -59,7 +60,8 @@ export default function ProjectCard({ project }) {
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="text-accent hover:text-primary"
+            onClick={(e) => e.stopPropagation()}
+            className="text-accent hover:text-primary border border-gray-700 hover:border-primary rounded-md px-2 py-1 transition"
           >
             <i className="fab fa-github"></i>
           </a>
@@ -70,7 +72,8 @@ export default function ProjectCard({ project }) {
             href={project.live}
             target="_blank"
             rel="noreferrer"
-            className="text-accent hover:text-primary"
+            onClick={(e) => e.stopPropagation()}
+            className="text-accent hover:text-primary border border-gray-700 hover:border-primary rounded-md px-2 py-1 transition"
           >
             Live
           </a>
@@ -79,3 +82,4 @@ export default function ProjectCard({ project }) {
     </article>
   );
 }
+

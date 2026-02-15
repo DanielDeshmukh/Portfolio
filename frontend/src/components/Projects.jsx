@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ProjectCard from './ProjectCard'
 import { loadProjects } from '../utils/loadData'
 
-export default function Projects(){
+export default function Projects({onProjectClick}){
   const [data, setData] = useState(null)
   useEffect(()=>{
     loadProjects().then(setData)
@@ -13,7 +13,7 @@ export default function Projects(){
     <section id="projects" className="mt-12">
       <h2 className="text-2xl font-heading">Projects</h2>
       <div className="mt-6 grid md:grid-cols-3 gap-6">
-        {data.projects.map(p=> <ProjectCard key={p.id} project={p} />)}
+        {data.projects.map(p=> <ProjectCard key={p.id} project={p} onClick={() => onProjectClick(p.id)} />)}
       </div>
     </section>
   )

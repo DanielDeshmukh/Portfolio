@@ -7,7 +7,16 @@
       "tech": ["React","Node.js","Python","Supabase","TailwindCSS"],
       "github": "https://github.com/DanielDeshmukh/TradeX",
       "live": null,
-      "images": ["tradex-logo.png"]
+      "images": [
+        {"file": "tradex-logo.png", "caption": "TradeX branding and logo design representing the trading platform identity."},
+        {"file": "tradex-splashscreen.png", "caption": "Splash screen introducing users to the TradeX platform with engaging visuals."},
+        {"file": "tradex-authpage.png", "caption": "Secure authentication interface for user login and account access management."},
+        {"file": "tradex-profilepage.png", "caption": "User profile dashboard displaying personal information and account details."},
+        {"file": "tradex-priceaction-table.png", "caption": "Real-time price action table showing stock data and market analysis insights."},
+        {"file": "tradex-settingspage.png", "caption": "Comprehensive settings panel for customizing user preferences and platform configuration."},
+        {"file": "tradex-referalcode-generation.png", "caption": "Referral code generation feature enabling users to invite friends and earn rewards."},
+        {"file": "tradex-subscriptionplan-user-activity.png", "caption": "Subscription plans interface with user activity tracking and plan management options."}
+      ]
     },
     {
       "id": "babujichaay",
@@ -16,7 +25,16 @@
       "tech": ["React","Node.js","Express","TailwindCSS"],
       "github": "https://github.com/DanielDeshmukh/Babuji-Chaay",
       "live": "https://babujichaai.in/",
-      "images": ["babujichaay-logo.png"]
+      "images": [
+        {"file": "babujichaay-logo.png", "caption": "Babuji Chaay brand identity and logo representing the café management system."},
+        {"file": "babujichaay-authpage.png", "caption": "Secure login interface for staff and admin access to the POS system."},
+        {"file": "babujichaay-adminAuthentication.png", "caption": "Advanced admin authentication interface with multi-level security protocols."},
+        {"file": "babujichaay-dashboard.png", "caption": "Main dashboard providing real-time sales metrics, inventory status, and business analytics."},
+        {"file": "babujichaay-menu-page.png", "caption": "Interactive menu page allowing quick browsing and ordering of café items."},
+        {"file": "babujichaay-invoice.png", "caption": "Professional invoice generation and printing system for customer transactions."},
+        {"file": "babujichaay-website.png", "caption": "Public-facing website showcasing the café brand and its offerings online."},
+        {"file": "babujichaay-website-franchise.png", "caption": "Franchise information page displaying expansion opportunities and partnership details."}
+      ]
     },
     {
       "id": "qure",
@@ -25,7 +43,13 @@
       "tech": ["React","Node.js","Express","PostgreSQL","WebSockets"],
       "github": "https://github.com/DanielDeshmukh/Qure",
       "live": null,
-      "images": ["qure-logo.png"]
+      "images": [
+        {"file": "qure-logo.png", "caption": "Qure branding and logo representing innovative queue management solutions."},
+        {"file": "qure-language-selection.png", "caption": "Multi-language selection interface making the platform accessible to diverse users."},
+        {"file": "qure-role-selection.png", "caption": "Role selection screen distinguishing between patients, medical professionals, and admin users."},
+        {"file": "qure-patient-signup.png", "caption": "Patient registration form with simplified interface for easy queue enrollment and management."},
+        {"file": "qure-medic-signup.png", "caption": "Medical professional registration and authentication for healthcare provider access."}
+      ]
     }
   ]
 }

@@ -7,6 +7,7 @@ export default function Navbar(){
     ['About','#about'],
     ['Skills','#skills'],
     ['Projects','#projects'],
+    ['Certifications','#certifications'],
     ['Resume','#resume'],
     ['Contact','#contact']
   ]

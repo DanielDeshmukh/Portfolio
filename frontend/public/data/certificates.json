@@ -1,0 +1,16 @@
+{
+  "certificates": [
+    {
+      "id": "b10x",
+      "name": "B10X League",
+      "file": "certificate-b10x.png",
+      "description": "Successfully attended a webinar conducted by B10X focused on the latest AI tools and strategies to enhance work efficiency, productivity, and modern digital workflows. Demonstrated proactive learning and commitment to staying updated with emerging AI technologies."
+    },
+    {
+      "id": "samsung",
+      "name": "Samsung Innovation",
+      "file": "certificate-samsung.png",
+      "description": "Successfully attended a hands-on GitHub Copilot workshop conducted by Ansh Mehra on January 20, 2026, at Samsung BKC, focused on leveraging AI-powered development using the Samsung Galaxy Book5 Series and Galaxy AI ecosystem. Demonstrated initiative in adopting modern AI-assisted coding tools to enhance development speed and productivity."
+    }
+  ]
+}

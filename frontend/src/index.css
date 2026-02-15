@@ -17,7 +17,7 @@ body{
 }
 
 .card{
-  @apply bg-secondary rounded-lg shadow-md p-6;
+  @apply bg-secondary rounded-lg shadow-md p-4;
 }
 
 .fade-up{

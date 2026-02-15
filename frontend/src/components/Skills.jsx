@@ -72,7 +72,7 @@ export default function Skills({ profile, adminMode, onSave }) {
                 flex
                 items-center
                 gap-4
-                p-4
+                p-3
                 rounded-lg
                 bg-secondary
                 hover:bg-secondary/80

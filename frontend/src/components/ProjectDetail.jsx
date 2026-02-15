@@ -39,7 +39,7 @@ export default function ProjectDetail({ projectId, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur z-50 overflow-y-auto">
-      <div className="max-w-4xl mx-auto px-6 py-8">
+      <div className="max-w-4xl mx-auto px-6 py-6">
         <button
           onClick={onClose}
           className="mb-6 inline-flex items-center gap-2 text-gray-300 hover:text-primary transition border border-gray-600 hover:border-primary rounded-md px-3 py-1"
@@ -95,8 +95,8 @@ export default function ProjectDetail({ projectId, onClose }) {
                     />
                   </div>
                   {currentImage?.caption && (
-                    <div className="p-4 bg-secondary border-t border-gray-700">
-                      <p className="text-gray-200">{currentImage.caption}</p>
+                    <div className="p-3 bg-secondary border-t border-gray-700">
+                      <p className="text-gray-200 text-sm">{currentImage.caption}</p>
                     </div>
                   )}
                 </div>

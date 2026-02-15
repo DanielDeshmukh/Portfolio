@@ -23,10 +23,10 @@ export default function AdminGate({onEnable}){
           <div className="bg-secondary rounded p-6 w-80 border border-gray-700">
             <h3 className="font-heading text-lg">Admin</h3>
             <p className="text-sm mt-2 text-gray-200">Enter secret key to enable edit mode.</p>
-            <input value={key} onChange={e=>setKey(e.target.value)} className="mt-3 w-full px-3 py-2 bg-background rounded border border-gray-700 focus:border-primary transition" />
-            <div className="mt-4 flex justify-end gap-2">
-              <button onClick={()=>setOpen(false)} className="px-3 py-2 border border-accent rounded hover:border-primary transition">Cancel</button>
-              <button onClick={submit} className="px-3 py-2 bg-primary text-black rounded border border-primary hover:opacity-90 transition">Unlock</button>
+            <input value={key} onChange={e=>setKey(e.target.value)} className="mt-3 w-full px-3 py-2 bg-background rounded border border-gray-700 focus:border-primary transition text-sm" />
+            <div className="mt-3 flex justify-end gap-2">
+              <button onClick={()=>setOpen(false)} className="px-3 py-1 border border-accent rounded hover:border-primary transition text-sm">Cancel</button>
+              <button onClick={submit} className="px-3 py-1 bg-primary text-black rounded border border-primary hover:opacity-90 transition text-sm">Unlock</button>
             </div>
           </div>
         </div>

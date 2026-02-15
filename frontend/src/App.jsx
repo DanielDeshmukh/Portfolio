@@ -5,6 +5,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import ProjectDetail from './components/ProjectDetail'
+import Certifications from './components/Certifications'
 import Resume from './components/Resume'
 import Contact from './components/Contact'
 import AdminGate from './components/AdminGate'
@@ -47,6 +48,7 @@ export default function App(){
         <About profile={profile} />
         <Skills profile={profile} adminMode={adminMode} onSave={saveProfile} />
         <Projects onProjectClick={setSelectedProjectId} />
+        <Certifications />
         <Resume />
         <Contact profile={profile} />
       </main>

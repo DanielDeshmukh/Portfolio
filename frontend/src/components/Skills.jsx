@@ -44,12 +44,10 @@ export default function Skills({ profile, adminMode, onSave }) {
 
   return (
     <section id="skills" className="mt-12 scroll-mt-24">
-      {/* Heading */}
       <h2 className="text-2xl md:text-3xl font-heading">
         Skills
       </h2>
 
-      {/* Responsive Grid */}
       <div
         className="
           mt-6
@@ -81,7 +79,6 @@ export default function Skills({ profile, adminMode, onSave }) {
                 transition
               "
             >
-              {/* Icon */}
               <img
                 src={src}
                 alt={skill}
@@ -91,7 +88,6 @@ export default function Skills({ profile, adminMode, onSave }) {
                 }}
               />
 
-              {/* Skill Name */}
               <div className="flex-1 min-w-0">
                 <div className="font-semibold truncate">
                   {skill}
@@ -104,7 +100,6 @@ export default function Skills({ profile, adminMode, onSave }) {
                 )}
               </div>
 
-              {/* Delete Button */}
               {adminMode && (
                 <button
                   onClick={() => deleteSkill(index)}
@@ -123,7 +118,6 @@ export default function Skills({ profile, adminMode, onSave }) {
         })}
       </div>
 
-      {/* Admin Add Skill */}
       {adminMode && (
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
           <input

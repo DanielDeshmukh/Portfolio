@@ -14,7 +14,6 @@ export default function Navbar(){
 
   const handleNavClick = (href) => {
     setOpen(false)
-    // Smooth scroll behavior
     if (href.startsWith('#')) {
       const element = document.querySelector(href)
       if (element) {

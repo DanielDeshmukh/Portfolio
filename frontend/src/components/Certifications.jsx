@@ -45,7 +45,6 @@ export default function Certifications() {
         ))}
       </div>
 
-      {/* Fullscreen Certificate View */}
       {selectedCert && (
         <CertificateModal certificate={selectedCert} onClose={() => setSelectedCert(null)} />
       )}
@@ -93,9 +92,8 @@ function CertificateModal({ certificate, onClose }) {
           </div>
 
           <div className="relative bg-black/20 rounded-lg overflow-hidden border border-gray-600">
-            {/* Anti-screenshot overlay */}
             <div className="absolute inset-0 pointer-events-none user-select-none z-40" />
-            
+
             <img
               src={`/${certificate.file}`}
               alt={certificate.name}

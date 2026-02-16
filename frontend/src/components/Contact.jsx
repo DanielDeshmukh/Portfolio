@@ -11,7 +11,6 @@ export default function Contact({ profile }) {
       id="contact"
       className="mt-16 scroll-mt-24 px-1 sm:px-0"
     >
-      {/* Header */}
       <div className="mb-6 flex items-center gap-3">
         <i className="fas fa-envelope text-primary text-lg sm:text-xl"></i>
         <h2 className="text-2xl sm:text-3xl font-heading text-white tracking-wide">
@@ -19,7 +18,6 @@ export default function Contact({ profile }) {
         </h2>
       </div>
 
-      {/* Card */}
       <div
         className="
           card
@@ -37,10 +35,8 @@ export default function Contact({ profile }) {
           transition-all duration-300
         "
       >
-        {/* Left Section */}
         <div className="flex flex-col gap-4 w-full md:w-auto">
 
-          {/* Email */}
           {contact.email && (
             <div className="flex items-start gap-3 group">
               <i className="fas fa-envelope text-accent mt-1 group-hover:text-primary transition-colors"></i>
@@ -67,7 +63,6 @@ export default function Contact({ profile }) {
             </div>
           )}
 
-          {/* Phone */}
           <div className="flex items-start gap-3 group">
             <i className="fas fa-phone text-accent mt-1 group-hover:text-primary transition-colors"></i>
 
@@ -92,7 +87,6 @@ export default function Contact({ profile }) {
           </div>
         </div>
 
-        {/* Right Section - Social Icons */}
         <div
           className="
             flex
@@ -157,7 +151,6 @@ export default function Contact({ profile }) {
             </a>
           )}
 
-          {/* Call Icon */}
           <a
             href={`tel:${phone}`}
             aria-label="Call"

@@ -17,31 +17,34 @@ function Img({ src, alt }) {
 export default function ProjectCard({ project, onClick }) {
   if (!project) return null;
 
-  // Handle both old format (string) and new format (object with file and caption)
   let imageSrc = null;
   if (project.images && project.images.length > 0) {
     const firstImage = project.images[0];
     imageSrc = typeof firstImage === 'string' ? `/${firstImage}` : `/${firstImage.file}`;
   }
 
+  const status = project.status ?? (project.live ? 'deployed' : 'under-development')
+  const statusLabel = status === 'deployed' ? 'Deployed' : 'In progress'
+  const statusClasses = status === 'deployed' ? 'bg-green-400 text-black' : 'bg-yellow-400 text-black'
+
   return (
-    <article onClick={onClick} className="card flex flex-col p-5 cursor-pointer border border-gray-700 hover:border-primary transition group">
-      {/* Image */}
+    <article onClick={onClick} className="relative card flex flex-col p-5 cursor-pointer border border-gray-700 hover:border-primary transition group">
       <div className="mb-4">
         <Img src={imageSrc} alt={project.name} />
       </div>
 
-      {/* Title */}
+      <div className={`absolute top-4 right-4 px-2 py-1 text-xs font-semibold rounded-full ${statusClasses} border border-gray-800`}>
+        {statusLabel}
+      </div>
+
       <h3 className="font-heading text-lg group-hover:text-primary transition">
         {project.name}
       </h3>
 
-      {/* Description */}
       <p className="text-sm text-gray-200 mt-2 flex-1">
         {project.description}
       </p>
 
-      {/* Tech stack */}
       <div className="mt-3 flex flex-wrap gap-2">
         {project.tech?.map((t) => (
           <span
@@ -53,7 +56,6 @@ export default function ProjectCard({ project, onClick }) {
         ))}
       </div>
 
-      {/* Links */}
       <div className="mt-4 flex items-center gap-3">
         {project.github && (
           <a

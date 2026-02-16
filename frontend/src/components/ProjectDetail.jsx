@@ -12,7 +12,6 @@ export default function ProjectDetail({ projectId, onClose }) {
       setProject(found)
       
       if (found && found.images) {
-        // Handle both old format (string) and new format (object with file and caption)
         const processedImages = found.images.map(img => {
           if (typeof img === 'string') {
             return { file: img, caption: '' }
@@ -48,7 +47,6 @@ export default function ProjectDetail({ projectId, onClose }) {
         </button>
 
         <div className="space-y-8">
-          {/* Project Title & Links */}
           <div>
             <h1 className="text-4xl font-heading text-white mb-4">{project.name}</h1>
             <div className="flex gap-4 flex-wrap">
@@ -73,15 +71,39 @@ export default function ProjectDetail({ projectId, onClose }) {
                 </a>
               )}
             </div>
+            {(() => {
+              const status = project.status ?? (project.live ? 'deployed' : 'under-development')
+              const progress = typeof project.progress === 'number' ? project.progress : (project.live ? 100 : 0)
+              const statusLabel = status === 'deployed' ? 'Deployed' : 'In progress'
+              const statusClasses = status === 'deployed' ? 'bg-green-400 text-black' : 'bg-yellow-400 text-black'
+
+              return (
+                <div className="mt-4">
+                  <div className="flex items-center gap-4 mb-2">
+                    <div className={`px-3 py-1 rounded-full text-sm font-semibold ${statusClasses} border border-gray-800`}>
+                      {statusLabel}
+                    </div>
+                    <div className="text-sm text-gray-300">
+                      {progress}%
+                    </div>
+                  </div>
+
+                  <div className="w-full bg-gray-800 rounded h-3 overflow-hidden border border-gray-700">
+                    <div
+                      className="h-full bg-primary transition-all"
+                      style={{ width: `${Math.max(0, Math.min(100, progress))}%` }}
+                    />
+                  </div>
+                </div>
+              )
+            })()}
           </div>
 
-          {/* Description */}
           <div>
             <h2 className="text-2xl font-heading mb-3">Overview</h2>
             <p className="text-gray-200 text-lg leading-relaxed">{project.description}</p>
           </div>
 
-          {/* Screenshot Gallery */}
           {screenshots.length > 0 && (
             <div>
               <h2 className="text-2xl font-heading mb-4">Screenshots</h2>
@@ -101,7 +123,6 @@ export default function ProjectDetail({ projectId, onClose }) {
                   )}
                 </div>
 
-                {/* Navigation */}
                 {screenshots.length > 1 && (
                   <div className="flex gap-4 items-center justify-between">
                     <button
@@ -122,7 +143,6 @@ export default function ProjectDetail({ projectId, onClose }) {
                   </div>
                 )}
 
-                {/* Thumbnail Gallery */}
                 {screenshots.length > 1 && (
                   <div className="grid grid-cols-4 md:grid-cols-6 gap-2">
                     {screenshots.map((img, idx) => (
@@ -149,7 +169,6 @@ export default function ProjectDetail({ projectId, onClose }) {
             </div>
           )}
 
-          {/* Tech Stack */}
           <div>
             <h2 className="text-2xl font-heading mb-3">Tech Stack</h2>
             <div className="flex flex-wrap gap-2">

@@ -7,6 +7,8 @@
       "tech": ["React","Node.js","Python","Supabase","TailwindCSS"],
       "github": "https://github.com/DanielDeshmukh/TradeX",
       "live": null,
+      "status": "under-development",
+      "progress": 40,
       "images": ["tradex-logo.png"]
     },
     {
@@ -16,6 +18,8 @@
       "tech": ["React","Node.js","Express","TailwindCSS"],
       "github": "https://github.com/DanielDeshmukh/Babuji-Chaay",
       "live": "https://babujichaai.in/",
+      "status": "deployed",
+      "progress": 100,
       "images": ["babujichaay-logo.png"]
     },
     {
@@ -25,6 +29,8 @@
       "tech": ["React","Node.js","Express","PostgreSQL","WebSockets"],
       "github": "https://github.com/DanielDeshmukh/Qure",
       "live": null,
+      "status": "under-development",
+      "progress": 10,
       "images": ["qure-logo.png"]
     }
   ]

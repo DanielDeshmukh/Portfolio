@@ -7,6 +7,8 @@
       "tech": ["React","Node.js","Python","Supabase","TailwindCSS"],
       "github": "https://github.com/DanielDeshmukh/TradeX",
       "live": null,
+      "status": "under-development",
+      "progress": 40,
       "images": [
         {"file": "tradex-logo.png", "caption": "TradeX branding and logo design representing the trading platform identity."},
         {"file": "tradex-splashscreen.png", "caption": "Splash screen introducing users to the TradeX platform with engaging visuals."},
@@ -25,6 +27,8 @@
       "tech": ["React","Node.js","Express","TailwindCSS"],
       "github": "https://github.com/DanielDeshmukh/Babuji-Chaay",
       "live": "https://babujichaai.in/",
+      "status": "deployed",
+      "progress": 100,
       "images": [
         {"file": "babujichaay-logo.png", "caption": "Babuji Chaay brand identity and logo representing the café management system."},
         {"file": "babujichaay-authpage.png", "caption": "Secure login interface for staff and admin access to the POS system."},
@@ -43,6 +47,8 @@
       "tech": ["React","Node.js","Express","PostgreSQL","WebSockets"],
       "github": "https://github.com/DanielDeshmukh/Qure",
       "live": null,
+      "status": "under-development",
+      "progress": 10,
       "images": [
         {"file": "qure-logo.png", "caption": "Qure branding and logo representing innovative queue management solutions."},
         {"file": "qure-language-selection.png", "caption": "Multi-language selection interface making the platform accessible to diverse users."},

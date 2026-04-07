@@ -26,7 +26,7 @@
       "description": "Full-stack POS and inventory management system for cafés and tea stalls with real client deployment.",
       "tech": ["React","Node.js","Express","TailwindCSS"],
       "github": "https://github.com/DanielDeshmukh/Babuji-Chaay",
-      "live": "https://babujichaai.in/",
+      "live": "https://babujichaay.com/",
       "status": "deployed",
       "progress": 100,
       "images": [

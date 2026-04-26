@@ -56,6 +56,23 @@
         {"file": "qure-patient-signup.png", "caption": "Patient registration form with simplified interface for easy queue enrollment and management."},
         {"file": "qure-medic-signup.png", "caption": "Medical professional registration and authentication for healthcare provider access."}
       ]
+    },
+    {
+      "id": "aether",
+      "name": "Aether",
+      "description": "AETHER simulates human-like decision-making to identify vulnerabilities, generate targeted exploits, and provide actionable remediation within a scalable SaaS architecture.",
+      "tech": ["React","Node.js","Express","WebSockets","Python","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/aether",
+      "live": null,
+      "status": "under-development",
+      "progress": 70,
+      "images": [
+        {"file": "aether-logo.png", "caption": "Aether branding and logo."},
+        {"file": "aether-landing-page-hero.png", "caption": "Intelligent agentic reasoning platform redefining automated ethical security testing at scale."},
+        {"file": "aether-moto.png", "caption": "Adaptive AI simulating expert reasoning to deliver scalable, next-generation security testing"},
+        {"file": "aether-authentication.png", "caption": "Passwordless authentication with secure magic links, eliminating keylogging and SQL injection risks."},
+        {"file": "aether-dashboard.png", "caption": "Centralized dashboard showcasing scan targets with detailed debriefs, traces, and remediation insights"}
+      ]
     }
   ]
 }

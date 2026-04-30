@@ -8,12 +8,9 @@ import ProjectDetail from './components/ProjectDetail'
 import Certifications from './components/Certifications'
 import Resume from './components/Resume'
 import Contact from './components/Contact'
-import AdminGate from './components/AdminGate'
-import AdminPanel from './components/AdminPanel'
 import { loadProfile } from './utils/loadData'
 
 export default function App(){
-  const [adminMode, setAdminMode] = useState(false)
   const [profile, setProfile] = useState(null)
   const [selectedProjectId, setSelectedProjectId] = useState(null)
 
@@ -46,14 +43,12 @@ export default function App(){
       <main className="max-w-6xl mx-auto px-6 pt-20 pb-20">
         <Hero profile={profile} />
         <About profile={profile} />
-        <Skills profile={profile} adminMode={adminMode} onSave={saveProfile} />
+        <Skills profile={profile} />
         <Projects onProjectClick={setSelectedProjectId} />
         <Certifications />
         <Resume />
         <Contact profile={profile} />
       </main>
-      <AdminGate onEnable={()=>setAdminMode(true)} />
-      {adminMode && <AdminPanel profile={profile} onClose={()=>setAdminMode(false)} onSave={saveProfile} />}
     </div>
   )
 }

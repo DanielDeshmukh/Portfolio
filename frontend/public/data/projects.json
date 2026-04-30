@@ -73,6 +73,29 @@
         {"file": "aether-authentication.png", "caption": "Passwordless authentication with secure magic links, eliminating keylogging and SQL injection risks."},
         {"file": "aether-dashboard.png", "caption": "Centralized dashboard showcasing scan targets with detailed debriefs, traces, and remediation insights"}
       ]
+    },
+    {
+      "id": "interior-design-portfolio",
+      "name": "Interior Design Portfolio",
+      "description": "A modern, responsive portfolio website for showcasing interior design projects and services.",
+      "tech": ["React","TailwindCSS", "Netlify", "Figma", "WhatsApp API"],
+      "github": "https://github.com/DanielDeshmukh/Interior-Designs-Template",
+      "live": "https://danieldeshmukh-webdesigns.netlify.app/",
+      "status": "deployed",
+      "progress": 100,
+      "images": [
+        {"file": "interior-design-website-logo.png", "caption": "Interior Design Portfolio branding and logo."},
+        {"file": "interior-design-website-icon.png", "caption": "Custom icon design representing the interior design portfolio's unique identity."},
+        {"file": "interior-design-website-hero-section.png", "caption": "Modern, responsive landing page for the interior design portfolio."},
+        {"file": "interior-design-website-about-us.png", "caption": "About Us page providing information about the interior design services offered and the designer's background."},
+        {"file": "interior-design-website-contact-page.png", "caption": "Contact page with a form for potential clients to get in touch for inquiries and consultations."},
+        {"file": "interior-design-website-projects-section.png", "caption": "Projects page showcasing a gallery of interior design projects with descriptions and images."},
+        {"file": "interior-design-website-project-grid.png", "caption": "Project grid layout displaying various interior design projects in an organized and visually appealing manner."},
+        {"file": "interior-design-website-services.png", "caption": "Services page outlining the various interior design services offered, including consultations, space planning, and custom design solutions."},
+        {"file": "interior-design-website-inquiry-page.png", "caption": "Inquiry page with a contact form for potential clients to request more information or schedule a consultation."},
+        {"file":"interior-design-website-inquiry-form-submission.jpeg", "caption": "Inquiry submissions from the website form delivered directly to the owner via WhatsApp for seamless communication and lead management."},
+        {"file": "interior-design-website-footer.png", "caption": "Footer section with contact information, social media links, and copyright details."}
+      ]
     }
   ]
 }

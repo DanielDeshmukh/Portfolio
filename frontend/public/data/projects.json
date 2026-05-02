@@ -107,6 +107,7 @@
       "status": "deployed",
       "progress": 100,
       "images": [
+        {"file": "ella-llm-receptionist-logo.png", "caption": "Ella branding and logo representing the AI-powered clinical receptionist."},
         {"file": "ella-llm-dosage-calculation.png", "caption": "Utilizing OCRed medical books and advanced RAG techniques, Ella provides accurate dosage calculations for medications, ensuring patient safety and effective treatment."},
         {"file": "ella-llm-empathy-check.png", "caption": "Ella's LLM empathy check feature. Ella uses advanced Hard RAG and Medical books to provide empathetic responses to patient inquiries, ensuring a compassionate and supportive interaction."},
         {"file": "ella-llm-immediate-medication-guidance.png", "caption": "Ella's LLM immediate medication guidance feature. Ella utilizes advanced Hard RAG and Medical books to provide immediate and accurate medication guidance to patients, ensuring they receive the correct information for their health needs."},

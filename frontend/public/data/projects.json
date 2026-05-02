@@ -99,7 +99,7 @@
     },
     {
       "id": "Ella",
-      "name": "Ella - AI Powered Clinical Reseptionist",
+      "name": "Ella - AI Powered Clinical Receptionist",
       "description": "Ella is an AI-powered clinical receptionist designed to streamline patient interactions, appointment scheduling, and enhancing efficiency and patient experience.",
       "tech": ["Python","Groq API", "Rich","Lang-Chain", "Tesseract OCR", "RAG"],
       "github": "https://github.com/DanielDeshmukh/ella",

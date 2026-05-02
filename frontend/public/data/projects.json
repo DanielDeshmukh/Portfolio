@@ -96,6 +96,25 @@
         {"file":"interior-design-website-inquiry-form-submission.jpeg", "caption": "Inquiry submissions from the website form delivered directly to the owner via WhatsApp for seamless communication and lead management."},
         {"file": "interior-design-website-footer.png", "caption": "Footer section with contact information, social media links, and copyright details."}
       ]
+    },
+    {
+      "id": "Ella",
+      "name": "Ella - AI Powered Clinical Reseptionist",
+      "description": "Ella is an AI-powered clinical receptionist designed to streamline patient interactions, appointment scheduling, and enhancing efficiency and patient experience.",
+      "tech": ["Python","Groq API", "Rich","Lang-Chain", "Tesseract OCR", "RAG"],
+      "github": "https://github.com/DanielDeshmukh/ella",
+      "live": null,
+      "status": "deployed",
+      "progress": 100,
+      "images": [
+        {"file": "ella-llm-dosage-calculation.png", "caption": "Utilizing OCRed medical books and advanced RAG techniques, Ella provides accurate dosage calculations for medications, ensuring patient safety and effective treatment."},
+        {"file": "ella-llm-empathy-check.png", "caption": "Ella's LLM empathy check feature. Ella uses advanced Hard RAG and Medical books to provide empathetic responses to patient inquiries, ensuring a compassionate and supportive interaction."},
+        {"file": "ella-llm-immediate-medication-guidance.png", "caption": "Ella's LLM immediate medication guidance feature. Ella utilizes advanced Hard RAG and Medical books to provide immediate and accurate medication guidance to patients, ensuring they receive the correct information for their health needs."},
+        {"file": "ella-llm-quick-reasoning.png", "caption": "Ella's LLM quick reasoning feature. Ella employs advanced Medical books to deliver quick and accurate reasoning for patient inquiries, ensuring efficient and informed responses."},
+        {"file": "ella-llm-quick-understanding-of-patients-query.png", "caption": "Ella leverages advanced Medical books to quickly understand and respond to patient queries, providing timely and relevant information for their healthcare needs."},
+        {"file": "ella-llm-red-flag-protocol.png", "caption": "Ella Uses Intent Recognition and Advanced RAG to identify red flag symptoms in patient interactions, ensuring timely escalation and appropriate care for critical health concerns."},
+        {"file": "ella-llm-seamless-understanding-of-conversation-conclusion.png", "caption": "Ella provides a seamless understanding of conversation conclusions, ensuring effective communication and follow-up for patient interactions."}
+      ]
     }
   ]
 }

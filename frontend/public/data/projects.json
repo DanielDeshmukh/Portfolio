@@ -58,6 +58,19 @@
       ]
     },
     {
+      "id": "hector",
+      "name": "Hector",
+      "description": "Hector is a high-precision, Hard-RAG legal intelligence system designed to navigate the complexities of Indian Law.",
+      "tech": ["React","Node.js","Express","WebSockets","Python","TailwindCSS","Lang-Chain"],
+      "github": "https://github.com/DanielDeshmukh/Hector",
+      "live": null,
+      "status": "under-development",
+      "progress": 20,
+      "images": [
+        {"file": "hector-legal-intelligence.png", "caption": "Hector branding and logo. "}
+      ]
+    },
+    {
       "id": "aether",
       "name": "Aether",
       "description": "AETHER simulates human-like decision-making to identify vulnerabilities, generate targeted exploits, and provide actionable remediation within a scalable SaaS architecture.",
@@ -99,7 +112,7 @@
     },
     {
       "id": "Ella",
-      "name": "Ella - AI Powered Clinical Receptionist",
+      "name": "Ella",
       "description": "Ella is an AI-powered clinical receptionist designed to streamline patient interactions, appointment scheduling, and enhancing efficiency and patient experience.",
       "tech": ["Python","Groq API", "Rich","Lang-Chain", "Tesseract OCR", "RAG"],
       "github": "https://github.com/DanielDeshmukh/ella",

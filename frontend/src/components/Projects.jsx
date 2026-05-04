@@ -21,7 +21,7 @@ export default function Projects({onProjectClick}){
             onClick={() => setShowAll(!showAll)}
             className="text-xs font-bold uppercase tracking-widest text-accent hover:text-primary transition-colors"
           >
-            {showAll ? 'Show Less' : `Show More (${data.projects.length})`}
+            {showAll ? 'Show Less' : `View All (${data.projects.length})`}
           </button>
         )}
       </div>

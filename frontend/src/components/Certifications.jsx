@@ -22,13 +22,13 @@ export default function Certifications() {
 
   return (
     <section id="certifications" className="mt-12">
-      <h2 className="text-2xl font-heading">Certifications & Achievements</h2>
+      <h2 className="text-2xl font-heading font-semibold text-goldlight">Certifications & Achievements</h2>
       <div className="mt-6 grid md:grid-cols-2 gap-4">
         {certificates.map(cert => (
           <div
             key={cert.id}
             onClick={() => setSelectedCert(cert)}
-            className="card p-3 border border-gray-700 hover:border-primary transition cursor-pointer group"
+            className="card p-3 border border-slate hover:border-primary transition cursor-pointer group"
           >
             <div className="w-full h-40 rounded overflow-hidden bg-black/20 mb-3">
               <img
@@ -39,7 +39,7 @@ export default function Certifications() {
                 draggable={false}
               />
             </div>
-            <h3 className="font-heading text-base group-hover:text-primary transition">{cert.name}</h3>
+            <h3 className="font-heading text-base font-semibold group-hover:text-primary transition">{cert.name}</h3>
             <p className="text-xs text-gray-300 mt-1">{cert.description}</p>
           </div>
         ))}
@@ -79,19 +79,19 @@ function CertificateModal({ certificate, onClose }) {
       <div className="max-w-3xl w-full">
         <button
           onClick={onClose}
-          className="mb-4 inline-flex items-center gap-2 text-gray-300 hover:text-primary transition border border-gray-600 hover:border-primary rounded-md px-2 py-1 text-sm"
+          className="mb-4 inline-flex items-center gap-2 text-gray-300 hover:text-primary transition border border-slate hover:border-primary rounded-md px-2 py-1 text-sm"
         >
           <i className="fas fa-arrow-left"></i> Close
         </button>
 
-        <div className="bg-black/40 rounded-lg p-6 backdrop-blur border border-gray-700">
+        <div className="bg-black/40 rounded-lg p-6 backdrop-blur border border-slate">
           <div className="mb-3">
-            <h2 className="text-2xl font-heading text-white mb-2">{certificate.name}</h2>
+            <h2 className="text-2xl font-heading font-semibold text-white mb-2">{certificate.name}</h2>
             <p className="text-xs text-gray-300">{certificate.description}</p>
             <p className="text-xs text-gray-500 mt-2 italic">For privacy protection, this certificate cannot be downloaded or screenshotted.</p>
           </div>
 
-          <div className="relative bg-black/20 rounded-lg overflow-hidden border border-gray-600">
+          <div className="relative bg-black/20 rounded-lg overflow-hidden border border-slate">
             <div className="absolute inset-0 pointer-events-none user-select-none z-40" />
 
             <img

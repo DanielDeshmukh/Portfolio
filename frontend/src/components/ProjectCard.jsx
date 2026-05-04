@@ -28,7 +28,7 @@ export default function ProjectCard({ project, onClick }) {
   const statusClasses = status === 'deployed' ? 'bg-green-400 text-black' : 'bg-yellow-400 text-black'
 
   return (
-    <article onClick={onClick} className="relative card flex flex-col p-5 cursor-pointer border border-gray-700 hover:border-primary transition group">
+    <article onClick={onClick} className="relative card flex flex-col p-5 cursor-pointer border border-slate hover:border-primary transition group">
       <div className="mb-4">
         <Img src={imageSrc} alt={project.name} />
       </div>
@@ -37,7 +37,7 @@ export default function ProjectCard({ project, onClick }) {
         {statusLabel}
       </div>
 
-      <h3 className="font-heading text-lg group-hover:text-primary transition">
+      <h3 className="font-heading text-lg font-semibold group-hover:text-primary transition">
         {project.name}
       </h3>
 
@@ -49,7 +49,7 @@ export default function ProjectCard({ project, onClick }) {
         {project.tech?.map((t) => (
           <span
             key={t}
-            className="text-xs px-2 py-1 bg-background/40 rounded border border-gray-700 group-hover:border-primary transition"
+            className="text-xs px-2 py-1 bg-background/40 rounded border border-slate group-hover:border-primary transition"
           >
             {t}
           </span>
@@ -63,7 +63,7 @@ export default function ProjectCard({ project, onClick }) {
             target="_blank"
             rel="noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="text-accent hover:text-primary border border-gray-700 hover:border-primary rounded-md px-2 py-1 transition"
+            className="text-accent hover:text-primary border border-slate hover:border-primary rounded-md px-2 py-1 transition"
           >
             <i className="fab fa-github"></i>
           </a>
@@ -75,7 +75,7 @@ export default function ProjectCard({ project, onClick }) {
             target="_blank"
             rel="noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="text-accent hover:text-primary border border-gray-700 hover:border-primary rounded-md px-2 py-1 transition"
+            className="text-accent hover:text-primary border border-slate hover:border-primary rounded-md px-2 py-1 transition"
           >
             Live
           </a>
@@ -84,4 +84,3 @@ export default function ProjectCard({ project, onClick }) {
     </article>
   );
 }
-

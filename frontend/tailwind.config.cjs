@@ -6,14 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#5A924E',
-        accent: '#919DAB',
-        background: '#131313',
-        secondary: '#27302E'
+        primary: 'var(--color-gold)',
+        accent: 'var(--color-silver)',
+        background: 'var(--color-cream)',
+        secondary: 'var(--color-charcoal)',
+        slate: 'var(--color-slate)',
+        goldlight: 'var(--color-gold-light)'
       },
       fontFamily: {
-        heading: ['"Playfair Display"', 'serif'],
-        body: ['Inter', 'sans-serif']
+        heading: ['"Space Grotesk"', 'sans-serif'],
+        body: ['Manrope', 'sans-serif']
       },
       keyframes: {
         fadeIn: {

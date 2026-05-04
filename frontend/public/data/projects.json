@@ -1,26 +1,6 @@
 {
   "projects": [
     {
-      "id": "tradex",
-      "name": "TradeX",
-      "description": "Beginner-friendly trading platform for Indian stock market using Dhan API and PPO AI model to generate signals for trader education.",
-      "tech": ["React","Node.js","Python","Supabase","TailwindCSS"],
-      "github": "https://github.com/DanielDeshmukh/TradeX",
-      "live": null,
-      "status": "under-development",
-      "progress": 40,
-      "images": [
-        {"file": "tradex-logo.png", "caption": "TradeX branding and logo design representing the trading platform identity."},
-        {"file": "tradex-splashscreen.png", "caption": "Splash screen introducing users to the TradeX platform with engaging visuals."},
-        {"file": "tradex-authpage.png", "caption": "Secure authentication interface for user login and account access management."},
-        {"file": "tradex-profilepage.png", "caption": "User profile dashboard displaying personal information and account details."},
-        {"file": "tradex-priceaction-table.png", "caption": "Real-time price action table showing stock data and market analysis insights."},
-        {"file": "tradex-settingspage.png", "caption": "Comprehensive settings panel for customizing user preferences and platform configuration."},
-        {"file": "tradex-referalcode-generation.png", "caption": "Referral code generation feature enabling users to invite friends and earn rewards."},
-        {"file": "tradex-subscriptionplan-user-activity.png", "caption": "Subscription plans interface with user activity tracking and plan management options."}
-      ]
-    },
-    {
       "id": "babujichaay",
       "name": "Babuji Chaay",
       "description": "Full-stack POS and inventory management system for cafés and tea stalls with real client deployment.",
@@ -38,6 +18,63 @@
         {"file": "babujichaay-invoice.png", "caption": "Professional invoice generation and printing system for customer transactions."},
         {"file": "babujichaay-website.png", "caption": "Public-facing website showcasing the café brand and its offerings online."},
         {"file": "babujichaay-website-franchise.png", "caption": "Franchise information page displaying expansion opportunities and partnership details."}
+      ]
+    },
+    {
+      "id": "Ella",
+      "name": "Ella",
+      "description": "Ella is an AI-powered clinical receptionist designed to streamline patient interactions, appointment scheduling, and enhancing efficiency and patient experience.",
+      "tech": ["Python","Groq API", "Rich","Lang-Chain", "Tesseract OCR", "RAG"],
+      "github": "https://github.com/DanielDeshmukh/ella",
+      "live": null,
+      "status": "deployed",
+      "progress": 100,
+      "images": [
+        {"file": "ella-llm-receptionist-logo.png", "caption": "Ella branding and logo representing the AI-powered clinical receptionist."},
+        {"file": "ella-llm-dosage-calculation.png", "caption": "Utilizing OCRed medical books and advanced RAG techniques, Ella provides accurate dosage calculations for medications, ensuring patient safety and effective treatment."},
+        {"file": "ella-llm-empathy-check.png", "caption": "Ella's LLM empathy check feature. Ella uses advanced Hard RAG and Medical books to provide empathetic responses to patient inquiries, ensuring a compassionate and supportive interaction."},
+        {"file": "ella-llm-immediate-medication-guidance.png", "caption": "Ella's LLM immediate medication guidance feature. Ella utilizes advanced Hard RAG and Medical books to provide immediate and accurate medication guidance to patients, ensuring they receive the correct information for their health needs."},
+        {"file": "ella-llm-quick-reasoning.png", "caption": "Ella's LLM quick reasoning feature. Ella employs advanced Medical books to deliver quick and accurate reasoning for patient inquiries, ensuring efficient and informed responses."},
+        {"file": "ella-llm-quick-understanding-of-patients-query.png", "caption": "Ella leverages advanced Medical books to quickly understand and respond to patient queries, providing timely and relevant information for their healthcare needs."},
+        {"file": "ella-llm-red-flag-protocol.png", "caption": "Ella Uses Intent Recognition and Advanced RAG to identify red flag symptoms in patient interactions, ensuring timely escalation and appropriate care for critical health concerns."},
+        {"file": "ella-llm-seamless-understanding-of-conversation-conclusion.png", "caption": "Ella provides a seamless understanding of conversation conclusions, ensuring effective communication and follow-up for patient interactions."}
+      ]
+    },
+    {
+      "id": "aether",
+      "name": "Aether",
+      "description": "AETHER simulates human-like decision-making to identify vulnerabilities, generate targeted exploits, and provide actionable remediation within a scalable SaaS architecture.",
+      "tech": ["React","Node.js","Express","WebSockets","Python","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/aether",
+      "live": null,
+      "status": "under-development",
+      "progress": 70,
+      "images": [
+        {"file": "aether-logo.png", "caption": "Aether branding and logo."},
+        {"file": "aether-landing-page-hero.png", "caption": "Intelligent agentic reasoning platform redefining automated ethical security testing at scale."},
+        {"file": "aether-moto.png", "caption": "Adaptive AI simulating expert reasoning to deliver scalable, next-generation security testing"},
+        {"file": "aether-authentication.png", "caption": "Passwordless authentication with secure magic links, eliminating keylogging and SQL injection risks."},
+        {"file": "aether-dashboard.png", "caption": "Centralized dashboard showcasing scan targets with detailed debriefs, traces, and remediation insights"}
+      ]
+    },
+    {
+      "id": "tradex",
+      "name": "TradeX",
+      "description": "Beginner-friendly trading platform for Indian stock market using Dhan API and PPO AI model to generate signals for trader education.",
+      "tech": ["React","Node.js","Python","Supabase","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/TradeX",
+      "live": null,
+      "status": "under-development",
+      "progress": 40,
+      "images": [
+        {"file": "tradex-logo.png", "caption": "TradeX branding and logo design representing the trading platform identity."},
+        {"file": "tradex-splashscreen.png", "caption": "Splash screen introducing users to the TradeX platform with engaging visuals."},
+        {"file": "tradex-authpage.png", "caption": "Secure authentication interface for user login and account access management."},
+        {"file": "tradex-profilepage.png", "caption": "User profile dashboard displaying personal information and account details."},
+        {"file": "tradex-priceaction-table.png", "caption": "Real-time price action table showing stock data and market analysis insights."},
+        {"file": "tradex-settingspage.png", "caption": "Comprehensive settings panel for customizing user preferences and platform configuration."},
+        {"file": "tradex-referalcode-generation.png", "caption": "Referral code generation feature enabling users to invite friends and earn rewards."},
+        {"file": "tradex-subscriptionplan-user-activity.png", "caption": "Subscription plans interface with user activity tracking and plan management options."}
       ]
     },
     {
@@ -71,23 +108,6 @@
       ]
     },
     {
-      "id": "aether",
-      "name": "Aether",
-      "description": "AETHER simulates human-like decision-making to identify vulnerabilities, generate targeted exploits, and provide actionable remediation within a scalable SaaS architecture.",
-      "tech": ["React","Node.js","Express","WebSockets","Python","TailwindCSS"],
-      "github": "https://github.com/DanielDeshmukh/aether",
-      "live": null,
-      "status": "under-development",
-      "progress": 70,
-      "images": [
-        {"file": "aether-logo.png", "caption": "Aether branding and logo."},
-        {"file": "aether-landing-page-hero.png", "caption": "Intelligent agentic reasoning platform redefining automated ethical security testing at scale."},
-        {"file": "aether-moto.png", "caption": "Adaptive AI simulating expert reasoning to deliver scalable, next-generation security testing"},
-        {"file": "aether-authentication.png", "caption": "Passwordless authentication with secure magic links, eliminating keylogging and SQL injection risks."},
-        {"file": "aether-dashboard.png", "caption": "Centralized dashboard showcasing scan targets with detailed debriefs, traces, and remediation insights"}
-      ]
-    },
-    {
       "id": "interior-design-portfolio",
       "name": "Interior Design Portfolio",
       "description": "A modern, responsive portfolio website for showcasing interior design projects and services.",
@@ -108,26 +128,6 @@
         {"file": "interior-design-website-inquiry-page.png", "caption": "Inquiry page with a contact form for potential clients to request more information or schedule a consultation."},
         {"file":"interior-design-website-inquiry-form-submission.jpeg", "caption": "Inquiry submissions from the website form delivered directly to the owner via WhatsApp for seamless communication and lead management."},
         {"file": "interior-design-website-footer.png", "caption": "Footer section with contact information, social media links, and copyright details."}
-      ]
-    },
-    {
-      "id": "Ella",
-      "name": "Ella",
-      "description": "Ella is an AI-powered clinical receptionist designed to streamline patient interactions, appointment scheduling, and enhancing efficiency and patient experience.",
-      "tech": ["Python","Groq API", "Rich","Lang-Chain", "Tesseract OCR", "RAG"],
-      "github": "https://github.com/DanielDeshmukh/ella",
-      "live": null,
-      "status": "deployed",
-      "progress": 100,
-      "images": [
-        {"file": "ella-llm-receptionist-logo.png", "caption": "Ella branding and logo representing the AI-powered clinical receptionist."},
-        {"file": "ella-llm-dosage-calculation.png", "caption": "Utilizing OCRed medical books and advanced RAG techniques, Ella provides accurate dosage calculations for medications, ensuring patient safety and effective treatment."},
-        {"file": "ella-llm-empathy-check.png", "caption": "Ella's LLM empathy check feature. Ella uses advanced Hard RAG and Medical books to provide empathetic responses to patient inquiries, ensuring a compassionate and supportive interaction."},
-        {"file": "ella-llm-immediate-medication-guidance.png", "caption": "Ella's LLM immediate medication guidance feature. Ella utilizes advanced Hard RAG and Medical books to provide immediate and accurate medication guidance to patients, ensuring they receive the correct information for their health needs."},
-        {"file": "ella-llm-quick-reasoning.png", "caption": "Ella's LLM quick reasoning feature. Ella employs advanced Medical books to deliver quick and accurate reasoning for patient inquiries, ensuring efficient and informed responses."},
-        {"file": "ella-llm-quick-understanding-of-patients-query.png", "caption": "Ella leverages advanced Medical books to quickly understand and respond to patient queries, providing timely and relevant information for their healthcare needs."},
-        {"file": "ella-llm-red-flag-protocol.png", "caption": "Ella Uses Intent Recognition and Advanced RAG to identify red flag symptoms in patient interactions, ensuring timely escalation and appropriate care for critical health concerns."},
-        {"file": "ella-llm-seamless-understanding-of-conversation-conclusion.png", "caption": "Ella provides a seamless understanding of conversation conclusions, ensuring effective communication and follow-up for patient interactions."}
       ]
     }
   ]

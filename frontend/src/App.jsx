@@ -43,7 +43,7 @@ export default function App(){
       <main className="max-w-6xl mx-auto px-6 pt-20 pb-20">
         <Hero profile={profile} />
         <About profile={profile} />
-        <Skills profile={profile} />
+        <Skills profile={profile} onSave={saveProfile} />
         <Projects onProjectClick={setSelectedProjectId} />
         <Certifications />
         <Resume />

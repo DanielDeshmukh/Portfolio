@@ -11,12 +11,19 @@
   },
   "skills": [
     "Node.js",
-    "React",
-    "Supabase",
-    "TailwindCSS",
+    "Websocket",
+    "Figma",
     "Python",
+    "Groq",
+    "Netlify",
+    "HTTPie",
+    "Supabase",
+    "Vite",
+    "TailwindCSS",
     "PostgreSQL",
-    "Next.js",
-    "TypeScript"
-  ]
+    "_React",
+    "GitHub",
+    "LangChain"
+
+ ]
 }

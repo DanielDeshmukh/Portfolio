@@ -13,7 +13,7 @@ export default function Contact({ profile }) {
     >
       <div className="mb-6 flex items-center gap-3">
         <i className="fas fa-envelope text-primary text-lg sm:text-xl"></i>
-        <h2 className="text-2xl sm:text-3xl font-heading text-white tracking-wide">
+        <h2 className="text-2xl sm:text-3xl font-heading font-semibold text-goldlight tracking-wide">
           Contact
         </h2>
       </div>

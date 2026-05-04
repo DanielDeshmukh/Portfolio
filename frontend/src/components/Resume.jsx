@@ -3,14 +3,14 @@ import React from 'react'
 export default function Resume(){
   return (
     <section id="resume" className="mt-12">
-      <h2 className="text-2xl font-heading">Resume</h2>
-      <div className="mt-4 card border border-gray-700 hover:border-primary transition">
+      <h2 className="text-2xl font-heading font-semibold text-goldlight">Resume</h2>
+      <div className="mt-4 card border border-slate hover:border-primary transition">
         <div className="flex flex-col md:flex-row gap-3">
           <div className="flex-1">
             <iframe title="resume" src="/resume/resume.pdf" className="w-full h-64 bg-black/10 rounded" />
           </div>
           <div className="w-full md:w-56 flex flex-col gap-2">
-            <a href="/resume/resume.pdf" target="_blank" rel="noreferrer" className="px-3 py-2 bg-primary text-black rounded-md inline-flex items-center gap-2 justify-center border border-primary hover:opacity-90 transition text-sm"><i className="fas fa-eye"></i> View</a>
+            <a href="/resume/resume.pdf" target="_blank" rel="noreferrer" className="px-3 py-2 bg-primary text-background rounded-md inline-flex items-center gap-2 justify-center border border-primary hover:opacity-90 transition text-sm"><i className="fas fa-eye"></i> View</a>
             <a href="/resume/resume.pdf" download className="px-3 py-2 border border-accent text-accent rounded-md inline-flex items-center gap-2 justify-center hover:border-primary hover:text-primary transition text-sm"><i className="fas fa-download"></i> Download</a>
           </div>
         </div>

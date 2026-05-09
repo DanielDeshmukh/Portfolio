@@ -17,4 +17,4 @@ build
 #ignore resume directory in public folder
 public/resume
 public/resume/*
-public/ *.png
+public/images

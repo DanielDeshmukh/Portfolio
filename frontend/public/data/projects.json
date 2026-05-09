@@ -1,0 +1,134 @@
+{
+  "projects": [
+    {
+      "id": "babujichaay",
+      "name": "Babuji Chaay",
+      "description": "Full-stack POS and inventory management system for cafés and tea stalls with real client deployment.",
+      "tech": ["React","Node.js","Express","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/Babuji-Chaay",
+      "live": "https://babujichaay.com/",
+      "status": "deployed",
+      "progress": 100,
+      "images": [
+        {"file": "images/babujichaay-logo.png", "caption": "Babuji Chaay brand identity and logo representing the café management system."},
+        {"file": "images/babujichaay-authpage.png", "caption": "Secure login interface for staff and admin access to the POS system."},
+        {"file": "images/babujichaay-adminAuthentication.png", "caption": "Advanced admin authentication interface with multi-level security protocols."},
+        {"file": "images/babujichaay-dashboard.png", "caption": "Main dashboard providing real-time sales metrics, inventory status, and business analytics."},
+        {"file": "images/babujichaay-menu-page.png", "caption": "Interactive menu page allowing quick browsing and ordering of café items."},
+        {"file": "images/babujichaay-invoice.png", "caption": "Professional invoice generation and printing system for customer transactions."},
+        {"file": "images/babujichaay-website.png", "caption": "Public-facing website showcasing the café brand and its offerings online."},
+        {"file": "images/babujichaay-website-franchise.png", "caption": "Franchise information page displaying expansion opportunities and partnership details."}
+      ]
+    },
+    {
+      "id": "Ella",
+      "name": "Ella",
+      "description": "Ella is an AI-powered clinical receptionist designed to streamline patient interactions, appointment scheduling, and enhancing efficiency and patient experience.",
+      "tech": ["Python","Groq API", "Rich","Lang-Chain", "Tesseract OCR", "RAG"],
+      "github": "https://github.com/DanielDeshmukh/ella",
+      "live": null,
+      "status": "deployed",
+      "progress": 100,
+      "images": [
+        {"file": "images/ella-llm-receptionist-logo.png", "caption": "Ella branding and logo representing the AI-powered clinical receptionist."},
+        {"file": "images/ella-llm-dosage-calculation.png", "caption": "Utilizing OCRed medical books and advanced RAG techniques, Ella provides accurate dosage calculations for medications, ensuring patient safety and effective treatment."},
+        {"file": "images/ella-llm-empathy-check.png", "caption": "Ella's LLM empathy check feature. Ella uses advanced Hard RAG and Medical books to provide empathetic responses to patient inquiries, ensuring a compassionate and supportive interaction."},
+        {"file": "images/ella-llm-immediate-medication-guidance.png", "caption": "Ella's LLM immediate medication guidance feature. Ella utilizes advanced Hard RAG and Medical books to provide immediate and accurate medication guidance to patients, ensuring they receive the correct information for their health needs."},
+        {"file": "images/ella-llm-quick-reasoning.png", "caption": "Ella's LLM quick reasoning feature. Ella employs advanced Medical books to deliver quick and accurate reasoning for patient inquiries, ensuring efficient and informed responses."},
+        {"file": "images/ella-llm-quick-understanding-of-patients-query.png", "caption": "Ella leverages advanced Medical books to quickly understand and respond to patient queries, providing timely and relevant information for their healthcare needs."},
+        {"file": "images/ella-llm-red-flag-protocol.png", "caption": "Ella Uses Intent Recognition and Advanced RAG to identify red flag symptoms in patient interactions, ensuring timely escalation and appropriate care for critical health concerns."},
+        {"file": "images/ella-llm-seamless-understanding-of-conversation-conclusion.png", "caption": "Ella provides a seamless understanding of conversation conclusions, ensuring effective communication and follow-up for patient interactions."}
+      ]
+    },
+    {
+      "id": "aether",
+      "name": "Aether",
+      "description": "AETHER simulates human-like decision-making to identify vulnerabilities, generate targeted exploits, and provide actionable remediation within a scalable SaaS architecture.",
+      "tech": ["React","Node.js","Express","WebSockets","Python","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/aether",
+      "live": null,
+      "status": "under-development",
+      "progress": 70,
+      "images": [
+        {"file": "images/aether-logo.png", "caption": "Aether branding and logo."},
+        {"file": "images/aether-landing-page-hero.png", "caption": "Intelligent agentic reasoning platform redefining automated ethical security testing at scale."},
+        {"file": "images/aether-moto.png", "caption": "Adaptive AI simulating expert reasoning to deliver scalable, next-generation security testing"},
+        {"file": "images/aether-authentication.png", "caption": "Passwordless authentication with secure magic links, eliminating keylogging and SQL injection risks."},
+        {"file": "images/aether-dashboard.png", "caption": "Centralized dashboard showcasing scan targets with detailed debriefs, traces, and remediation insights"}
+      ]
+    },
+    {
+      "id": "tradex",
+      "name": "TradeX",
+      "description": "Beginner-friendly trading platform for Indian stock market using Dhan API and PPO AI model to generate signals for trader education.",
+      "tech": ["React","Node.js","Python","Supabase","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/TradeX",
+      "live": null,
+      "status": "under-development",
+      "progress": 40,
+      "images": [
+        {"file": "images/tradex-logo.png", "caption": "TradeX branding and logo design representing the trading platform identity."},
+        {"file": "images/tradex-splashscreen.png", "caption": "Splash screen introducing users to the TradeX platform with engaging visuals."},
+        {"file": "images/tradex-authpage.png", "caption": "Secure authentication interface for user login and account access management."},
+        {"file": "images/tradex-profilepage.png", "caption": "User profile dashboard displaying personal information and account details."},
+        {"file": "images/tradex-priceaction-table.png", "caption": "Real-time price action table showing stock data and market analysis insights."},
+        {"file": "images/tradex-settingspage.png", "caption": "Comprehensive settings panel for customizing user preferences and platform configuration."},
+        {"file": "images/tradex-referalcode-generation.png", "caption": "Referral code generation feature enabling users to invite friends and earn rewards."},
+        {"file": "images/tradex-subscriptionplan-user-activity.png", "caption": "Subscription plans interface with user activity tracking and plan management options."}
+      ]
+    },
+    {
+      "id": "qure",
+      "name": "Qure",
+      "description": "Smart OPD queue management platform enabling remote queue participation without requiring smartphone literacy.",
+      "tech": ["React","Node.js","Express","PostgreSQL","WebSockets"],
+      "github": "https://github.com/DanielDeshmukh/Qure",
+      "live": null,
+      "status": "under-development",
+      "progress": 10,
+      "images": [
+        {"file": "images/qure-logo.png", "caption": "Qure branding and logo representing innovative queue management solutions."},
+        {"file": "images/qure-language-selection.png", "caption": "Multi-language selection interface making the platform accessible to diverse users."},
+        {"file": "images/qure-role-selection.png", "caption": "Role selection screen distinguishing between patients, medical professionals, and admin users."},
+        {"file": "images/qure-patient-signup.png", "caption": "Patient registration form with simplified interface for easy queue enrollment and management."},
+        {"file": "images/qure-medic-signup.png", "caption": "Medical professional registration and authentication for healthcare provider access."}
+      ]
+    },
+    {
+      "id": "hector",
+      "name": "Hector",
+      "description": "Hector is a high-precision, Hard-RAG legal intelligence system designed to navigate the complexities of Indian Law.",
+      "tech": ["React","Node.js","Express","WebSockets","Python","TailwindCSS","Lang-Chain"],
+      "github": "https://github.com/DanielDeshmukh/Hector",
+      "live": null,
+      "status": "under-development",
+      "progress": 20,
+      "images": [
+        {"file": "images/hector-legal-intelligence.png", "caption": "Hector branding and logo. "}
+      ]
+    },
+    {
+      "id": "interior-design-portfolio",
+      "name": "Interior Design Portfolio",
+      "description": "A modern, responsive portfolio website for showcasing interior design projects and services.",
+      "tech": ["React","TailwindCSS", "Netlify", "Figma", "WhatsApp API"],
+      "github": "https://github.com/DanielDeshmukh/Interior-Designs-Template",
+      "live": "https://danieldeshmukh-webdesigns.netlify.app/",
+      "status": "deployed",
+      "progress": 100,
+      "images": [
+        {"file": "images/interior-design-website-logo.png", "caption": "Interior Design Portfolio branding and logo."},
+        {"file": "images/interior-design-website-icon.png", "caption": "Custom icon design representing the interior design portfolio's unique identity."},
+        {"file": "images/interior-design-website-hero-section.png", "caption": "Modern, responsive landing page for the interior design portfolio."},
+        {"file": "images/interior-design-website-about-us.png", "caption": "About Us page providing information about the interior design services offered and the designer's background."},
+        {"file": "images/interior-design-website-contact-page.png", "caption": "Contact page with a form for potential clients to get in touch for inquiries and consultations."},
+        {"file": "images/interior-design-website-projects-section.png", "caption": "Projects page showcasing a gallery of interior design projects with descriptions and images."},
+        {"file": "images/interior-design-website-project-grid.png", "caption": "Project grid layout displaying various interior design projects in an organized and visually appealing manner."},
+        {"file": "images/interior-design-website-services.png", "caption": "Services page outlining the various interior design services offered, including consultations, space planning, and custom design solutions."},
+        {"file": "images/interior-design-website-inquiry-page.png", "caption": "Inquiry page with a contact form for potential clients to request more information or schedule a consultation."},
+        {"file":"images/interior-design-website-inquiry-form-submission.jpeg", "caption": "Inquiry submissions from the website form delivered directly to the owner via WhatsApp for seamless communication and lead management."},
+        {"file": "images/interior-design-website-footer.png", "caption": "Footer section with contact information, social media links, and copyright details."}
+      ]
+    }
+  ]
+}

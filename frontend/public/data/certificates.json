@@ -11,6 +11,12 @@
       "name": "Samsung Innovation",
       "file": "images/certificate-samsung.png",
       "description": "Successfully attended a hands-on GitHub Copilot workshop conducted by Ansh Mehra on January 20, 2026, at Samsung BKC, focused on leveraging AI-powered development using the Samsung Galaxy Book5 Series and Galaxy AI ecosystem. Demonstrated initiative in adopting modern AI-assisted coding tools to enhance development speed and productivity."
-    }
+    },
+      {
+        "id": "Responsive Web Design",
+        "name": "FreeCodeCamp Responsive Web Design",
+        "file": "images/certificate-freeCodeCamp-Legacy-Responsive-Web_Design.jpeg",
+        "description": "Successfully completed the FreeCodeCamp Responsive Web Design certification, demonstrating proficiency in HTML, CSS, and responsive design principles to create visually appealing and mobile-friendly web pages. This certification reflects a strong foundation in front-end web development and a commitment to building accessible and user-friendly websites."
+      }
   ]
 }

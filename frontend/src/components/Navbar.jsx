@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function Navbar(){
+export default function Navbar({ onNavigate }){
   const [open,setOpen] = useState(false)
   const items = [
     ['Home','#home'],
@@ -9,15 +9,23 @@ export default function Navbar(){
     ['Projects','#projects'],
     ['Certifications','#certifications'],
     ['Resume','#resume'],
-    ['Contact','#contact']
+    ['Contact','#contact'],
+    ['Hire Me','/hire']
   ]
 
   const handleNavClick = (href) => {
     setOpen(false)
     if (href.startsWith('#')) {
+      if (typeof onNavigate === 'function') {
+        onNavigate('home')
+      }
       const element = document.querySelector(href)
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else if (href === '/hire') {
+      if (typeof onNavigate === 'function') {
+        onNavigate('hire')
       }
     }
   }

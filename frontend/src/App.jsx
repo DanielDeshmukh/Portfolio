@@ -7,12 +7,14 @@ import Projects from './components/Projects'
 import ProjectDetail from './components/ProjectDetail'
 import Certifications from './components/Certifications'
 import Resume from './components/Resume'
+import HireMe from './components/HireMe'
 import Contact from './components/Contact'
 import { loadProfile } from './utils/loadData'
 
 export default function App(){
   const [profile, setProfile] = useState(null)
   const [selectedProjectId, setSelectedProjectId] = useState(null)
+  const [page, setPage] = useState('home')
 
   useEffect(()=>{
     const local = localStorage.getItem('profile_override')
@@ -31,7 +33,7 @@ export default function App(){
   if(selectedProjectId) {
     return (
       <div className="min-h-screen bg-background text-gray-100">
-        <Navbar />
+        <Navbar onNavigate={setPage} />
         <ProjectDetail projectId={selectedProjectId} onClose={() => setSelectedProjectId(null)} />
       </div>
     )
@@ -39,15 +41,21 @@ export default function App(){
 
   return (
     <div className="min-h-screen bg-background text-gray-100">
-      <Navbar />
+      <Navbar onNavigate={setPage} />
       <main className="max-w-6xl mx-auto px-6 pt-20 pb-20">
-        <Hero profile={profile} />
-        <About profile={profile} />
-        <Skills profile={profile} onSave={saveProfile} />
-        <Projects onProjectClick={setSelectedProjectId} />
-        <Certifications />
-        <Resume />
-        <Contact profile={profile} />
+        {page === 'hire' ? (
+          <HireMe />
+        ) : (
+          <>
+            <Hero profile={profile} />
+            <About profile={profile} />
+            <Skills profile={profile} onSave={saveProfile} />
+            <Projects onProjectClick={setSelectedProjectId} />
+            <Certifications />
+            <Resume />
+            <Contact profile={profile} />
+          </>
+        )}
       </main>
     </div>
   )

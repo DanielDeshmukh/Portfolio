@@ -1,10 +1,22 @@
 {
   "certificates": [
     {
+      "id": "CS50",
+      "name": "CS50's Introduction to Artificial Intelligence with Python",
+      "file": "images/certificate-CS50-Introduction-to-AI-with-python.png",
+      "description": "Successfully completed the CS50's Introduction to Artificial Intelligence with Python certification, demonstrating proficiency in fundamental AI concepts and practical implementation using Python. This certification reflects a strong understanding of AI principles, algorithms, and applications, showcasing the ability to develop intelligent systems and solve complex problems using AI techniques."
+    },
+    {
       "id": "b10x",
       "name": "B10X League",
       "file": "images/certificate-b10x.png",
       "description": "Successfully attended a webinar conducted by B10X focused on the latest AI tools and strategies to enhance work efficiency, productivity, and modern digital workflows. Demonstrated proactive learning and commitment to staying updated with emerging AI technologies."
+    },
+    {
+      "id": "Javascript Algorithms and Data Structures",
+      "name": "FreeCodeCamp Javascript Algorithms and Data Structures",
+      "file": "images/certificate-freeCodeCamp-Legacy-Javascript-Algorithm-Data-Structures.jpeg",
+      "description": "Successfully completed the FreeCodeCamp Javascript Algorithms and Data Structures certification, demonstrating proficiency in JavaScript programming and data structures. This certification reflects a strong foundation in algorithmic thinking and problem-solving skills."
     },
     {
       "id": "samsung",

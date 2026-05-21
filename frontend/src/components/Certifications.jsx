@@ -13,6 +13,7 @@ const loadCertificates = async () => {
 export default function Certifications() {
   const [certificates, setCertificates] = useState([])
   const [selectedCert, setSelectedCert] = useState(null)
+  const [showAll, setShowAll] = useState(false)
 
   useEffect(() => {
     loadCertificates().then(data => setCertificates(data.certificates || []))
@@ -20,11 +21,23 @@ export default function Certifications() {
 
   if (certificates.length === 0) return null
 
+  const visibleCertificates = showAll ? certificates : certificates.slice(0, 4)
+
   return (
     <section id="certifications" className="mt-12">
-      <h2 className="text-2xl font-heading font-semibold text-goldlight">Certifications & Achievements</h2>
+      <div className="flex justify-between items-end gap-4">
+        <h2 className="text-2xl font-heading font-semibold text-goldlight">Certifications & Achievements</h2>
+        {certificates.length > 4 && (
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="text-xs font-bold uppercase tracking-widest text-accent hover:text-primary transition-colors"
+          >
+            {showAll ? 'Show Less' : `Show More (${certificates.length})`}
+          </button>
+        )}
+      </div>
       <div className="mt-6 grid md:grid-cols-2 gap-4">
-        {certificates.map(cert => (
+        {visibleCertificates.map(cert => (
           <div
             key={cert.id}
             onClick={() => setSelectedCert(cert)}

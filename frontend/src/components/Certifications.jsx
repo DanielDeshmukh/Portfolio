@@ -88,8 +88,8 @@ function CertificateModal({ certificate, onClose }) {
   }, [onClose])
 
   return (
-    <div className="fixed inset-0 bg-black/90 backdrop-blur z-50 flex items-center justify-center overflow-y-auto p-4 user-select-none">
-      <div className="max-w-3xl w-full">
+    <div className="fixed inset-0 bg-black/90 backdrop-blur z-50 overflow-y-auto p-4 user-select-none">
+      <div className="max-w-3xl w-full mx-auto">
         <button
           onClick={onClose}
           className="mb-4 inline-flex items-center gap-2 text-gray-300 hover:text-primary transition border border-slate hover:border-primary rounded-md px-2 py-1 text-sm"

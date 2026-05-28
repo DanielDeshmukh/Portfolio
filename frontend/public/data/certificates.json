@@ -7,6 +7,12 @@
       "description": "Successfully completed the CS50's Introduction to Artificial Intelligence with Python certification, This certification reflects a strong understanding of AI principles, algorithms, and applications."
     },
     {
+      "id": "anthropic",
+      "name": "Claude with Anthropic API",
+      "file": "images/certificate-claude-with-anthropic-api.jpg",
+      "description": "Successfully completed the 'Claude with Anthropic API' certification, demonstrating proficiency in utilizing the Anthropic API to integrate and leverage the capabilities of the Claude language model for various applications. This certification reflects a strong understanding of AI language models and their practical implementation using the Anthropic API."
+    },
+    {
       "id": "b10x",
       "name": "B10X League",
       "file": "images/certificate-b10x.png",

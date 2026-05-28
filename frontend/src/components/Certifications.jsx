@@ -21,41 +21,125 @@ export default function Certifications() {
 
   if (certificates.length === 0) return null
 
+  const DOMAIN_MAP = {
+    "AI & Tools": {
+      icon: "fas fa-robot",
+      ids: ["anthropic", "CS50", "samsung", "b10x"]
+    },
+    "Web Dev": {
+      icon: "fas fa-code",
+      ids: ["freeCodeCamp"]
+    },
+    "Finance": {
+      icon: "fas fa-chart-line",
+      ids: ["b10x"]
+    },
+    "Workshops": {
+      icon: "fas fa-chalkboard-teacher",
+      ids: ["samsung", "b10x"]
+    }
+  }
+
   const visibleCertificates = showAll ? certificates : certificates.slice(0, 4)
+  const groupedCerts = visibleCertificates.reduce((acc, cert) => {
+    if (!acc[cert.id]) acc[cert.id] = []
+    acc[cert.id].push(cert)
+    return acc
+  }, {})
 
   return (
     <section id="certifications" className="mt-12">
-      <div className="flex justify-between items-end gap-4">
+      <div className="flex justify-between items-center gap-4">
         <h2 className="text-2xl font-heading font-semibold text-goldlight">Certifications & Achievements</h2>
         {certificates.length > 4 && (
           <button
             onClick={() => setShowAll(!showAll)}
             className="text-xs font-bold uppercase tracking-widest text-accent hover:text-primary transition-colors"
           >
-            {showAll ? 'Show Less' : `Show More (${certificates.length})`}
+            {showAll ? 'Show Less' : `Show More (${certificates.length - 4})`}
           </button>
         )}
       </div>
-      <div className="mt-6 grid md:grid-cols-2 gap-4">
-        {visibleCertificates.map(cert => (
-          <div
-            key={cert.id}
-            onClick={() => setSelectedCert(cert)}
-            className="card p-3 border border-slate hover:border-primary transition cursor-pointer group"
-          >
-            <div className="w-full h-40 rounded overflow-hidden bg-black/20 mb-3">
-              <img
-                src={`/${cert.file}`}
-                alt={cert.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                onContextMenu={e => e.preventDefault()}
-                draggable={false}
-              />
+      <hr className="border-slate mb-6" />
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {Object.entries(DOMAIN_MAP).map(([domain, config]) => {
+          const domainCount = certificates.filter(cert => config.ids.includes(cert.id)).length
+          const progressSegments = Math.min(domainCount, certificates.length)
+
+          return (
+            <div key={domain} tabIndex={0} className="card p-3 border border-slate focus-visible:outline focus-visible:outline-1">
+              <i className={`${config.icon} text-base text-gray-300`}></i>
+              <h3 className="font-heading text-base font-semibold mt-2">{domain}</h3>
+              <p className="text-xs text-gray-500 mt-1">{domainCount} cert(s)</p>
+              <div className="mt-3 h-1 bg-black/20 rounded overflow-hidden">
+                {progressSegments === 0 ? (
+                  <div className="h-full w-1 border-t border-primary" />
+                ) : (
+                  <div className="h-full flex">
+                    {certificates.map((cert, index) => (
+                      <div
+                        key={`${domain}-${cert.id}-${index}`}
+                        className={`h-full flex-1 ${index < progressSegments ? 'border-t border-primary' : ''}`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
-            <h3 className="font-heading text-base font-semibold group-hover:text-primary transition">{cert.name}</h3>
-            <p className="text-xs text-gray-300 mt-1">{cert.description}</p>
-          </div>
-        ))}
+          )
+        })}
+      </div>
+
+      <div className="mt-6 grid gap-4">
+        {Object.entries(groupedCerts).map(([id, groupCertificates]) => {
+          const totalGroupCount = certificates.filter(cert => cert.id === id).length
+          const isPartialGroup = !showAll && groupCertificates.length < totalGroupCount
+
+          return (
+            <div
+              key={id}
+              className="card border border-slate rounded-lg"
+            >
+              <div className="flex items-center gap-3 border-b border-slate p-3">
+                <div className="w-8 h-8 flex items-center justify-center border border-slate rounded-md p-2 text-xs font-bold uppercase text-gray-300">
+                  {id.slice(0, 2).toUpperCase()}
+                </div>
+                <h3 className="font-heading text-base font-semibold">
+                  {id.charAt(0).toUpperCase() + id.slice(1)}
+                </h3>
+                <div className="ml-auto border border-slate rounded px-2 py-1 text-xs text-gray-300">
+                  {groupCertificates.length} certificate(s)
+                </div>
+              </div>
+
+              {isPartialGroup && (
+                <p className="text-xs text-gray-500 italic px-4 py-3 border-b border-slate">
+                  Showing {groupCertificates.length} of {totalGroupCount} &mdash; expand to see all
+                </p>
+              )}
+
+              <div>
+                {groupCertificates.map(cert => (
+                  <div
+                    key={cert.name}
+                    onClick={() => setSelectedCert(cert)}
+                    tabIndex={0}
+                    className="border-b border-slate last:border-b-0 hover:border-primary transition cursor-pointer py-3 px-4 group focus-visible:outline focus-visible:outline-1"
+                  >
+                    <div className="flex gap-3">
+                      <div className="w-2 h-2 rounded-full border border-primary mt-2 flex-none" />
+                      <div>
+                        <h4 className="font-heading text-base font-semibold group-hover:text-primary transition">{cert.name}</h4>
+                        <p className="text-xs text-gray-300 mt-1">{cert.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+        })}
       </div>
 
       {selectedCert && (

@@ -19,7 +19,7 @@
       "description": "Successfully attended a webinar conducted by B10X focused on the latest AI tools and strategies to enhance work efficiency, productivity, and modern digital workflows. Demonstrated proactive learning and commitment to staying updated with emerging AI technologies."
     },
     {
-      "id": "Javascript Algorithms and Data Structures",
+      "id": "freeCodeCamp",
       "name": "FreeCodeCamp Javascript Algorithms and Data Structures",
       "file": "images/certificate-freeCodeCamp-Legacy-Javascript-Algorithm-Data-Structures.jpeg",
       "description": "Successfully completed the FreeCodeCamp Javascript Algorithms and Data Structures certification, demonstrating proficiency in JavaScript programming and data structures. This certification reflects a strong foundation in algorithmic thinking and problem-solving skills."
@@ -30,8 +30,20 @@
       "file": "images/certificate-samsung.png",
       "description": "Successfully attended a hands-on GitHub Copilot workshop conducted by Ansh Mehra on January 20, 2026, at Samsung BKC, focused on leveraging AI-powered development using the Samsung Galaxy Book5 Series and Galaxy AI ecosystem. Demonstrated initiative in adopting modern AI-assisted coding tools to enhance development speed and productivity."
     },
+    {
+      "id": "freeCodeCamp",
+      "name": "FreeCodeCamp Front End Libraries",
+      "file": "images/certificate-freeCodeCamp-Front-End-Libraries.jpg",
+      "description": "Successfully completed the FreeCodeCamp Front End Libraries certification, This certification reflects a strong foundation in client-side development and a commitment to creating modern, user-friendly interfaces."
+    },
+    {
+      "id": "anthropic",
+      "name": "Introduction to Sub Agents",
+      "file": "images/certificate-claude-introduction-to-sub-agents.jpg",
+      "description": "Successfully completed the 'Introduction to Sub Agents' certification, This certification reflects a strong understanding of modular AI design and the practical implementation of sub-agents for improved functionality and performance."
+    },
       {
-        "id": "Responsive Web Design",
+        "id": "freeCodeCamp",
         "name": "FreeCodeCamp Responsive Web Design",
         "file": "images/certificate-freeCodeCamp-Legacy-Responsive-Web_Design.jpeg",
         "description": "Successfully completed the FreeCodeCamp Responsive Web Design certification, demonstrating proficiency in HTML, CSS, and responsive design principles to create visually appealing and mobile-friendly web pages. This certification reflects a strong foundation in front-end web development and a commitment to building accessible and user-friendly websites."

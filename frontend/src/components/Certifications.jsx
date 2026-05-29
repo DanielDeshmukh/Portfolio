@@ -14,6 +14,7 @@ export default function Certifications() {
   const [certificates, setCertificates] = useState([])
   const [selectedCert, setSelectedCert] = useState(null)
   const [showAll, setShowAll] = useState(false)
+  const [activeTab, setActiveTab] = useState('all')
 
   useEffect(() => {
     loadCertificates().then(data => setCertificates(data.certificates || []))
@@ -21,27 +22,20 @@ export default function Certifications() {
 
   if (certificates.length === 0) return null
 
-  const DOMAIN_MAP = {
-    "AI & Tools": {
-      icon: "fas fa-robot",
-      ids: ["anthropic", "CS50", "samsung", "b10x"]
-    },
-    "Web Dev": {
-      icon: "fas fa-code",
-      ids: ["freeCodeCamp"]
-    },
-    "Finance": {
-      icon: "fas fa-chart-line",
-      ids: ["b10x"]
-    },
-    "Workshops": {
-      icon: "fas fa-chalkboard-teacher",
-      ids: ["samsung", "b10x"]
-    }
-  }
+  const tabList = [
+    { id: 'all', label: 'All' },
+    ...Array.from(new Set(certificates.map(c => c.id))).map(id => ({
+      id,
+      label: id.charAt(0).toUpperCase() + id.slice(1)
+    }))
+  ]
 
-  const visibleCertificates = showAll ? certificates : certificates.slice(0, 4)
-  const groupedCerts = visibleCertificates.reduce((acc, cert) => {
+  const sliced = showAll ? certificates : certificates.slice(0, 4)
+  const visibleCertificates = activeTab === 'all'
+    ? sliced
+    : sliced.filter(c => c.id === activeTab)
+  const hiddenCount = certificates.length - 4
+  const grouped = visibleCertificates.reduce((acc, cert) => {
     if (!acc[cert.id]) acc[cert.id] = []
     acc[cert.id].push(cert)
     return acc
@@ -56,87 +50,92 @@ export default function Certifications() {
             onClick={() => setShowAll(!showAll)}
             className="text-xs font-bold uppercase tracking-widest text-accent hover:text-primary transition-colors"
           >
-            {showAll ? 'Show Less' : `Show More (${certificates.length - 4})`}
+            {showAll ? 'Show Less' : `Show More (${hiddenCount} more)`}
           </button>
         )}
       </div>
       <hr className="border-slate mb-6" />
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {Object.entries(DOMAIN_MAP).map(([domain, config]) => {
-          const domainCount = certificates.filter(cert => config.ids.includes(cert.id)).length
-          const progressSegments = Math.min(domainCount, certificates.length)
+      <div className="flex flex-wrap gap-1.5 mt-4 mb-4">
+        {tabList.map(tab => {
+          const totalCount = tab.id === 'all'
+            ? certificates.length
+            : certificates.filter(c => c.id === tab.id).length
+
+          const isActive = activeTab === tab.id
 
           return (
-            <div key={domain} tabIndex={0} className="card p-3 border border-slate focus-visible:outline focus-visible:outline-1">
-              <i className={`${config.icon} text-base text-gray-300`}></i>
-              <h3 className="font-heading text-base font-semibold mt-2">{domain}</h3>
-              <p className="text-xs text-gray-500 mt-1">{domainCount} cert(s)</p>
-              <div className="mt-3 h-1 bg-black/20 rounded overflow-hidden">
-                {progressSegments === 0 ? (
-                  <div className="h-full w-1 border-t border-primary" />
-                ) : (
-                  <div className="h-full flex">
-                    {certificates.map((cert, index) => (
-                      <div
-                        key={`${domain}-${cert.id}-${index}`}
-                        className={`h-full flex-1 ${index < progressSegments ? 'border-t border-primary' : ''}`}
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md border text-xs font-medium transition-colors
+                ${isActive
+                  ? 'border-primary text-primary bg-transparent'
+                  : 'border-slate text-gray-400 hover:border-gray-500 hover:text-gray-300 bg-transparent'
+                }`}
+            >
+              {tab.label}
+              <span className={`text-xs px-1.5 py-0.5 rounded-full border
+                ${isActive
+                  ? 'border-primary text-primary'
+                  : 'border-slate text-gray-500'
+                }`}
+              >
+                {totalCount}
+              </span>
+            </button>
           )
         })}
       </div>
 
-      <div className="mt-6 grid gap-4">
-        {Object.entries(groupedCerts).map(([id, groupCertificates]) => {
-          const totalGroupCount = certificates.filter(cert => cert.id === id).length
-          const isPartialGroup = !showAll && groupCertificates.length < totalGroupCount
+      <div className="flex flex-col gap-3 mt-2">
+        {Object.entries(grouped).map(([id, certs]) => {
+          const totalInGroup = certificates.filter(c => c.id === id).length
+          const isPartial = certs.length < totalInGroup && !showAll
 
           return (
-            <div
-              key={id}
-              className="card border border-slate rounded-lg"
-            >
-              <div className="flex items-center gap-3 border-b border-slate p-3">
-                <div className="w-8 h-8 flex items-center justify-center border border-slate rounded-md p-2 text-xs font-bold uppercase text-gray-300">
-                  {id.slice(0, 2).toUpperCase()}
+            <div key={id} className="border border-slate rounded-lg overflow-hidden">
+              {activeTab === 'all' && (
+                <div className="flex items-center gap-3 px-4 py-2.5 border-b border-slate bg-black/20">
+                  <div className="w-8 h-8 rounded-md border border-slate flex items-center justify-center text-xs font-bold text-gray-300 uppercase flex-shrink-0">
+                    {id.slice(0, 2)}
+                  </div>
+                  <span className="text-sm font-semibold text-gray-200 capitalize flex-1">
+                    {id}
+                  </span>
+                  <span className="text-xs text-gray-500 border border-slate rounded-full px-2 py-0.5">
+                    {totalInGroup} certificate{totalInGroup !== 1 ? 's' : ''}
+                  </span>
                 </div>
-                <h3 className="font-heading text-base font-semibold">
-                  {id.charAt(0).toUpperCase() + id.slice(1)}
-                </h3>
-                <div className="ml-auto border border-slate rounded px-2 py-1 text-xs text-gray-300">
-                  {groupCertificates.length} certificate(s)
-                </div>
-              </div>
-
-              {isPartialGroup && (
-                <p className="text-xs text-gray-500 italic px-4 py-3 border-b border-slate">
-                  Showing {groupCertificates.length} of {totalGroupCount} &mdash; expand to see all
-                </p>
               )}
 
-              <div>
-                {groupCertificates.map(cert => (
-                  <div
-                    key={cert.name}
-                    onClick={() => setSelectedCert(cert)}
-                    tabIndex={0}
-                    className="border-b border-slate last:border-b-0 hover:border-primary transition cursor-pointer py-3 px-4 group focus-visible:outline focus-visible:outline-1"
-                  >
-                    <div className="flex gap-3">
-                      <div className="w-2 h-2 rounded-full border border-primary mt-2 flex-none" />
-                      <div>
-                        <h4 className="font-heading text-base font-semibold group-hover:text-primary transition">{cert.name}</h4>
-                        <p className="text-xs text-gray-300 mt-1">{cert.description}</p>
-                      </div>
-                    </div>
+              {certs.map((cert, i) => (
+                <div
+                  key={cert.name}
+                  onClick={() => setSelectedCert(cert)}
+                  className={`flex items-start gap-3 px-4 py-3 cursor-pointer hover:border-primary transition group
+                    ${i < certs.length - 1 ? 'border-b border-slate' : ''}`}
+                >
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-1.5" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-semibold text-gray-200 group-hover:text-primary transition">
+                      {cert.name}
+                    </p>
+                    <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">
+                      {cert.description}
+                    </p>
                   </div>
-                ))}
-              </div>
+                  <i className="fas fa-chevron-right text-gray-600 text-xs mt-1 flex-shrink-0" />
+                </div>
+              ))}
+
+              {isPartial && (
+                <div className="px-4 py-2 border-t border-slate">
+                  <p className="text-xs text-gray-500 italic">
+                    Showing {certs.length} of {totalInGroup} — expand to see all
+                  </p>
+                </div>
+              )}
             </div>
           )
         })}

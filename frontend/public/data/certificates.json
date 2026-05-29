@@ -25,6 +25,12 @@
       "description": "Successfully completed the FreeCodeCamp Javascript Algorithms and Data Structures certification, demonstrating proficiency in JavaScript programming and data structures. This certification reflects a strong foundation in algorithmic thinking and problem-solving skills."
     },
     {
+      "id": "anthropic",
+      "name": "Introduction to Agent Skills",
+      "file": "images/certificate-claude-introduction-to-agent-skills.jpg",
+      "description": "Successfully completed the 'Introduction to Agent Skills' certification, demonstrating a strong understanding of the fundamental skills required for building and deploying AI agents skills. This certification reflects proficiency in designing, developing, and implementing agent skills."
+    },
+    {
       "id": "samsung",
       "name": "Samsung Innovation",
       "file": "images/certificate-samsung.png",

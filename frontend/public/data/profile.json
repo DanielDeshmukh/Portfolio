@@ -11,8 +11,10 @@
   },
   "skills": [
     "Node.js",
+    "Sqlite",
     "Websocket",
     "Figma",
+    "Anthropic",
     "Python",
     "Groq",
     "Netlify",
@@ -21,6 +23,7 @@
     "Vite",
     "TailwindCSS",
     "PostgreSQL",
+    "ClaudeCode",
     "_React",
     "GitHub",
     "LangChain"

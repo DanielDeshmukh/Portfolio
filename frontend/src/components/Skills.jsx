@@ -3,6 +3,9 @@ import {
   Figma,
   Github,
   Vite,
+  AnthropicIcon as Anthropic,
+  ClaudeCode ,
+  SqliteIcon as Sqlite,
   Groq,
   HttpieIcon as Httpie,
   Langchain,
@@ -21,6 +24,9 @@ const skillIconMap = {
   'Node.js': Nodejs,
   Supabase,
   Vite,
+  Anthropic,
+  ClaudeCode,
+  Sqlite,
   TailwindCSS: Tailwind,
   Python,
   Groq,
@@ -37,7 +43,7 @@ const skillIconMap = {
   Langchain,
 }
 
-const whiteBgIconSkills = new Set(['HTTPie', 'Websocket', 'Websockets', 'GitHub', 'github','Groq'])
+const whiteBgIconSkills = new Set(['HTTPie', 'Websocket', 'Websockets', 'GitHub', 'github','Groq','Anthropic'])
 
 export default function Skills({ profile, adminMode, onSave }) {
   const [skills, setSkills] = useState([])

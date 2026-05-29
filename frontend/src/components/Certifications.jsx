@@ -22,6 +22,8 @@ export default function Certifications() {
 
   if (certificates.length === 0) return null
 
+  const ids = new Set(certificates.map(c => c.id)).size
+
   const tabList = [
     { id: 'all', label: 'All' },
     ...Array.from(new Set(certificates.map(c => c.id))).map(id => ({
@@ -30,11 +32,11 @@ export default function Certifications() {
     }))
   ]
 
-  const sliced = showAll ? certificates : certificates.slice(0, 4)
+  const sliced = showAll ? certificates : certificates.slice(0, ids)
   const visibleCertificates = activeTab === 'all'
     ? sliced
     : sliced.filter(c => c.id === activeTab)
-  const hiddenCount = certificates.length - 4
+  const hiddenCount = certificates.length - ids
   const grouped = visibleCertificates.reduce((acc, cert) => {
     if (!acc[cert.id]) acc[cert.id] = []
     acc[cert.id].push(cert)
@@ -45,7 +47,7 @@ export default function Certifications() {
     <section id="certifications" className="mt-12">
       <div className="flex justify-between items-center gap-4">
         <h2 className="text-2xl font-heading font-semibold text-goldlight">Certifications & Achievements</h2>
-        {certificates.length > 4 && (
+        {certificates.length > ids && (
           <button
             onClick={() => setShowAll(!showAll)}
             className="text-xs font-bold uppercase tracking-widest text-accent hover:text-primary transition-colors"

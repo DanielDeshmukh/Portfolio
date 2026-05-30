@@ -14,9 +14,9 @@
     },
     {
       "id": "anthropic",
-      "name": "Claude with Anthropic API",
-      "file": "images/certificate-claude-with-anthropic-api.jpg",
-      "description": "Successfully completed the 'Claude with Anthropic API' certification, demonstrating proficiency in utilizing the Anthropic API to integrate and leverage the capabilities of the Claude language model for various applications. This certification reflects a strong understanding of AI language models and their practical implementation using the Anthropic API."
+      "name": "Model Context Protocols Advanced Topics",
+      "file": "images/certificate-claude-model-context-protocol-advanced-topics.jpg",
+      "description": "Successfully completed the 'Model Context Protocols Advanced Topics' certification, learning advanceed topics such as sampling, root, and more. This certification reflects a strong understanding of advanced concepts in model context protocols and their practical applications in AI development."
     },
     {
       "id": "b10x",
@@ -29,6 +29,12 @@
       "name": "Samsung Innovation",
       "file": "images/certificate-samsung.png",
       "description": "Successfully attended a hands-on GitHub Copilot workshop conducted by Ansh Mehra on January 20, 2026, at Samsung BKC, focused on leveraging AI-powered development using the Samsung Galaxy Book5 Series and Galaxy AI ecosystem. Demonstrated initiative in adopting modern AI-assisted coding tools to enhance development speed and productivity."
+    },
+    {
+      "id": "anthropic",
+      "name": "Claude with Anthropic API",
+      "file": "images/certificate-claude-with-anthropic-api.jpg",
+      "description": "Successfully completed the 'Claude with Anthropic API' certification, demonstrating proficiency in utilizing the Anthropic API to integrate and leverage the capabilities of the Claude language model for various applications. This certification reflects a strong understanding of AI language models and their practical implementation using the Anthropic API."
     },
     {
       "id": "anthropic",

@@ -61,11 +61,24 @@
       "description": "Successfully completed the 'Introduction to Agent Skills' certification, demonstrating a strong understanding of the fundamental skills required for building and deploying AI agents skills. This certification reflects proficiency in designing, developing, and implementing agent skills."
     },
     {
+      "id": "anthropic",
+      "name": "Claude Code in Action",
+      "file": "images/certificate-claude-code-in-action.jpg",
+      "description": "Successfully completed the 'Claude Code in Action' certification, demonstrating practical application of Claude Code in real-world scenarios. This certification reflects proficiency in utilizing Claude Code for various programming tasks and projects."
+    },
+    {
       "id": "freeCodeCamp",
       "name": "FreeCodeCamp Responsive Web Design",
       "file": "images/certificate-freeCodeCamp-Legacy-Responsive-Web_Design.jpeg",
       "description": "Successfully completed the FreeCodeCamp Responsive Web Design certification, demonstrating proficiency in HTML, CSS, and responsive design principles to create visually appealing and mobile-friendly web pages. This certification reflects a strong foundation in front-end web development and a commitment to building accessible and user-friendly websites."
     },
+    {
+      "id": "CS50",
+      "name": "CS50's Introduction to Databases with SQL",
+      "file": "images/certificate-introduction-to-sql.jpg",
+      "description": "Successfully attended the 'Introduction to Databases with SQL' certification, Completing seven problems sets and a final year project on Legal document retrieval system HECTOR. This certification reflects a strong understanding of database design, SQL querying, and practical application of database management systems."
+    },
+
     {
       "id": "anthropic",
       "name": "Introduction to Sub Agents",

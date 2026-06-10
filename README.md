@@ -1,3 +1,5 @@
+⭐ If you're using this as a reference for your own portfolio — a star helps other devs find it. Takes 2 seconds.
+
 # Daniel Shashank Deshmukh Portfolio
 
 Professional portfolio website for Daniel Shashank Deshmukh, a full stack developer focused on scalable SaaS systems, automation workflows, and real-world product engineering.

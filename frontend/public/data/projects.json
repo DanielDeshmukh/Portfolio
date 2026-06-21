@@ -41,6 +41,37 @@
       ]
     },
     {
+      "id": "github-profile-score",
+      "name": "GitHub Profile Score",
+      "description": "API service that calculates a GitHub user's profile score based on their contributions, repositories, and activity.",
+      "tech": ["TypeScript","Node.js","Express","TailwindCSS"],
+      "github": "https://github.com/DanielDeshmukh/github-profile-score",
+      "live": null,
+      "status": "deployed",
+      "progress": 100,
+      "images": [
+
+        {"file": "images/github-profile-score-branding.png", "caption": "GitHub Profile Score Logo branding"},
+        {"file": "images/DanielDeshmukh.png", "caption": "GitHub Profile Score web application showcasing the user's profile score and contributions."},
+        {"file": "images/contributions.png", "caption": "SVG card displaying the user's contributions and activity on GitHub, providing a visual representation of their engagement and impact within the GitHub community."},
+        {"file": "images/languages.png", "caption": "SVG card displaying the user's programming languages and their usage statistics on GitHub, offering insights into their coding expertise and preferences."},
+        {"file": "images/overview.png", "caption": "SVG card displaying the user's contributions and activity on GitHub, providing a visual representation of their engagement and impact within the GitHub community."},
+        {"file": "images/most-active-repo.png", "caption": "SVG card displaying the user's most active repository and its details on GitHub, offering insights into their coding projects and contributions."},
+        {"file": "images/most-starred-repo.png", "caption": "SVG card displaying the user's most starred repository and its details on GitHub, providing a visual representation of their interests and engagement with other developers' projects."},
+        {"file": "images/longest-maintained-repo.png", "caption": "SVG card displaying the user's longest maintained repository and its details on GitHub, offering insights into their commitment and consistency in coding projects."},
+        {"file": "images/contribution-trend.png", "caption": "SVG card displaying the user's contribution trend over time on GitHub, providing insights into their activity and engagement with the community."},
+        {"file": "images/commits-per-tenure.png", "caption": "SVG card displaying the user's commits per tenure on GitHub, offering insights into their coding activity and contributions over time."},
+        {"file": "images/commit-pattern.png", "caption": "SVG card displaying the user's commit patterns on GitHub, offering insights into their coding habits and consistency"},
+        {"file": "images/avg-commits-per-repo.png", "caption": "SVG card displaying the user's average commits per repository on GitHub, providing insights into their coding activity and contributions across different projects."},
+        {"file": "images/account-age.png", "caption": "SVG card displaying the user's account age on GitHub, offering insights into their longevity and commitment within the community."},
+        {"file": "images/13-error-rate-limit.png", "caption": "SVG card displaying api response rate limit reach."},
+        {"file": "images/14-error-user-not-found.png", "caption": "SVG card graceful fallback on user not found."}
+
+
+
+      ]
+    },
+    {
       "id": "aether",
       "name": "Aether",
       "description": "AETHER simulates human-like decision-making to identify vulnerabilities, generate targeted exploits, and provide actionable remediation within a scalable SaaS architecture.",

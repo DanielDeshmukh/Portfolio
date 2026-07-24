@@ -135,7 +135,16 @@
       "status": "under-development",
       "progress": 20,
       "images": [
-        {"file": "images/hector-legal-intelligence.png", "caption": "Hector branding and logo. "}
+        {"file": "images/hector-legal-intelligence.png", "caption": "Hector branding and logo."},
+        {"file": "images/hector-home-page-chat-interface.png", "caption": "Home page with intelligent chat interface featuring Intent Routing, Hybrid Retrieval, Hierarchical Context, and Citation Grounding."},
+        {"file": "images/hector-query-processing-pipeline.png", "caption": "Real-time query processing pipeline showing Intent Routing, Hybrid Retrieval, Hierarchical Context, and Citation Grounding steps."},
+        {"file": "images/hector-grounded-answer-result.png", "caption": "Grounded answer with statutory text, IPC-BNS differences, practical implications, and comparison table."},
+        {"file": "images/hector-source-documents-retrieval.png", "caption": "Source documents panel displaying retrieved legal sources with match percentages and RAG retrieval details."},
+        {"file": "images/hector-ipc-bns-comparison-page.png", "caption": "IPC to BNS Comparison page for cross-referencing sections across acts."},
+        {"file": "images/hector-ipc-bns-comparison-results.png", "caption": "Side-by-side comparison results showing IPC and BNS section mappings with relevance scores."},
+        {"file": "images/hector-chain-of-verification-technology.png", "caption": "Chain-of-Verification technology overview explaining Query Parsing, Vector Retrieval, Cross-Reference Resolution, and Verification Chain."},
+        {"file": "images/hector-ipc-bns-cross-reference-guide.png", "caption": "IPC to BNS Cross-Reference Guide with complete mapping of 496 Indian Penal Code sections to Bharatiya Nyaya Sanhita equivalents."},
+        {"file": "images/hector-legal-coverage-bare-acts.png", "caption": "Legal Coverage page listing all 38 indexed Bare Acts organized by Criminal, Criminal Procedure, Evidence, and Civil categories."}
       ]
     },
     {

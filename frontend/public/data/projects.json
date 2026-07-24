@@ -111,8 +111,8 @@
           "caption": "Benchmark results: 96% intent accuracy, 9.26s avg latency, 0.92 retrieval score across 90K+ medical records."
         },
         {
-          "file": "images/ella-medical-intelligence-demo.mp4",
-          "caption": "Demo video showcasing Ella's medical intelligence capabilities and Hard-RAG pipeline in action."
+          "file": "images/ella-sdk-code-examples.png",
+          "caption": "SDK usage examples showing Basic Query, Pretty Print, and Context Manager interfaces for easy integration."
         }
       ]
     },
@@ -377,6 +377,49 @@
         {
           "file": "images/hector-legal-coverage-bare-acts.png",
           "caption": "Legal Coverage page listing all 38 indexed Bare Acts organized by Criminal, Criminal Procedure, Evidence, and Civil categories."
+        }
+      ]
+    },
+    {
+      "id": "themis",
+      "name": "Themis",
+      "description": "Parametric Legal Intelligence Engine for Indian Law — a fine-tuned Mistral 7B LoRA model trained on 74K+ legal Q&A pairs covering BNS, IPC, BNSS, BSA, and more.",
+      "tech": [
+        "Python",
+        "Mistral 7B",
+        "LoRA",
+        "Unsloth",
+        "HuggingFace",
+        "PyPI"
+      ],
+      "github": null,
+      "live": null,
+      "status": "deployed",
+      "progress": 100,
+      "images": [
+        {
+          "file": "images/themis-readme-header.png",
+          "caption": "Themis branding — The Parametric Legal Intelligence Engine for Indian Law, powered by Mistral 7B LoRA."
+        },
+        {
+          "file": "images/themis-pypi-page.png",
+          "caption": "Themis published on PyPI (v2.0.2) as a pip-installable package for retrieval-grounded Indian legal reasoning."
+        },
+        {
+          "file": "images/themis-cli-usage.png",
+          "caption": "CLI interface supporting single-shot Q&A and interactive chat for legal queries."
+        },
+        {
+          "file": "images/themis-training-data.png",
+          "caption": "Training data breakdown: 74,000 Q&A pairs across BNS, IPC, BNSS, BSA, Consumer Protection Act, RTI, and Supreme Court judgments."
+        },
+        {
+          "file": "images/themis-huggingface-model.png",
+          "caption": "HuggingFace model card for themis-mistral-7b-lora-v5 — fine-tuned from Mistral 7B Instruct with Unsloth."
+        },
+        {
+          "file": "images/themis-gpu-training-setup.png",
+          "caption": "Kaggle training setup using Tesla T4 with 14.6 GB VRAM and PyTorch 2.10."
         }
       ]
     },

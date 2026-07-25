@@ -393,7 +393,7 @@
         "PyPI"
       ],
       "github": null,
-      "live": null,
+      "live": "https://huggingface.co/Daniel2503/themis-mistral-7b-lora-v5",
       "status": "deployed",
       "progress": 100,
       "images": [
@@ -489,28 +489,84 @@
       "id": "proteus",
       "name": "Proteus",
       "description": "JD-aware resume analyzer powered by a five-agent NVIDIA NIM pipeline — semantic match scoring, gap analysis, bullet-level rewrites, and tailored cover letters from a single job description.",
-      "tech": ["Next.js", "TypeScript", "TailwindCSS", "NVIDIA NIM", "LLaMA 3.1 70B", "NextAuth.js", "Vercel"],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "NVIDIA NIM",
+        "LLaMA 3.1 70B",
+        "NextAuth.js",
+        "Vercel"
+      ],
       "github": "https://github.com/DanielDeshmukh/proteus",
       "live": "https://proteus-phi.vercel.app/",
       "status": "deployed",
       "progress": 100,
       "images": [
-        {"file": "images/proteus-logo.png", "caption": "Proteus branding and gold diamond logo."},
-        {"file": "images/proteus-landing-page.png", "caption": "Landing page — paste, upload, or link a job description and your resume for five-agent pipeline analysis."},
-        {"file": "images/proteus-login-page.png", "caption": "Authentication page with email/password, magic link, Google, and GitHub sign-in options."},
-        {"file": "images/proteus-analyze-page.png", "caption": "Analyze interface with JD pasted and resume PDF uploaded, showing real-time pipeline progress."},
-        {"file": "images/proteus-score-breakdown.png", "caption": "Score breakdown with radar chart (hard skills, soft skills, domain keywords, ATS bait) and gap analysis by severity."},
-        {"file": "images/proteus-models-page.png", "caption": "Models page showing the five-agent NVIDIA NIM pipeline — JD Parser, Resume Parser, Gap Analyzer, Rewrite Suggester, and Cover Letter."},
-        {"file": "images/proteus-pdf-report.png", "caption": "Downloadable PDF analysis report with match score, section scores, and gap analysis table."},
-        {"file": "images/proteus-rewrite-suggestions.png", "caption": "PDF rewrite suggestions with before/after bullet comparisons and impact scores per requirement."},
-        {"file": "images/proteus-cover-letter.png", "caption": "Generated cover letter in web UI with copy and download options, plus prioritized action items."},
-        {"file": "images/proteus-cover-letter-pdf.png", "caption": "Downloaded tailored cover letter PDF generated from the same parsed JD context."},
-        {"file": "images/proteus-documentation.png", "caption": "Full documentation site with user guide, pipeline architecture, NVIDIA NIM models, and API reference."},
-        {"file": "images/proteus-api-reference.png", "caption": "REST API reference listing /api/analyze, /api/history, /api/models, /api/health, and /api/usage endpoints."},
-        {"file": "images/proteus-rate-limits.png", "caption": "Rate limits and usage docs — 10 analyses per day with server-side enforcement."},
-        {"file": "images/proteus-user-guide.png", "caption": "User guide explaining match score, gap analysis, rewrite suggestions, cover letter, and priority actions."},
-        {"file": "images/proteus-terms-of-service.png", "caption": "Terms of Service page for the Proteus platform."},
-        {"file": "images/proteus-privacy-policy.png", "caption": "Privacy Policy page detailing data collection, usage, and user rights."}
+        {
+          "file": "images/proteus-logo.png",
+          "caption": "Proteus branding and gold diamond logo."
+        },
+        {
+          "file": "images/proteus-landing-page.png",
+          "caption": "Landing page — paste, upload, or link a job description and your resume for five-agent pipeline analysis."
+        },
+        {
+          "file": "images/proteus-login-page.png",
+          "caption": "Authentication page with email/password, magic link, Google, and GitHub sign-in options."
+        },
+        {
+          "file": "images/proteus-analyze-page.png",
+          "caption": "Analyze interface with JD pasted and resume PDF uploaded, showing real-time pipeline progress."
+        },
+        {
+          "file": "images/proteus-score-breakdown.png",
+          "caption": "Score breakdown with radar chart (hard skills, soft skills, domain keywords, ATS bait) and gap analysis by severity."
+        },
+        {
+          "file": "images/proteus-models-page.png",
+          "caption": "Models page showing the five-agent NVIDIA NIM pipeline — JD Parser, Resume Parser, Gap Analyzer, Rewrite Suggester, and Cover Letter."
+        },
+        {
+          "file": "images/proteus-pdf-report.png",
+          "caption": "Downloadable PDF analysis report with match score, section scores, and gap analysis table."
+        },
+        {
+          "file": "images/proteus-rewrite-suggestions.png",
+          "caption": "PDF rewrite suggestions with before/after bullet comparisons and impact scores per requirement."
+        },
+        {
+          "file": "images/proteus-cover-letter.png",
+          "caption": "Generated cover letter in web UI with copy and download options, plus prioritized action items."
+        },
+        {
+          "file": "images/proteus-cover-letter-pdf.png",
+          "caption": "Downloaded tailored cover letter PDF generated from the same parsed JD context."
+        },
+        {
+          "file": "images/proteus-documentation.png",
+          "caption": "Full documentation site with user guide, pipeline architecture, NVIDIA NIM models, and API reference."
+        },
+        {
+          "file": "images/proteus-api-reference.png",
+          "caption": "REST API reference listing /api/analyze, /api/history, /api/models, /api/health, and /api/usage endpoints."
+        },
+        {
+          "file": "images/proteus-rate-limits.png",
+          "caption": "Rate limits and usage docs — 10 analyses per day with server-side enforcement."
+        },
+        {
+          "file": "images/proteus-user-guide.png",
+          "caption": "User guide explaining match score, gap analysis, rewrite suggestions, cover letter, and priority actions."
+        },
+        {
+          "file": "images/proteus-terms-of-service.png",
+          "caption": "Terms of Service page for the Proteus platform."
+        },
+        {
+          "file": "images/proteus-privacy-policy.png",
+          "caption": "Privacy Policy page detailing data collection, usage, and user rights."
+        }
       ]
     }
   ]

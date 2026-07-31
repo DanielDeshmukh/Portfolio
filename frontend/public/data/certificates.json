@@ -84,6 +84,12 @@
       "name": "Introduction to Sub Agents",
       "file": "images/certificate-claude-introduction-to-sub-agents.jpg",
       "description": "Successfully completed the 'Introduction to Sub Agents' certification, This certification reflects a strong understanding of modular AI design and the practical implementation of sub-agents for improved functionality and performance."
+    },
+    {
+      "id": "anthropic",
+      "name": "AI Fluency for Builders",
+      "file": "images/certificate-ai-fluency-for-builders.png",
+      "description": "Successfully completed the 'AI Fluency for Builders' certification by CodePath.org in partnership with Anthropic, demonstrating foundational fluency in AI concepts, tools, and best practices for building AI-powered applications."
     }
   ]
 }

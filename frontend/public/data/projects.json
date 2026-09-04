@@ -575,7 +575,14 @@
       "description": "Wholesale plastic products e-commerce website with product catalog, shopping cart, checkout, and admin dashboard.",
       "tech": [
         "Next.js",
-        "TailwindCSS"
+        "TailwindCSS",
+        "Turso",
+        "Figma",
+        "Vercel",
+        "jsPDF",
+        "Cloudinary",
+        "Node.js",
+        "Express"
       ],
       "github": "https://github.com/DanielDeshmukh/shree-gurudev-plastics",
       "live": "https://shree-gurudev-plastics.vercel.app",
@@ -584,107 +591,107 @@
       "images": [
         {
           "file": "images/shree-gurudev-plastics-logo.png",
-          "caption": "Shree Gurudev Plastics branding — wholesale supplier of plastic chairs, tables, crates, mugs, tubs, dustbins, stools, and more."
+          "caption": "SGP brand identity — wholesale supplier of plastic chairs, tables, crates, mugs, tubs, dustbins, stools, and more."
         },
         {
-          "file": "images/shree-gurudev-plastics-homepage.png",
-          "caption": "Shree Gurudev Plastics homepage showcasing the wholesale plastic products catalog."
+          "file": "images/shree-gurudev-plastics-homepage-ganesh-chaturthi-special.png",
+          "caption": "Homepage with Ganesh Chaturthi festival theme — festive banner, marigold decorations, and special offers for the season."
         },
         {
           "file": "images/shree-gurudev-plastics-hero.png",
-          "caption": "Hero section with brand identity and call-to-action for browsing products."
+          "caption": "Hero section — 'Premium Quality Plastic Products | Bulk Seller & Distributor in Bhayander' with stats bar showing 1360+ products, 3 brands, 1000+ customers, and 7+ cities served."
         },
         {
-          "file": "images/shree-gurudev-plastics-about.png",
-          "caption": "About page providing information about the company and its wholesale plastic products."
+          "file": "images/shree-gurudev-plastics-about-us.png",
+          "caption": "About Us page — company story, mission, and 'What We Offer' section covering retail sales, bulk & wholesale, and a wide product range."
         },
         {
           "file": "images/shree-gurudev-plastics-products.png",
-          "caption": "Full product catalog page displaying all available plastic products."
+          "caption": "Product detail page for 'Salsa' chair — color variants, tiered pricing (retail ₹1,026 / retailer ₹972 / bulk ₹810), pincode delivery check, stock status, and WhatsApp enquiry."
         },
         {
-          "file": "images/shree-gurudev-plastics-category-1.png",
-          "caption": "Product category browsing page — first category section."
+          "file": "images/shree-gurudev-plastics-products-page.png",
+          "caption": "All Products catalog — 569 products with search, sort, brand/category sidebar filters, and quick add-to-cart cards."
         },
         {
-          "file": "images/shree-gurudev-plastics-category-2.png",
-          "caption": "Product category browsing page — second category section."
+          "file": "images/shree-gurudev-plastics-most-bought-products.png",
+          "caption": "Most Bought Products — ranked leaderboard of top sellers with units sold, led by Salsa Black and Salsa Orange at 60 units each."
         },
         {
-          "file": "images/shree-gurudev-plastics-category-3.png",
-          "caption": "Product category browsing page — third category section."
+          "file": "images/shree-gurudev-plastics-compare-page-upto-4-products-with-highlighting-most-bought-among-and-share-option-as-well.png",
+          "caption": "Product Comparison page — side-by-side comparison of up to 4 products with price range slider, stock levels, popularity highlighting, and WhatsApp enquiry."
         },
         {
-          "file": "images/shree-gurudev-plastics-category-4.png",
-          "caption": "Product category browsing page — fourth category section."
+          "file": "images/shree-gurudev-plastics-wishlist.png",
+          "caption": "Empty Wishlist page — save products by tapping the heart icon, with a call-to-action to browse the catalog."
         },
         {
-          "file": "images/shree-gurudev-plastics-category-5.png",
-          "caption": "Product category browsing page — fifth category section."
+          "file": "images/shree-gurudev-plastics-locations-available.png",
+          "caption": "Delivery Locations page — service areas across Bhayander, Naigaon, Vasai, Virar, Mumbai, and Thane with delivery timeframes and WhatsApp enquiry per location."
         },
         {
-          "file": "images/shree-gurudev-plastics-product-detail-1.png",
-          "caption": "Product detail page showing specifications, pricing, and bulk order options."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-product-detail-2.png",
-          "caption": "Product detail page — second product view with images and description."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-product-detail-3.png",
-          "caption": "Product detail page — third product view with specifications."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-product-detail-4.png",
-          "caption": "Product detail page — fourth product view with pricing tiers."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-product-detail-5.png",
-          "caption": "Product detail page — fifth product view with related products."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-cart.png",
-          "caption": "Shopping cart with selected items, quantities, and bulk pricing calculations."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-checkout-1.png",
-          "caption": "Checkout flow — shipping details and delivery information form."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-checkout-2.png",
-          "caption": "Checkout flow — order summary and payment method selection."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-checkout-3.png",
-          "caption": "Checkout flow — final confirmation step before order placement."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-order-confirmation.png",
-          "caption": "Order confirmation page with order summary and tracking details."
-        },
-        {
-          "file": "images/shree-gurudev-plastics-contact.png",
-          "caption": "Contact page with business inquiries and wholesale order form."
+          "file": "images/shree-gurudev-plastics-head-office-location-map.png",
+          "caption": "Find Us page — embedded Google Map with head office pin in Bhayander, business hours (Mon–Sat 9 AM – 8 PM), and quick-action buttons for directions, WhatsApp, and browsing products."
         },
         {
           "file": "images/shree-gurudev-plastics-footer.png",
-          "caption": "Footer section with contact information, quick links, and business details."
+          "caption": "Footer — product categories, brand links (Aristo, Mango Chairs, Reego), quick links, service area badges, and WhatsApp contact."
         },
         {
-          "file": "images/shree-gurudev-plastics-mobile.png",
-          "caption": "Responsive mobile view ensuring seamless browsing on all devices."
+          "file": "images/shree-gurudev-plastics-privacy-policy-page.png",
+          "caption": "Privacy Policy page — effective 31 August 2026, compliant with IT Act 2000 and IT Rules 2011."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-developer-contact.png",
+          "caption": "Developer contact section — Daniel Deshmukh, with email, phone, and portfolio link for website feedback and technical issues."
         },
         {
           "file": "images/shree-gurudev-plastics-admin-dashboard.png",
-          "caption": "Admin dashboard with sales metrics, order overview, and inventory status."
+          "caption": "Admin Dashboard & Analytics — 1526 products, 41 orders, ₹4,17,860 revenue, 12-month revenue bar chart, 30-day trend line, and order status donut chart."
         },
         {
-          "file": "images/shree-gurudev-plastics-admin-products.png",
-          "caption": "Admin product management page for adding, editing, and organizing product listings."
+          "file": "images/shree-gurudev-plastics-admin-orders-page.png",
+          "caption": "Admin Orders page — table with order ID, customer, phone, delivery/payment status, totals, and actions (Mark Paid, Invoice, Print, WhatsApp, Delete)."
         },
         {
-          "file": "images/shree-gurudev-plastics-admin-orders.png",
-          "caption": "Admin orders page for managing and fulfilling wholesale customer orders."
+          "file": "images/shree-gurudev-plastics-admin-offers-creation-page.png",
+          "caption": "Admin Offers page — manage festival offers with discount percentages, product counts, countdown timers, and toggle/edit/delete controls."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-admin-festival-settings.png",
+          "caption": "Admin Festival Settings — toggle festival mode, select festivals (Ganesh Chaturthi, Diwali, Holi, etc.), set discount %, banner message, and auto-disable end date."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-order-notifications.png",
+          "caption": "Admin Notifications — real-time order confirmations and new order alerts with read/unread filters."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-reports-page.png",
+          "caption": "Admin Reports — download daily/monthly Excel reports and generate online sales reports with date pickers."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-top-costomers.png",
+          "caption": "Admin Top Customers — ranked customer list with total spend and order count, plus order trends chart and category breakdown donut."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-reciept-sample.png",
+          "caption": "Invoice/Receipt preview — tax invoice with line items, CGST/SGST breakdown, and print-ready format."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-order-completed-modal-with-order-tracking-feature.png",
+          "caption": "Order Placed confirmation modal — order number, delivery assurance, and 'Track Your Order' link with phone support."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-live-order-tracking.png",
+          "caption": "Live Order Tracking (early stage) — 'Payment Pending' status with 6-step progress tracker showing only Order Placed, and a Cancel Order option."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-order-tracking-completed-tracks within-seconds.png",
+          "caption": "Live Order Tracking (completed) — all 6 steps green with timestamps, paid badge, and order item summary."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-festival-broadcast-page.png",
+          "caption": "Admin Festival Broadcast — select festivals, compose custom messages, choose customers, and generate broadcast messages for WhatsApp outreach."
         }
       ]
     }

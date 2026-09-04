@@ -568,6 +568,125 @@
           "caption": "Privacy Policy page detailing data collection, usage, and user rights."
         }
       ]
+    },
+    {
+      "id": "shree-gurudev-plastics",
+      "name": "Shree Gurudev Plastics",
+      "description": "Wholesale plastic products e-commerce website with product catalog, shopping cart, checkout, and admin dashboard.",
+      "tech": [
+        "Next.js",
+        "TailwindCSS"
+      ],
+      "github": "https://github.com/DanielDeshmukh/shree-gurudev-plastics",
+      "live": "https://shree-gurudev-plastics.vercel.app",
+      "status": "completed",
+      "progress": 100,
+      "images": [
+        {
+          "file": "images/shree-gurudev-plastics-logo.png",
+          "caption": "Shree Gurudev Plastics branding — wholesale supplier of plastic chairs, tables, crates, mugs, tubs, dustbins, stools, and more."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-homepage.png",
+          "caption": "Shree Gurudev Plastics homepage showcasing the wholesale plastic products catalog."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-hero.png",
+          "caption": "Hero section with brand identity and call-to-action for browsing products."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-about.png",
+          "caption": "About page providing information about the company and its wholesale plastic products."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-products.png",
+          "caption": "Full product catalog page displaying all available plastic products."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-category-1.png",
+          "caption": "Product category browsing page — first category section."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-category-2.png",
+          "caption": "Product category browsing page — second category section."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-category-3.png",
+          "caption": "Product category browsing page — third category section."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-category-4.png",
+          "caption": "Product category browsing page — fourth category section."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-category-5.png",
+          "caption": "Product category browsing page — fifth category section."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-product-detail-1.png",
+          "caption": "Product detail page showing specifications, pricing, and bulk order options."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-product-detail-2.png",
+          "caption": "Product detail page — second product view with images and description."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-product-detail-3.png",
+          "caption": "Product detail page — third product view with specifications."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-product-detail-4.png",
+          "caption": "Product detail page — fourth product view with pricing tiers."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-product-detail-5.png",
+          "caption": "Product detail page — fifth product view with related products."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-cart.png",
+          "caption": "Shopping cart with selected items, quantities, and bulk pricing calculations."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-checkout-1.png",
+          "caption": "Checkout flow — shipping details and delivery information form."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-checkout-2.png",
+          "caption": "Checkout flow — order summary and payment method selection."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-checkout-3.png",
+          "caption": "Checkout flow — final confirmation step before order placement."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-order-confirmation.png",
+          "caption": "Order confirmation page with order summary and tracking details."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-contact.png",
+          "caption": "Contact page with business inquiries and wholesale order form."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-footer.png",
+          "caption": "Footer section with contact information, quick links, and business details."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-mobile.png",
+          "caption": "Responsive mobile view ensuring seamless browsing on all devices."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-admin-dashboard.png",
+          "caption": "Admin dashboard with sales metrics, order overview, and inventory status."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-admin-products.png",
+          "caption": "Admin product management page for adding, editing, and organizing product listings."
+        },
+        {
+          "file": "images/shree-gurudev-plastics-admin-orders.png",
+          "caption": "Admin orders page for managing and fulfilling wholesale customer orders."
+        }
+      ]
     }
   ]
 }

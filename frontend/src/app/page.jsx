@@ -29,6 +29,17 @@ export default function HomePage() {
     }
   }, [])
 
+  useEffect(() => {
+    const hash = window.location.hash
+    if (!hash) return
+    const scrollTo = () => {
+      const el = document.querySelector(hash)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }
+    const t = setTimeout(scrollTo, 150)
+    return () => clearTimeout(t)
+  }, [profile])
+
   function saveProfile(updated) {
     setProfile(updated)
     localStorage.setItem('profile_override', JSON.stringify(updated))

@@ -3,13 +3,26 @@ import { requireAuth } from '../../../lib/auth'
 import { getDb, initSchema } from '../../../lib/db'
 import crypto from 'crypto'
 
-function generateCode() {
+function generateCode(projectName) {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
-  let code = 'SGP-'
+  const slug = (projectName || 'PROJECT')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 7)
+    .join('')
+  let hash = ''
   for (let i = 0; i < 6; i++) {
-    code += chars.charAt(Math.floor(Math.random() * chars.length))
+    hash += chars.charAt(Math.floor(Math.random() * chars.length))
   }
-  return code
+  const now = new Date()
+  const ts = now.getFullYear().toString().slice(2) +
+    String(now.getMonth() + 1).padStart(2, '0') +
+    String(now.getDate()).padStart(2, '0') +
+    String(now.getHours()).padStart(2, '0') +
+    String(now.getMinutes()).padStart(2, '0')
+  return `${slug}-${hash}-${ts}`
 }
 
 export async function GET(request) {
@@ -89,11 +102,16 @@ export async function POST(request) {
       }
 
       const codes = []
+      const projRow = await db.execute({
+        sql: 'SELECT name FROM client_projects WHERE id = ?',
+        args: [project_id],
+      })
+      const projectName = projRow.rows[0]?.name || 'PROJECT'
       for (let slot = 1; slot <= 3; slot++) {
         let code
         let attempts = 0
         do {
-          code = generateCode()
+          code = generateCode(projectName)
           attempts++
         } while (attempts < 10)
 

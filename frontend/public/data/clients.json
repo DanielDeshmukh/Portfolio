@@ -18,6 +18,25 @@
           "live": "https://shree-gurudev-plastics.vercel.app"
         }
       ]
+    },
+    {
+      "id": "babujichaay",
+      "name": "Babuji Chaay",
+      "logo": "images/babujichaay-logo.png",
+      "contact": {
+        "phone": null,
+        "email": null,
+        "website": "https://babujichaay.com/"
+      },
+      "relationSince": "2025",
+      "description": "Full-stack POS and inventory management system for cafés and tea stalls with real client deployment.",
+      "projects": [
+        {
+          "name": "Babuji Chaay POS System",
+          "github": "https://github.com/DanielDeshmukh/Babuji-Chaay",
+          "live": "https://babujichaay.com/"
+        }
+      ]
     }
   ]
 }

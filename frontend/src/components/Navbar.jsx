@@ -15,8 +15,7 @@ export default function Navbar(){
     ['Certifications', '/#certifications'],
     ['Resume', '/#resume'],
     ['Contact', '/#contact'],
-    ['Hire Me', '/hire'],
-    ['Admin', '/admin']
+    ['Hire Me', '/hire']
   ]
 
   const handleNavClick = (href) => {

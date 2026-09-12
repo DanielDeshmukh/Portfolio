@@ -241,9 +241,9 @@ export async function POST(request) {
     }
 
     if (action === 'purge') {
+      await db.execute('DELETE FROM discount_ledger')
       await db.execute('DELETE FROM referral_uses')
       await db.execute('DELETE FROM referral_codes')
-      await db.execute('DELETE FROM discount_ledger')
       return NextResponse.json({ ok: true, message: 'All referral data cleared' })
     }
 

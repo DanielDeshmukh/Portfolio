@@ -1,6 +1,5 @@
 'use client'
 import { use, useEffect, useState } from 'react'
-import Link from 'next/link'
 
 export default function RefPage({ params }) {
   const { code } = use(params)
@@ -132,7 +131,7 @@ export default function RefPage({ params }) {
 
           <div className="flex flex-col gap-2">
             <a
-              href="https://wa.me/918552084251?text=Hi%20Daniel%2C%20I%20was%20referred%20to%20you%20with%20code%3A%20' + encodeURIComponent(data.code)"
+              href={`https://wa.me/918552084251?text=${encodeURIComponent('Hi Daniel, I was referred to you with code: ' + data.code)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white text-sm font-medium flex items-center justify-center gap-2 transition-colors"
@@ -140,13 +139,13 @@ export default function RefPage({ params }) {
               <i className="fab fa-whatsapp text-lg"></i>
               Contact on WhatsApp
             </a>
-            <Link
-              href="/hire"
+            <a
+              href={`/enquiry?code=${encodeURIComponent(data.code)}`}
               className="w-full py-3 rounded-xl bg-primary/15 border border-primary/30 text-primary text-sm font-medium flex items-center justify-center gap-2 hover:bg-primary/25 transition-colors"
             >
               <i className="fas fa-paper-plane"></i>
-              Go to Hire Page
-            </Link>
+              Fill Enquiry Form
+            </a>
           </div>
         </div>
       </div>

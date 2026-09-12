@@ -136,7 +136,7 @@ function EnquiryForm() {
           {field('Service Needed', 'service', 'select', { required: true })}
           {field('Project Details', 'details', 'textarea', { required: true, placeholder: 'Describe your project, requirements, timeline, budget...' })}
 
-          <div>
+          <div className="relative">
             <label className="block text-sm font-medium text-gray-300 mb-1.5">
               Referral Code
               <span className="relative ml-1.5 inline-block">
@@ -148,11 +148,26 @@ function EnquiryForm() {
                   i
                 </button>
                 {showInfo && (
-                  <span className="absolute left-6 top-1/2 -translate-y-1/2 w-64 bg-slate-800 border border-slate rounded-lg p-3 text-xs text-gray-300 shadow-xl z-10">
-                    <span className="text-primary font-semibold">Referred?</span> Enter the code shared by an existing client.
-                    You&apos;ll get <span className="text-green-400 font-semibold">50% off your first month&apos;s maintenance</span> as a benefit.
-                    <button type="button" onClick={() => setShowInfo(false)} className="absolute top-1.5 right-2 text-gray-500 hover:text-gray-300"><i className="fas fa-times"></i></button>
-                  </span>
+                  <div className="absolute left-6 top-1/2 -translate-y-1/2 w-80 bg-slate-800 border border-slate rounded-lg p-4 text-xs text-gray-300 shadow-xl z-20">
+                    <button type="button" onClick={() => setShowInfo(false)} className="absolute top-2 right-2 text-gray-500 hover:text-gray-300">
+                      <i className="fas fa-times"></i>
+                    </button>
+
+                    <p className="mb-2">
+                      <span className="text-primary font-semibold">Have a referral code?</span> Enter it above and you&apos;ll get{' '}
+                      <span className="text-green-400 font-semibold">50% off your first month&apos;s maintenance</span>.
+                    </p>
+
+                    <div className="border-t border-slate/50 my-3"></div>
+
+                    <p className="mb-2">
+                      <span className="text-gray-200 font-semibold">Don&apos;t have a code?</span> No worries — you can ask an existing client for one.
+                    </p>
+                    <p className="mb-1 text-gray-400">
+                      Visit the <a href="/#clients" onClick={() => setShowInfo(false)} className="text-primary hover:underline font-medium">Clients page</a>, click on a client you know, and ask them for a referral code.
+                    </p>
+                    <p className="text-gray-500 text-[11px] italic">Each client has a limited number of referral codes to share.</p>
+                  </div>
                 )}
               </span>
             </label>

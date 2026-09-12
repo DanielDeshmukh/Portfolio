@@ -1,8 +1,9 @@
 'use client'
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useParams } from 'next/navigation'
 
-export default function RefPage({ params }) {
-  const { code } = use(params)
+export default function RefPage() {
+  const { code } = useParams()
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)

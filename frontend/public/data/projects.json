@@ -16,35 +16,35 @@
       "progress": 100,
       "images": [
         {
-          "file": "images/babujichaay-logo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203601/portfolio/images/babujichaay-logo.png",
           "caption": "Babuji Chaay brand identity and logo representing the café management system."
         },
         {
-          "file": "images/babujichaay-authpage.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203597/portfolio/images/babujichaay-authpage.png",
           "caption": "Secure login interface for staff and admin access to the POS system."
         },
         {
-          "file": "images/babujichaay-adminAuthentication.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203595/portfolio/images/babujichaay-adminAuthentication.png",
           "caption": "Advanced admin authentication interface with multi-level security protocols."
         },
         {
-          "file": "images/babujichaay-dashboard.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203598/portfolio/images/babujichaay-dashboard.png",
           "caption": "Main dashboard providing real-time sales metrics, inventory status, and business analytics."
         },
         {
-          "file": "images/babujichaay-menu-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203603/portfolio/images/babujichaay-menu-page.png",
           "caption": "Interactive menu page allowing quick browsing and ordering of café items."
         },
         {
-          "file": "images/babujichaay-invoice.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203600/portfolio/images/babujichaay-invoice.png",
           "caption": "Professional invoice generation and printing system for customer transactions."
         },
         {
-          "file": "images/babujichaay-website.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203607/portfolio/images/babujichaay-website.png",
           "caption": "Public-facing website showcasing the café brand and its offerings online."
         },
         {
-          "file": "images/babujichaay-website-franchise.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203604/portfolio/images/babujichaay-website-franchise.png",
           "caption": "Franchise information page displaying expansion opportunities and partnership details."
         }
       ]
@@ -67,51 +67,51 @@
       "progress": 100,
       "images": [
         {
-          "file": "images/ella-llm-receptionist-logo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203644/portfolio/images/ella-llm-receptionist-logo.png",
           "caption": "Ella branding and logo representing the AI-powered clinical receptionist."
         },
         {
-          "file": "images/ella-llm-dosage-calculation.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203638/portfolio/images/ella-llm-dosage-calculation.png",
           "caption": "Utilizing OCRed medical books and advanced RAG techniques, Ella provides accurate dosage calculations for medications, ensuring patient safety and effective treatment."
         },
         {
-          "file": "images/ella-llm-empathy-check.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203638/portfolio/images/ella-llm-empathy-check.png",
           "caption": "Ella's LLM empathy check feature. Ella uses advanced Hard RAG and Medical books to provide empathetic responses to patient inquiries, ensuring a compassionate and supportive interaction."
         },
         {
-          "file": "images/ella-llm-immediate-medication-guidance.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203640/portfolio/images/ella-llm-immediate-medication-guidance.png",
           "caption": "Ella's LLM immediate medication guidance feature. Ella utilizes advanced Hard RAG and Medical books to provide immediate and accurate medication guidance to patients, ensuring they receive the correct information for their health needs."
         },
         {
-          "file": "images/ella-llm-quick-reasoning.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203642/portfolio/images/ella-llm-quick-reasoning.png",
           "caption": "Ella's LLM quick reasoning feature. Ella employs advanced Medical books to deliver quick and accurate reasoning for patient inquiries, ensuring efficient and informed responses."
         },
         {
-          "file": "images/ella-llm-quick-understanding-of-patients-query.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203643/portfolio/images/ella-llm-quick-understanding-of-patients-query.png",
           "caption": "Ella leverages advanced Medical books to quickly understand and respond to patient queries, providing timely and relevant information for their healthcare needs."
         },
         {
-          "file": "images/ella-llm-red-flag-protocol.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203645/portfolio/images/ella-llm-red-flag-protocol.png",
           "caption": "Ella Uses Intent Recognition and Advanced RAG to identify red flag symptoms in patient interactions, ensuring timely escalation and appropriate care for critical health concerns."
         },
         {
-          "file": "images/ella-llm-seamless-understanding-of-conversation-conclusion.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203646/portfolio/images/ella-llm-seamless-understanding-of-conversation-conclusion.png",
           "caption": "Ella provides a seamless understanding of conversation conclusions, ensuring effective communication and follow-up for patient interactions."
         },
         {
-          "file": "images/ella-sdk-pypi-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203650/portfolio/images/ella-sdk-pypi-page.png",
           "caption": "Ella SDK published on PyPI as a pip-installable package (v1.2.5) — Medical Triage & Clinical RAG Engine."
         },
         {
-          "file": "images/ella-sdk-code-examples.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203649/portfolio/images/ella-sdk-code-examples.png",
           "caption": "SDK usage examples showing Basic Query, Pretty Print, and Context Manager interfaces for easy integration."
         },
         {
-          "file": "images/ella-sdk-benchmark.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203648/portfolio/images/ella-sdk-benchmark.png",
           "caption": "Benchmark results: 96% intent accuracy, 9.26s avg latency, 0.92 retrieval score across 90K+ medical records."
         },
         {
-          "file": "images/ella-sdk-code-examples.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203649/portfolio/images/ella-sdk-code-examples.png",
           "caption": "SDK usage examples showing Basic Query, Pretty Print, and Context Manager interfaces for easy integration."
         }
       ]
@@ -132,63 +132,63 @@
       "progress": 100,
       "images": [
         {
-          "file": "images/github-profile-score-branding.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203652/portfolio/images/github-profile-score-branding.png",
           "caption": "GitHub Profile Score Logo branding"
         },
         {
-          "file": "images/DanielDeshmukh.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203636/portfolio/images/DanielDeshmukh.png",
           "caption": "GitHub Profile Score web application showcasing the user's profile score and contributions."
         },
         {
-          "file": "images/contributions.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203635/portfolio/images/contributions.png",
           "caption": "SVG card displaying the user's contributions and activity on GitHub, providing a visual representation of their engagement and impact within the GitHub community."
         },
         {
-          "file": "images/languages.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203686/portfolio/images/languages.png",
           "caption": "SVG card displaying the user's programming languages and their usage statistics on GitHub, offering insights into their coding expertise and preferences."
         },
         {
-          "file": "images/overview.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203690/portfolio/images/overview.png",
           "caption": "SVG card displaying the user's contributions and activity on GitHub, providing a visual representation of their engagement and impact within the GitHub community."
         },
         {
-          "file": "images/most-active-repo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203688/portfolio/images/most-active-repo.png",
           "caption": "SVG card displaying the user's most active repository and its details on GitHub, offering insights into their coding projects and contributions."
         },
         {
-          "file": "images/most-starred-repo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203689/portfolio/images/most-starred-repo.png",
           "caption": "SVG card displaying the user's most starred repository and its details on GitHub, providing a visual representation of their interests and engagement with other developers' projects."
         },
         {
-          "file": "images/longest-maintained-repo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203687/portfolio/images/longest-maintained-repo.png",
           "caption": "SVG card displaying the user's longest maintained repository and its details on GitHub, offering insights into their commitment and consistency in coding projects."
         },
         {
-          "file": "images/contribution-trend.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203634/portfolio/images/contribution-trend.png",
           "caption": "SVG card displaying the user's contribution trend over time on GitHub, providing insights into their activity and engagement with the community."
         },
         {
-          "file": "images/commits-per-tenure.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203633/portfolio/images/commits-per-tenure.png",
           "caption": "SVG card displaying the user's commits per tenure on GitHub, offering insights into their coding activity and contributions over time."
         },
         {
-          "file": "images/commit-pattern.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203632/portfolio/images/commit-pattern.png",
           "caption": "SVG card displaying the user's commit patterns on GitHub, offering insights into their coding habits and consistency"
         },
         {
-          "file": "images/avg-commits-per-repo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203593/portfolio/images/avg-commits-per-repo.png",
           "caption": "SVG card displaying the user's average commits per repository on GitHub, providing insights into their coding activity and contributions across different projects."
         },
         {
-          "file": "images/account-age.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203586/portfolio/images/account-age.png",
           "caption": "SVG card displaying the user's account age on GitHub, offering insights into their longevity and commitment within the community."
         },
         {
-          "file": "images/13-error-rate-limit.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203584/portfolio/images/13-error-rate-limit.png",
           "caption": "SVG card displaying api response rate limit reach."
         },
         {
-          "file": "images/14-error-user-not-found.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203585/portfolio/images/14-error-user-not-found.png",
           "caption": "SVG card graceful fallback on user not found."
         }
       ]
@@ -211,23 +211,23 @@
       "progress": 70,
       "images": [
         {
-          "file": "images/aether-logo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203591/portfolio/images/aether-logo.png",
           "caption": "Aether branding and logo."
         },
         {
-          "file": "images/aether-landing-page-hero.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203590/portfolio/images/aether-landing-page-hero.png",
           "caption": "Intelligent agentic reasoning platform redefining automated ethical security testing at scale."
         },
         {
-          "file": "images/aether-moto.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203592/portfolio/images/aether-moto.png",
           "caption": "Adaptive AI simulating expert reasoning to deliver scalable, next-generation security testing"
         },
         {
-          "file": "images/aether-authentication.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203587/portfolio/images/aether-authentication.png",
           "caption": "Passwordless authentication with secure magic links, eliminating keylogging and SQL injection risks."
         },
         {
-          "file": "images/aether-dashboard.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203588/portfolio/images/aether-dashboard.png",
           "caption": "Centralized dashboard showcasing scan targets with detailed debriefs, traces, and remediation insights"
         }
       ]
@@ -249,35 +249,35 @@
       "progress": 40,
       "images": [
         {
-          "file": "images/tradex-logo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203756/portfolio/images/tradex-logo.png",
           "caption": "TradeX branding and logo design representing the trading platform identity."
         },
         {
-          "file": "images/tradex-splashscreen.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203760/portfolio/images/tradex-splashscreen.png",
           "caption": "Splash screen introducing users to the TradeX platform with engaging visuals."
         },
         {
-          "file": "images/tradex-authpage.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203755/portfolio/images/tradex-authpage.png",
           "caption": "Secure authentication interface for user login and account access management."
         },
         {
-          "file": "images/tradex-profilepage.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203757/portfolio/images/tradex-profilepage.png",
           "caption": "User profile dashboard displaying personal information and account details."
         },
         {
-          "file": "images/tradex-priceaction-table.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203756/portfolio/images/tradex-priceaction-table.png",
           "caption": "Real-time price action table showing stock data and market analysis insights."
         },
         {
-          "file": "images/tradex-settingspage.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203759/portfolio/images/tradex-settingspage.png",
           "caption": "Comprehensive settings panel for customizing user preferences and platform configuration."
         },
         {
-          "file": "images/tradex-referalcode-generation.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203758/portfolio/images/tradex-referalcode-generation.png",
           "caption": "Referral code generation feature enabling users to invite friends and earn rewards."
         },
         {
-          "file": "images/tradex-subscriptionplan-user-activity.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203761/portfolio/images/tradex-subscriptionplan-user-activity.png",
           "caption": "Subscription plans interface with user activity tracking and plan management options."
         }
       ]
@@ -299,23 +299,23 @@
       "progress": 10,
       "images": [
         {
-          "file": "images/qure-logo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203710/portfolio/images/qure-logo.png",
           "caption": "Qure branding and logo representing innovative queue management solutions."
         },
         {
-          "file": "images/qure-language-selection.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203709/portfolio/images/qure-language-selection.png",
           "caption": "Multi-language selection interface making the platform accessible to diverse users."
         },
         {
-          "file": "images/qure-role-selection.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203714/portfolio/images/qure-role-selection.png",
           "caption": "Role selection screen distinguishing between patients, medical professionals, and admin users."
         },
         {
-          "file": "images/qure-patient-signup.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203712/portfolio/images/qure-patient-signup.png",
           "caption": "Patient registration form with simplified interface for easy queue enrollment and management."
         },
         {
-          "file": "images/qure-medic-signup.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203711/portfolio/images/qure-medic-signup.png",
           "caption": "Medical professional registration and authentication for healthcare provider access."
         }
       ]
@@ -339,43 +339,43 @@
       "progress": 100,
       "images": [
         {
-          "file": "images/hector-legal-intelligence.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203661/portfolio/images/hector-legal-intelligence.png",
           "caption": "Hector branding and logo."
         },
         {
-          "file": "images/hector-home-page-chat-interface.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203655/portfolio/images/hector-home-page-chat-interface.png",
           "caption": "Home page with intelligent chat interface featuring Intent Routing, Hybrid Retrieval, Hierarchical Context, and Citation Grounding."
         },
         {
-          "file": "images/hector-query-processing-pipeline.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203662/portfolio/images/hector-query-processing-pipeline.png",
           "caption": "Real-time query processing pipeline showing Intent Routing, Hybrid Retrieval, Hierarchical Context, and Citation Grounding steps."
         },
         {
-          "file": "images/hector-grounded-answer-result.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203654/portfolio/images/hector-grounded-answer-result.png",
           "caption": "Grounded answer with statutory text, IPC-BNS differences, practical implications, and comparison table."
         },
         {
-          "file": "images/hector-source-documents-retrieval.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203663/portfolio/images/hector-source-documents-retrieval.png",
           "caption": "Source documents panel displaying retrieved legal sources with match percentages and RAG retrieval details."
         },
         {
-          "file": "images/hector-ipc-bns-comparison-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203657/portfolio/images/hector-ipc-bns-comparison-page.png",
           "caption": "IPC to BNS Comparison page for cross-referencing sections across acts."
         },
         {
-          "file": "images/hector-ipc-bns-comparison-results.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203658/portfolio/images/hector-ipc-bns-comparison-results.png",
           "caption": "Side-by-side comparison results showing IPC and BNS section mappings with relevance scores."
         },
         {
-          "file": "images/hector-chain-of-verification-technology.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203653/portfolio/images/hector-chain-of-verification-technology.png",
           "caption": "Chain-of-Verification technology overview explaining Query Parsing, Vector Retrieval, Cross-Reference Resolution, and Verification Chain."
         },
         {
-          "file": "images/hector-ipc-bns-cross-reference-guide.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203659/portfolio/images/hector-ipc-bns-cross-reference-guide.png",
           "caption": "IPC to BNS Cross-Reference Guide with complete mapping of 496 Indian Penal Code sections to Bharatiya Nyaya Sanhita equivalents."
         },
         {
-          "file": "images/hector-legal-coverage-bare-acts.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203660/portfolio/images/hector-legal-coverage-bare-acts.png",
           "caption": "Legal Coverage page listing all 38 indexed Bare Acts organized by Criminal, Criminal Procedure, Evidence, and Civil categories."
         }
       ]
@@ -398,27 +398,27 @@
       "progress": 100,
       "images": [
         {
-          "file": "images/themis-readme-header.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203753/portfolio/images/themis-readme-header.png",
           "caption": "Themis branding — The Parametric Legal Intelligence Engine for Indian Law, powered by Mistral 7B LoRA."
         },
         {
-          "file": "images/themis-pypi-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203752/portfolio/images/themis-pypi-page.png",
           "caption": "Themis published on PyPI (v2.0.2) as a pip-installable package for retrieval-grounded Indian legal reasoning."
         },
         {
-          "file": "images/themis-cli-usage.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203749/portfolio/images/themis-cli-usage.png",
           "caption": "CLI interface supporting single-shot Q&A and interactive chat for legal queries."
         },
         {
-          "file": "images/themis-training-data.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203754/portfolio/images/themis-training-data.png",
           "caption": "Training data breakdown: 74,000 Q&A pairs across BNS, IPC, BNSS, BSA, Consumer Protection Act, RTI, and Supreme Court judgments."
         },
         {
-          "file": "images/themis-huggingface-model.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203751/portfolio/images/themis-huggingface-model.png",
           "caption": "HuggingFace model card for themis-mistral-7b-lora-v5 — fine-tuned from Mistral 7B Instruct with Unsloth."
         },
         {
-          "file": "images/themis-gpu-training-setup.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203750/portfolio/images/themis-gpu-training-setup.png",
           "caption": "Kaggle training setup using Tesla T4 with 14.6 GB VRAM and PyTorch 2.10."
         }
       ]
@@ -440,47 +440,47 @@
       "progress": 100,
       "images": [
         {
-          "file": "images/interior-design-website-logo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203678/portfolio/images/interior-design-website-logo.png",
           "caption": "Interior Design Portfolio branding and logo."
         },
         {
-          "file": "images/interior-design-website-icon.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203674/portfolio/images/interior-design-website-icon.png",
           "caption": "Custom icon design representing the interior design portfolio's unique identity."
         },
         {
-          "file": "images/interior-design-website-hero-section.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203672/portfolio/images/interior-design-website-hero-section.png",
           "caption": "Modern, responsive landing page for the interior design portfolio."
         },
         {
-          "file": "images/interior-design-website-about-us.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203666/portfolio/images/interior-design-website-about-us.png",
           "caption": "About Us page providing information about the interior design services offered and the designer's background."
         },
         {
-          "file": "images/interior-design-website-contact-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203667/portfolio/images/interior-design-website-contact-page.png",
           "caption": "Contact page with a form for potential clients to get in touch for inquiries and consultations."
         },
         {
-          "file": "images/interior-design-website-projects-section.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203683/portfolio/images/interior-design-website-projects-section.png",
           "caption": "Projects page showcasing a gallery of interior design projects with descriptions and images."
         },
         {
-          "file": "images/interior-design-website-project-grid.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203681/portfolio/images/interior-design-website-project-grid.png",
           "caption": "Project grid layout displaying various interior design projects in an organized and visually appealing manner."
         },
         {
-          "file": "images/interior-design-website-services.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203685/portfolio/images/interior-design-website-services.png",
           "caption": "Services page outlining the various interior design services offered, including consultations, space planning, and custom design solutions."
         },
         {
-          "file": "images/interior-design-website-inquiry-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203675/portfolio/images/interior-design-website-inquiry-page.png",
           "caption": "Inquiry page with a contact form for potential clients to request more information or schedule a consultation."
         },
         {
-          "file": "images/interior-design-website-inquiry-form-submission.jpeg",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203674/portfolio/images/interior-design-website-inquiry-form-submission.jpg",
           "caption": "Inquiry submissions from the website form delivered directly to the owner via WhatsApp for seamless communication and lead management."
         },
         {
-          "file": "images/interior-design-website-footer.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203668/portfolio/images/interior-design-website-footer.png",
           "caption": "Footer section with contact information, social media links, and copyright details."
         }
       ]
@@ -504,67 +504,67 @@
       "progress": 100,
       "images": [
         {
-          "file": "images/proteus-logo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203698/portfolio/images/proteus-logo.png",
           "caption": "Proteus branding and gold diamond logo."
         },
         {
-          "file": "images/proteus-landing-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203697/portfolio/images/proteus-landing-page.png",
           "caption": "Landing page — paste, upload, or link a job description and your resume for five-agent pipeline analysis."
         },
         {
-          "file": "images/proteus-login-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203697/portfolio/images/proteus-login-page.png",
           "caption": "Authentication page with email/password, magic link, Google, and GitHub sign-in options."
         },
         {
-          "file": "images/proteus-analyze-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203691/portfolio/images/proteus-analyze-page.png",
           "caption": "Analyze interface with JD pasted and resume PDF uploaded, showing real-time pipeline progress."
         },
         {
-          "file": "images/proteus-score-breakdown.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203705/portfolio/images/proteus-score-breakdown.png",
           "caption": "Score breakdown with radar chart (hard skills, soft skills, domain keywords, ATS bait) and gap analysis by severity."
         },
         {
-          "file": "images/proteus-models-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203699/portfolio/images/proteus-models-page.png",
           "caption": "Models page showing the five-agent NVIDIA NIM pipeline — JD Parser, Resume Parser, Gap Analyzer, Rewrite Suggester, and Cover Letter."
         },
         {
-          "file": "images/proteus-pdf-report.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203700/portfolio/images/proteus-pdf-report.png",
           "caption": "Downloadable PDF analysis report with match score, section scores, and gap analysis table."
         },
         {
-          "file": "images/proteus-rewrite-suggestions.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203704/portfolio/images/proteus-rewrite-suggestions.png",
           "caption": "PDF rewrite suggestions with before/after bullet comparisons and impact scores per requirement."
         },
         {
-          "file": "images/proteus-cover-letter.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203695/portfolio/images/proteus-cover-letter.png",
           "caption": "Generated cover letter in web UI with copy and download options, plus prioritized action items."
         },
         {
-          "file": "images/proteus-cover-letter-pdf.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203693/portfolio/images/proteus-cover-letter-pdf.png",
           "caption": "Downloaded tailored cover letter PDF generated from the same parsed JD context."
         },
         {
-          "file": "images/proteus-documentation.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203696/portfolio/images/proteus-documentation.png",
           "caption": "Full documentation site with user guide, pipeline architecture, NVIDIA NIM models, and API reference."
         },
         {
-          "file": "images/proteus-api-reference.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203693/portfolio/images/proteus-api-reference.png",
           "caption": "REST API reference listing /api/analyze, /api/history, /api/models, /api/health, and /api/usage endpoints."
         },
         {
-          "file": "images/proteus-rate-limits.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203703/portfolio/images/proteus-rate-limits.png",
           "caption": "Rate limits and usage docs — 10 analyses per day with server-side enforcement."
         },
         {
-          "file": "images/proteus-user-guide.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203708/portfolio/images/proteus-user-guide.png",
           "caption": "User guide explaining match score, gap analysis, rewrite suggestions, cover letter, and priority actions."
         },
         {
-          "file": "images/proteus-terms-of-service.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203707/portfolio/images/proteus-terms-of-service.png",
           "caption": "Terms of Service page for the Proteus platform."
         },
         {
-          "file": "images/proteus-privacy-policy.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203701/portfolio/images/proteus-privacy-policy.png",
           "caption": "Privacy Policy page detailing data collection, usage, and user rights."
         }
       ]
@@ -590,107 +590,107 @@
       "progress": 100,
       "images": [
         {
-          "file": "images/shree-gurudev-plastics-logo.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203735/portfolio/images/shree-gurudev-plastics-logo.png",
           "caption": "SGP brand identity — wholesale supplier of plastic chairs, tables, crates, mugs, tubs, dustbins, stools, and more."
         },
         {
-          "file": "images/shree-gurudev-plastics-homepage-ganesh-chaturthi-special.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203730/portfolio/images/shree-gurudev-plastics-homepage-ganesh-chaturthi-special.png",
           "caption": "Homepage with Ganesh Chaturthi festival theme — festive banner, marigold decorations, and special offers for the season."
         },
         {
-          "file": "images/shree-gurudev-plastics-hero.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203728/portfolio/images/shree-gurudev-plastics-hero.png",
           "caption": "Hero section — 'Premium Quality Plastic Products | Bulk Seller & Distributor in Bhayander' with stats bar showing 1360+ products, 3 brands, 1000+ customers, and 7+ cities served."
         },
         {
-          "file": "images/shree-gurudev-plastics-about-us.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203715/portfolio/images/shree-gurudev-plastics-about-us.png",
           "caption": "About Us page — company story, mission, and 'What We Offer' section covering retail sales, bulk & wholesale, and a wide product range."
         },
         {
-          "file": "images/shree-gurudev-plastics-products.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203745/portfolio/images/shree-gurudev-plastics-products.png",
           "caption": "Product detail page for 'Salsa' chair — color variants, tiered pricing (retail ₹1,026 / retailer ₹972 / bulk ₹810), pincode delivery check, stock status, and WhatsApp enquiry."
         },
         {
-          "file": "images/shree-gurudev-plastics-products-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203743/portfolio/images/shree-gurudev-plastics-products-page.png",
           "caption": "All Products catalog — 569 products with search, sort, brand/category sidebar filters, and quick add-to-cart cards."
         },
         {
-          "file": "images/shree-gurudev-plastics-most-bought-products.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203738/portfolio/images/shree-gurudev-plastics-most-bought-products.png",
           "caption": "Most Bought Products — ranked leaderboard of top sellers with units sold, led by Salsa Black and Salsa Orange at 60 units each."
         },
         {
-          "file": "images/shree-gurudev-plastics-compare-page-upto-4-products-with-highlighting-most-bought-among-and-share-option-as-well.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203721/portfolio/images/shree-gurudev-plastics-compare-page-upto-4-products-with-highlighting-most-bought-among-and-share-option-as-well.png",
           "caption": "Product Comparison page — side-by-side comparison of up to 4 products with price range slider, stock levels, popularity highlighting, and WhatsApp enquiry."
         },
         {
-          "file": "images/shree-gurudev-plastics-wishlist.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203749/portfolio/images/shree-gurudev-plastics-wishlist.png",
           "caption": "Empty Wishlist page — save products by tapping the heart icon, with a call-to-action to browse the catalog."
         },
         {
-          "file": "images/shree-gurudev-plastics-locations-available.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203732/portfolio/images/shree-gurudev-plastics-locations-available.png",
           "caption": "Delivery Locations page — service areas across Bhayander, Naigaon, Vasai, Virar, Mumbai, and Thane with delivery timeframes and WhatsApp enquiry per location."
         },
         {
-          "file": "images/shree-gurudev-plastics-head-office-location-map.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203727/portfolio/images/shree-gurudev-plastics-head-office-location-map.png",
           "caption": "Find Us page — embedded Google Map with head office pin in Bhayander, business hours (Mon–Sat 9 AM – 8 PM), and quick-action buttons for directions, WhatsApp, and browsing products."
         },
         {
-          "file": "images/shree-gurudev-plastics-footer.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203725/portfolio/images/shree-gurudev-plastics-footer.png",
           "caption": "Footer — product categories, brand links (Aristo, Mango Chairs, Reego), quick links, service area badges, and WhatsApp contact."
         },
         {
-          "file": "images/shree-gurudev-plastics-privacy-policy-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203742/portfolio/images/shree-gurudev-plastics-privacy-policy-page.png",
           "caption": "Privacy Policy page — effective 31 August 2026, compliant with IT Act 2000 and IT Rules 2011."
         },
         {
-          "file": "images/shree-gurudev-plastics-developer-contact.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203723/portfolio/images/shree-gurudev-plastics-developer-contact.png",
           "caption": "Developer contact section — Daniel Deshmukh, with email, phone, and portfolio link for website feedback and technical issues."
         },
         {
-          "file": "images/shree-gurudev-plastics-admin-dashboard.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203717/portfolio/images/shree-gurudev-plastics-admin-dashboard.png",
           "caption": "Admin Dashboard & Analytics — 1526 products, 41 orders, ₹4,17,860 revenue, 12-month revenue bar chart, 30-day trend line, and order status donut chart."
         },
         {
-          "file": "images/shree-gurudev-plastics-admin-orders-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203720/portfolio/images/shree-gurudev-plastics-admin-orders-page.png",
           "caption": "Admin Orders page — table with order ID, customer, phone, delivery/payment status, totals, and actions (Mark Paid, Invoice, Print, WhatsApp, Delete)."
         },
         {
-          "file": "images/shree-gurudev-plastics-admin-offers-creation-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203719/portfolio/images/shree-gurudev-plastics-admin-offers-creation-page.png",
           "caption": "Admin Offers page — manage festival offers with discount percentages, product counts, countdown timers, and toggle/edit/delete controls."
         },
         {
-          "file": "images/shree-gurudev-plastics-admin-festival-settings.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203718/portfolio/images/shree-gurudev-plastics-admin-festival-settings.png",
           "caption": "Admin Festival Settings — toggle festival mode, select festivals (Ganesh Chaturthi, Diwali, Holi, etc.), set discount %, banner message, and auto-disable end date."
         },
         {
-          "file": "images/shree-gurudev-plastics-order-notifications.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203740/portfolio/images/shree-gurudev-plastics-order-notifications.png",
           "caption": "Admin Notifications — real-time order confirmations and new order alerts with read/unread filters."
         },
         {
-          "file": "images/shree-gurudev-plastics-reports-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203747/portfolio/images/shree-gurudev-plastics-reports-page.png",
           "caption": "Admin Reports — download daily/monthly Excel reports and generate online sales reports with date pickers."
         },
         {
-          "file": "images/shree-gurudev-plastics-top-costomers.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203748/portfolio/images/shree-gurudev-plastics-top-costomers.png",
           "caption": "Admin Top Customers — ranked customer list with total spend and order count, plus order trends chart and category breakdown donut."
         },
         {
-          "file": "images/shree-gurudev-plastics-reciept-sample.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203746/portfolio/images/shree-gurudev-plastics-reciept-sample.png",
           "caption": "Invoice/Receipt preview — tax invoice with line items, CGST/SGST breakdown, and print-ready format."
         },
         {
-          "file": "images/shree-gurudev-plastics-order-completed-modal-with-order-tracking-feature.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203739/portfolio/images/shree-gurudev-plastics-order-completed-modal-with-order-tracking-feature.png",
           "caption": "Order Placed confirmation modal — order number, delivery assurance, and 'Track Your Order' link with phone support."
         },
         {
-          "file": "images/shree-gurudev-plastics-live-order-tracking.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203731/portfolio/images/shree-gurudev-plastics-live-order-tracking.png",
           "caption": "Live Order Tracking (early stage) — 'Payment Pending' status with 6-step progress tracker showing only Order Placed, and a Cancel Order option."
         },
         {
-          "file": "images/shree-gurudev-plastics-order-tracking-completed-tracks within-seconds.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203741/portfolio/images/shree-gurudev-plastics-order-tracking-completed-tracks%20within-seconds.png",
           "caption": "Live Order Tracking (completed) — all 6 steps green with timestamps, paid badge, and order item summary."
         },
         {
-          "file": "images/shree-gurudev-plastics-festival-broadcast-page.png",
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203724/portfolio/images/shree-gurudev-plastics-festival-broadcast-page.png",
           "caption": "Admin Festival Broadcast — select festivals, compose custom messages, choose customers, and generate broadcast messages for WhatsApp outreach."
         }
       ]

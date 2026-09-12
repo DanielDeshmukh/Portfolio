@@ -3,92 +3,91 @@
     {
       "id": "CS50",
       "name": "CS50's Introduction to Artificial Intelligence with Python",
-      "file": "images/certificate-CS50-Introduction-to-AI-with-python.png",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203623/portfolio/images/certificate-CS50-Introduction-to-AI-with-python.png",
       "description": "Successfully completed the CS50's Introduction to Artificial Intelligence with Python certification, This certification reflects a strong understanding of AI principles, algorithms, and applications."
     },
     {
       "id": "freeCodeCamp",
       "name": "FreeCodeCamp Javascript Algorithms and Data Structures",
-      "file": "images/certificate-freeCodeCamp-Legacy-Javascript-Algorithm-Data-Structures.jpeg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203626/portfolio/images/certificate-freeCodeCamp-Legacy-Javascript-Algorithm-Data-Structures.jpg",
       "description": "Successfully completed the FreeCodeCamp Javascript Algorithms and Data Structures certification, demonstrating proficiency in JavaScript programming and data structures. This certification reflects a strong foundation in algorithmic thinking and problem-solving skills."
     },
     {
       "id": "anthropic",
       "name": "Model Context Protocols Advanced Topics",
-      "file": "images/certificate-claude-model-context-protocol-advanced-topics.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203619/portfolio/images/certificate-claude-model-context-protocol-advanced-topics.jpg",
       "description": "Successfully completed the 'Model Context Protocols Advanced Topics' certification, learning advanceed topics such as sampling, root, and more. This certification reflects a strong understanding of advanced concepts in model context protocols and their practical applications in AI development."
     },
     {
       "id": "b10x",
       "name": "B10X League",
-      "file": "images/certificate-b10x.png",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203609/portfolio/images/certificate-b10x.png",
       "description": "Successfully attended a webinar conducted by B10X focused on the latest AI tools and strategies to enhance work efficiency, productivity, and modern digital workflows. Demonstrated proactive learning and commitment to staying updated with emerging AI technologies."
     },
     {
       "id": "samsung",
       "name": "Samsung Innovation",
-      "file": "images/certificate-samsung.png",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203631/portfolio/images/certificate-samsung.png",
       "description": "Successfully attended a hands-on GitHub Copilot workshop conducted by Ansh Mehra on January 20, 2026, at Samsung BKC, focused on leveraging AI-powered development using the Samsung Galaxy Book5 Series and Galaxy AI ecosystem. Demonstrated initiative in adopting modern AI-assisted coding tools to enhance development speed and productivity."
     },
     {
       "id": "anthropic",
       "name": "Claude with Anthropic API",
-      "file": "images/certificate-claude-with-anthropic-api.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203621/portfolio/images/certificate-claude-with-anthropic-api.jpg",
       "description": "Successfully completed the 'Claude with Anthropic API' certification, demonstrating proficiency in utilizing the Anthropic API to integrate and leverage the capabilities of the Claude language model for various applications. This certification reflects a strong understanding of AI language models and their practical implementation using the Anthropic API."
     },
     {
       "id": "anthropic",
       "name": "Claude Code 101",
-      "file": "images/certificate-claude-code-101.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203611/portfolio/images/certificate-claude-code-101.jpg",
       "description": "Successfully completed the 'Claude Code 101' certification, In this course, I gained a comprehensive understanding of the fundamentals of Claude Code, including its architecture, features, and practical applications. This certification reflects my proficiency in utilizing Claude Code for various programming tasks and projects."
     },
     {
       "id": "freeCodeCamp",
       "name": "FreeCodeCamp Front End Libraries",
-      "file": "images/certificate-freeCodeCamp-Front-End-Libraries.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203624/portfolio/images/certificate-freeCodeCamp-Front-End-Libraries.jpg",
       "description": "Successfully completed the FreeCodeCamp Front End Libraries certification, This certification reflects a strong foundation in client-side development and a commitment to creating modern, user-friendly interfaces."
     },
     {
       "id": "anthropic",
       "name": "Introduction to Model Context Protocols",
-      "file": "images/certificate-claude-introduction-to-model-context-protocol.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203616/portfolio/images/certificate-claude-introduction-to-model-context-protocol.jpg",
       "description": "Successfully completed the 'Introduction to Model Context Protocols' certification, demonstrating a strong understanding of the principles and practices of model context protocols in AI development. This certification reflects proficiency in designing and implementing effective context management strategies for AI models to enhance their performance and reliability."
     },
     {
       "id": "anthropic",
       "name": "Introduction to Agent Skills",
-      "file": "images/certificate-claude-introduction-to-agent-skills.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203614/portfolio/images/certificate-claude-introduction-to-agent-skills.jpg",
       "description": "Successfully completed the 'Introduction to Agent Skills' certification, demonstrating a strong understanding of the fundamental skills required for building and deploying AI agents skills. This certification reflects proficiency in designing, developing, and implementing agent skills."
     },
     {
       "id": "anthropic",
       "name": "Claude Code in Action",
-      "file": "images/certificate-claude-code-in-action.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203612/portfolio/images/certificate-claude-code-in-action.jpg",
       "description": "Successfully completed the 'Claude Code in Action' certification, demonstrating practical application of Claude Code in real-world scenarios. This certification reflects proficiency in utilizing Claude Code for various programming tasks and projects."
     },
     {
       "id": "freeCodeCamp",
       "name": "FreeCodeCamp Responsive Web Design",
-      "file": "images/certificate-freeCodeCamp-Legacy-Responsive-Web_Design.jpeg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203626/portfolio/images/certificate-freeCodeCamp-Legacy-Responsive-Web_Design.jpg",
       "description": "Successfully completed the FreeCodeCamp Responsive Web Design certification, demonstrating proficiency in HTML, CSS, and responsive design principles to create visually appealing and mobile-friendly web pages. This certification reflects a strong foundation in front-end web development and a commitment to building accessible and user-friendly websites."
     },
     {
       "id": "CS50",
       "name": "CS50's Introduction to Databases with SQL",
-      "file": "images/certificate-introduction-to-sql.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203628/portfolio/images/certificate-introduction-to-sql.jpg",
       "description": "Successfully attended the 'Introduction to Databases with SQL' certification, Completing seven problems sets and a final year project on Legal document retrieval system HECTOR. This certification reflects a strong understanding of database design, SQL querying, and practical application of database management systems."
     },
-
     {
       "id": "anthropic",
       "name": "Introduction to Sub Agents",
-      "file": "images/certificate-claude-introduction-to-sub-agents.jpg",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203617/portfolio/images/certificate-claude-introduction-to-sub-agents.jpg",
       "description": "Successfully completed the 'Introduction to Sub Agents' certification, This certification reflects a strong understanding of modular AI design and the practical implementation of sub-agents for improved functionality and performance."
     },
     {
       "id": "anthropic",
       "name": "AI Fluency for Builders",
-      "file": "images/certificate-ai-fluency-for-builders.png",
+      "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203608/portfolio/images/certificate-ai-fluency-for-builders.png",
       "description": "Successfully completed the 'AI Fluency for Builders' certification by CodePath.org in partnership with Anthropic, demonstrating foundational fluency in AI concepts, tools, and best practices for building AI-powered applications."
     }
   ]

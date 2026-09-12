@@ -30,7 +30,7 @@ export default function ClientDetail() {
         <div className="space-y-8">
           <div className="flex items-center gap-6">
             <img
-              src={`/${client.logo}`}
+              src={client.logo?.startsWith('http') ? client.logo : `/${client.logo}`}
               alt={client.name}
               className="w-24 h-24 object-contain"
             />

@@ -18,7 +18,7 @@ export default function ProjectCard({ project }) {
   let imageSrc = null;
   if (project.images && project.images.length > 0) {
     const firstImage = project.images[0];
-    imageSrc = typeof firstImage === 'string' ? `/${firstImage}` : `/${firstImage.file}`;
+    imageSrc = typeof firstImage === 'string' ? (firstImage.startsWith('http') ? firstImage : `/${firstImage}`) : (firstImage.file?.startsWith('http') ? firstImage.file : `/${firstImage.file}`);
   }
 
   const status = project.status ?? (project.live ? 'deployed' : 'under-development')

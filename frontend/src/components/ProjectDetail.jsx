@@ -30,7 +30,7 @@ export default function ProjectDetail() {
   if (!project) return null
 
   const currentImage = screenshots[selectedImageIndex]
-  const currentImageSrc = currentImage ? `/${currentImage.file}` : null
+  const currentImageSrc = currentImage ? (currentImage.file?.startsWith('http') ? currentImage.file : `/${currentImage.file}`) : null
 
   const nextImage = () => {
     setSelectedImageIndex((prev) => (prev + 1) % screenshots.length)
@@ -161,7 +161,7 @@ export default function ProjectDetail() {
                         title={img.caption}
                       >
                         <img
-                          src={`/${img.file}`}
+                          src={img.file?.startsWith('http') ? img.file : `/${img.file}`}
                           alt={`Thumbnail ${idx + 1}`}
                           className="w-full h-full object-cover"
                         />

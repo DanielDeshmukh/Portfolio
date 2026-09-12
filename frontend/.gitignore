@@ -11,6 +11,9 @@ build
 .env
 .env.local
 
+# generated
+cloudinary-urls.json
+
 # misc
 .DS_Store
 .vscode

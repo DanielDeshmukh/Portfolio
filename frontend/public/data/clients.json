@@ -3,7 +3,7 @@
     {
       "id": "shree-gurudev-plastics",
       "name": "Shree Gurudev Plastics",
-      "logo": "images/shree-gurudev-plastics-logo.png",
+      "logo": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203735/portfolio/images/shree-gurudev-plastics-logo.png",
       "contact": {
         "phone": "+91 85520 84251",
         "email": null,
@@ -22,7 +22,7 @@
     {
       "id": "babujichaay",
       "name": "Babuji Chaay",
-      "logo": "images/babujichaay-logo.png",
+      "logo": "https://res.cloudinary.com/vubrrgip/image/upload/v1789203601/portfolio/images/babujichaay-logo.png",
       "contact": {
         "phone": null,
         "email": null,

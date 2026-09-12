@@ -1,4 +1,5 @@
 export default function HireMe(){
+  const rateCardUrl = 'https://res.cloudinary.com/vubrrgip/raw/upload/v1789203766/portfolio/documents/RateCard.pdf'
   return (
     <section className="mt-12">
       <h2 className="text-2xl font-heading font-semibold text-goldlight">Hire Me</h2>
@@ -6,12 +7,12 @@ export default function HireMe(){
         <div className="flex flex-col gap-4 p-4">
           <iframe
             title="rate-card"
-            src="/data/rate-card/RateCard.pdf"
+            src={rateCardUrl}
             className="w-full h-[650px] bg-black/10 rounded"
           />
           <div className="flex justify-start">
             <a
-              href="/data/rate-card/RateCard.pdf"
+              href={rateCardUrl}
               download
               className="px-3 py-2 border border-accent text-accent rounded-md inline-flex items-center gap-2 justify-center hover:border-primary hover:text-primary transition text-sm"
             >

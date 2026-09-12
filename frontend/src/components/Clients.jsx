@@ -24,7 +24,7 @@ export default function Clients() {
           >
             <div className="w-20 h-20 flex items-center justify-center">
               <img
-                src={`/${client.logo}`}
+                src={client.logo?.startsWith('http') ? client.logo : `/${client.logo}`}
                 alt={client.name}
                 className="max-h-full max-w-full object-contain"
               />

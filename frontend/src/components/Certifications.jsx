@@ -194,7 +194,7 @@ function CertificateModal({ certificate, onClose }) {
             <div className="absolute inset-0 pointer-events-none user-select-none z-40" />
 
             <img
-              src={`/${certificate.file}`}
+              src={certificate.file?.startsWith('http') ? certificate.file : `/${certificate.file}`}
               alt={certificate.name}
               className="w-full h-auto select-none pointer-events-none"
               onContextMenu={handleImageContextMenu}

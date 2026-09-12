@@ -1,10 +1,8 @@
 import { NextResponse } from 'next/server'
 import { verifyPassword, signToken } from '../../../lib/auth'
-import { initSchema } from '../../../lib/db'
 
 export async function POST(request) {
   try {
-    await initSchema()
     const { username, password } = await request.json()
 
     if (!username || !password) {

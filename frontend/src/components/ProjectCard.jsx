@@ -14,7 +14,7 @@ function Img({ src, alt }) {
   );
 }
 
-export default function ProjectCard({ project, onClick }) {
+export default function ProjectCard({ project }) {
   if (!project) return null;
 
   let imageSrc = null;
@@ -28,7 +28,7 @@ export default function ProjectCard({ project, onClick }) {
   const statusClasses = status === 'deployed' ? 'bg-green-400 text-black' : 'bg-yellow-400 text-black'
 
   return (
-    <article onClick={onClick} className="relative card flex flex-col p-5 cursor-pointer border border-slate hover:border-primary transition group">
+    <article className="relative card flex flex-col p-5 border border-slate hover:border-primary transition group h-full">
       <div className="mb-4">
         <Img src={imageSrc} alt={project.name} />
       </div>
@@ -58,27 +58,19 @@ export default function ProjectCard({ project, onClick }) {
 
       <div className="mt-4 flex items-center gap-3">
         {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(e) => e.stopPropagation()}
+          <span
             className="text-accent hover:text-primary border border-slate hover:border-primary rounded-md px-2 py-1 transition"
           >
             <i className="fab fa-github"></i>
-          </a>
+          </span>
         )}
 
         {project.live && (
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(e) => e.stopPropagation()}
+          <span
             className="text-accent hover:text-primary border border-slate hover:border-primary rounded-md px-2 py-1 transition"
           >
             Live
-          </a>
+          </span>
         )}
       </div>
     </article>

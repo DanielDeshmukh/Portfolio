@@ -28,3 +28,16 @@ export async function loadProjects() {
     return null
   }
 }
+
+export async function loadClients() {
+  try {
+    const response = await fetch('/data/clients.json')
+    if (!response.ok) {
+      throw new Error(`Failed to load clients: ${response.statusText}`)
+    }
+    return await response.json()
+  } catch (error) {
+    console.error('Error loading clients:', error)
+    return { clients: [] }
+  }
+}

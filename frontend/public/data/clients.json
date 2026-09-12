@@ -1,0 +1,23 @@
+{
+  "projects": [
+    {
+      "id": "shree-gurudev-plastics",
+      "name": "Shree Gurudev Plastics",
+      "logo": "images/shree-gurudev-plastics-logo.png",
+      "contact": {
+        "phone": "+91 85520 84251",
+        "email": null,
+        "website": "https://shree-gurudev-plastics.vercel.app"
+      },
+      "relationSince": "2026",
+      "description": "Wholesale plastic products e-commerce platform with product catalog, shopping cart, checkout, admin dashboard, order tracking, festival broadcast system, and multi-location delivery management.",
+      "projects": [
+        {
+          "name": "Shree Gurudev Plastics Website",
+          "github": "https://github.com/DanielDeshmukh/shree-gurudev-plastics",
+          "live": "https://shree-gurudev-plastics.vercel.app"
+        }
+      ]
+    }
+  ]
+}

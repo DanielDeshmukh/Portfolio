@@ -1,10 +1,11 @@
-const { requireAuth } = require('./_shared/auth')
-const { getDb, initSchema } = require('./_shared/db')
-const { success, unauthorized, error, optionsResponse } = require('./_shared/response')
+import { NextResponse } from 'next/server'
+import { requireAuth } from '../../../lib/auth'
+import { getDb, initSchema } from '../../../lib/db'
 
-exports.handler = async (event) => {
-  if (event.httpMethod === 'OPTIONS') return optionsResponse()
-  if (!requireAuth(event)) return unauthorized()
+export async function GET(request) {
+  if (!requireAuth(request)) {
+    return NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 })
+  }
 
   try {
     await initSchema()
@@ -22,7 +23,8 @@ exports.handler = async (event) => {
     const thisMonth = new Date().toISOString().slice(0, 7)
     const refsThisMonth = uses.rows.filter(u => u.used_at && u.used_at.startsWith(thisMonth))
 
-    return success({
+    return NextResponse.json({
+      ok: true,
       stats: {
         totalClients: clients.rows.length,
         totalProjects: projects.rows.length,
@@ -37,6 +39,6 @@ exports.handler = async (event) => {
       recentReferrals: uses.rows.slice(0, 10),
     })
   } catch (err) {
-    return error(500, err.message)
+    return NextResponse.json({ ok: false, error: err.message }, { status: 500 })
   }
 }

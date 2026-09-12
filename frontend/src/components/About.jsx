@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function About({profile}){
   if(!profile) return null
   return (

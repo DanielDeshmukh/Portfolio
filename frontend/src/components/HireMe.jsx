@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function HireMe(){
   return (
     <section className="mt-12">

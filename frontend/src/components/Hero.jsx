@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Hero({profile}){
   if(!profile) return <section id="home" className="py-20" />
   return (

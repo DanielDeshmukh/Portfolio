@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+'use client'
+import { useState, useEffect } from 'react'
 import {
   Figma,
   Github,
   Vite,
   AnthropicIcon as Anthropic,
-  ClaudeCode ,
+  ClaudeCode,
   SqliteIcon as Sqlite,
   Groq,
   HttpieIcon as Httpie,

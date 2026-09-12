@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+'use client'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { loadClients } from '../utils/loadData'
 
 export default function Clients() {
@@ -18,7 +19,7 @@ export default function Clients() {
         {clients.map(client => (
           <Link
             key={client.id}
-            to={`/clients/${client.id}`}
+            href={`/clients/${client.id}`}
             className="card flex flex-col items-center gap-3 p-5 border border-slate hover:border-primary transition group text-center"
           >
             <div className="w-20 h-20 flex items-center justify-center">

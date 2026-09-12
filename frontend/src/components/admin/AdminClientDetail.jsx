@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+'use client'
+import { useEffect, useState } from 'react'
+import { useParams } from 'next/navigation'
+import Link from 'next/link'
 
 const API = '/api'
 
@@ -75,7 +77,7 @@ export default function AdminClientDetail() {
 
   return (
     <div>
-      <Link to="/admin/clients" className="text-sm text-gray-400 hover:text-primary transition mb-4 inline-block">
+      <Link href="/admin/clients" className="text-sm text-gray-400 hover:text-primary transition mb-4 inline-block">
         <i className="fas fa-arrow-left mr-1"></i>Back to Clients
       </Link>
 
@@ -143,7 +145,7 @@ export default function AdminClientDetail() {
                   </div>
                   <div className="flex gap-2">
                     <Link
-                      to={`/admin/referrals/${project.id}`}
+                      href={`/admin/referrals/${project.id}`}
                       className="px-3 py-1 text-xs border border-primary/30 rounded-md text-primary hover:bg-primary/10 transition"
                     >
                       <i className="fas fa-ticket-alt mr-1"></i>Referrals

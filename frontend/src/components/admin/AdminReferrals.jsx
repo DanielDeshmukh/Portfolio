@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+'use client'
+import { useEffect, useState } from 'react'
+import { useParams } from 'next/navigation'
+import Link from 'next/link'
 
 const API = '/api'
 
@@ -67,7 +69,7 @@ export default function AdminReferrals() {
 
   return (
     <div>
-      <Link to={`/admin/clients`} className="text-sm text-gray-400 hover:text-primary transition mb-4 inline-block">
+      <Link href="/admin/clients" className="text-sm text-gray-400 hover:text-primary transition mb-4 inline-block">
         <i className="fas fa-arrow-left mr-1"></i>Back to Clients
       </Link>
 
@@ -112,7 +114,7 @@ export default function AdminReferrals() {
       <h2 className="text-lg font-heading font-semibold text-goldlight mb-3">Referral Codes ({year})</h2>
       {codes.length === 0 ? (
         <div className="card border border-slate text-gray-400 text-sm text-center py-6 mb-8">
-          No codes generated yet. Click "Generate Codes" above.
+          No codes generated yet. Click &quot;Generate Codes&quot; above.
         </div>
       ) : (
         <div className="card border border-slate overflow-hidden mb-8">

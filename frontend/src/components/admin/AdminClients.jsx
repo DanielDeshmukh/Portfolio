@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+'use client'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const API = '/api'
 
@@ -97,7 +98,7 @@ export default function AdminClients() {
                   {client.name?.slice(0, 2)}
                 </div>
                 <div>
-                  <Link to={`/admin/clients/${client.id}`} className="font-semibold text-gray-200 hover:text-primary transition">
+                  <Link href={`/admin/clients/${client.id}`} className="font-semibold text-gray-200 hover:text-primary transition">
                     {client.name}
                   </Link>
                   <div className="flex gap-4 text-xs text-gray-400 mt-0.5">
@@ -109,7 +110,7 @@ export default function AdminClients() {
               </div>
               <div className="flex gap-2">
                 <Link
-                  to={`/admin/clients/${client.id}`}
+                  href={`/admin/clients/${client.id}`}
                   className="px-3 py-1 text-xs border border-slate rounded-md text-gray-300 hover:border-primary hover:text-primary transition"
                 >
                   View

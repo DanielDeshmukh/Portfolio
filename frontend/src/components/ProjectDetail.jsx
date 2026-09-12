@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+'use client'
+import { useEffect, useState } from 'react'
+import { useParams, useRouter } from 'next/navigation'
 import { loadProjects } from '../utils/loadData'
 
 export default function ProjectDetail() {
   const { id } = useParams()
-  const navigate = useNavigate()
+  const router = useRouter()
   const [project, setProject] = useState(null)
   const [screenshots, setScreenshots] = useState([])
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
@@ -43,7 +44,7 @@ export default function ProjectDetail() {
     <div className="fixed inset-0 bg-black/80 backdrop-blur z-50 overflow-y-auto">
       <div className="max-w-4xl mx-auto px-6 py-6">
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => router.back()}
           className="mb-6 inline-flex items-center gap-2 text-gray-300 hover:text-primary transition border border-slate hover:border-primary rounded-md px-3 py-1"
         >
           <i className="fas fa-arrow-left"></i> Back

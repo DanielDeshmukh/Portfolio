@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+'use client'
+import { useEffect, useState } from 'react'
+import { useParams, useRouter } from 'next/navigation'
 import { loadClients } from '../utils/loadData'
 
 export default function ClientDetail() {
   const { id } = useParams()
-  const navigate = useNavigate()
+  const router = useRouter()
   const [client, setClient] = useState(null)
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function ClientDetail() {
     <div className="fixed inset-0 bg-black/80 backdrop-blur z-50 overflow-y-auto">
       <div className="max-w-4xl mx-auto px-6 py-6">
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => router.back()}
           className="mb-6 inline-flex items-center gap-2 text-gray-300 hover:text-primary transition border border-slate hover:border-primary rounded-md px-3 py-1"
         >
           <i className="fas fa-arrow-left"></i> Back

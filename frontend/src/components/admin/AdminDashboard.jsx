@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+'use client'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const API = '/api'
 

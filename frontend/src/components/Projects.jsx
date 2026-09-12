@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react'
-import { Link } from 'react-router-dom'
-import ProjectCard from './ProjectCard'
+'use client'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { loadProjects } from '../utils/loadData'
+import ProjectCard from './ProjectCard'
 
 export default function Projects(){
   const [data, setData] = useState(null)
@@ -28,7 +29,7 @@ export default function Projects(){
       </div>
       <div className="mt-6 grid md:grid-cols-3 gap-6">
         {visibleProjects.map(p=> (
-          <Link key={p.id} to={`/projects/${p.id}`}>
+          <Link key={p.id} href={`/projects/${p.id}`}>
             <ProjectCard project={p} />
           </Link>
         ))}

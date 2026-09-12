@@ -1,14 +1,14 @@
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcryptjs')
+import jwt from 'jsonwebtoken'
+import bcrypt from 'bcryptjs'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-change-me'
 const ADMIN_HASH = process.env.ADMIN_PASSWORD_HASH
 
-function signToken(payload) {
+export function signToken(payload) {
   return jwt.sign(payload, JWT_SECRET, { expiresIn: '24h' })
 }
 
-function verifyToken(token) {
+export function verifyToken(token) {
   try {
     return jwt.verify(token, JWT_SECRET)
   } catch {
@@ -16,23 +16,21 @@ function verifyToken(token) {
   }
 }
 
-function verifyPassword(password) {
+export function verifyPassword(password) {
   if (!ADMIN_HASH) return false
   return bcrypt.compareSync(password, ADMIN_HASH)
 }
 
-function getBearerToken(event) {
-  const auth = event.headers?.authorization || ''
+export function getBearerToken(request) {
+  const auth = request.headers.get('authorization') || ''
   if (auth.startsWith('Bearer ')) {
     return auth.slice(7)
   }
   return null
 }
 
-function requireAuth(event) {
-  const token = getBearerToken(event)
+export function requireAuth(request) {
+  const token = getBearerToken(request)
   if (!token) return null
   return verifyToken(token)
 }
-
-module.exports = { signToken, verifyToken, verifyPassword, requireAuth }

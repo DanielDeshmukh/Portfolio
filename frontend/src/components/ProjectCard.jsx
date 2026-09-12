@@ -1,5 +1,3 @@
-import React from "react";
-
 function Img({ src, alt }) {
   if (!src) return null;
 

@@ -1,8 +1,8 @@
-const { createClient } = require('@libsql/client')
+import { createClient } from '@libsql/client'
 
 let client = null
 
-function getDb() {
+export function getDb() {
   if (!client) {
     client = createClient({
       url: process.env.TURSO_DATABASE_URL,
@@ -12,7 +12,7 @@ function getDb() {
   return client
 }
 
-async function initSchema() {
+export async function initSchema() {
   const db = getDb()
 
   await db.executeMultiple(`
@@ -73,5 +73,3 @@ async function initSchema() {
     );
   `)
 }
-
-module.exports = { getDb, initSchema }

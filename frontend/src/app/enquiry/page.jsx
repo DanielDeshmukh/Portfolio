@@ -148,7 +148,7 @@ function EnquiryForm() {
                   i
                 </button>
                 {showInfo && (
-                  <div className="absolute left-6 top-1/2 -translate-y-1/2 w-80 bg-slate-800 border border-slate rounded-lg p-4 text-xs text-gray-300 shadow-xl z-20">
+                  <div className="absolute left-6 top-1/2 -translate-y-1/2 w-80 bg-[#1e293b] border border-slate rounded-lg p-4 text-xs text-gray-300 shadow-xl z-20" style={{ backgroundColor: '#1e293b' }}>
                     <button type="button" onClick={() => setShowInfo(false)} className="absolute top-2 right-2 text-gray-500 hover:text-gray-300">
                       <i className="fas fa-times"></i>
                     </button>

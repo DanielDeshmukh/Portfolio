@@ -1,5 +1,5 @@
 export default function Resume(){
-  const resumeUrl = 'https://res.cloudinary.com/vubrrgip/raw/upload/v1789203764/portfolio/documents/resume.pdf'
+  const resumeUrl = '/documents/resume.pdf'
   return (
     <section id="resume" className="mt-12">
       <h2 className="text-2xl font-heading font-semibold text-goldlight">Resume</h2>

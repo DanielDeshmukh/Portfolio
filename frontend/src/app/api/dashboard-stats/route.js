@@ -15,7 +15,7 @@ export async function GET(request) {
     const projects = await db.execute('SELECT * FROM client_projects ORDER BY created_at DESC')
     const codes = await db.execute('SELECT * FROM referral_codes ORDER BY created_at DESC')
     const uses = await db.execute('SELECT * FROM referral_uses ORDER BY used_at DESC')
-    const discounts = await db.execute('SELECT * FROM discount_ledger ORDER BY created_at DESC')
+    const discounts = await db.execute('SELECT * FROM discount_ledger')
 
     const currentYear = new Date().getFullYear()
     const activeCodes = codes.rows.filter(c => c.status === 'active' && c.year === currentYear)

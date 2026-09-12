@@ -22,8 +22,7 @@ export default function ClientDetail() {
     })
   }, [id])
 
-  const totalActive = refInfo ? refInfo.reduce((s, p) => s + parseInt(p.active || 0), 0) : 0
-  const totalAll = refInfo ? refInfo.reduce((s, p) => s + parseInt(p.total || 0), 0) : 0
+  const totalAvailable = refInfo ? refInfo.reduce((s, p) => s + parseInt(p.available || 0), 0) : 0
 
   function requestReferral() {
     const msg = encodeURIComponent(
@@ -148,26 +147,26 @@ export default function ClientDetail() {
                     <div key={i} className="flex items-center justify-between bg-background/50 rounded-lg px-4 py-2.5">
                       <span className="text-sm text-gray-300">{p.project_name}</span>
                       <div className="flex items-center gap-2">
-                        {parseInt(p.active) > 0 ? (
+                        {p.available > 0 ? (
                           <span className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-green-500/15 text-green-400 border border-green-500/30 flex items-center gap-1">
                             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                            {p.active} active
+                            {p.available} slot{p.available !== 1 ? 's' : ''} left
                           </span>
                         ) : (
-                          <span className="text-[11px] text-gray-500">none available</span>
+                          <span className="text-[11px] text-gray-500">all slots used</span>
                         )}
                       </div>
                     </div>
                   ))}
                 </div>
 
-                {totalActive > 0 ? (
+                {totalAvailable > 0 ? (
                   <div className="bg-green-900/15 border border-green-500/20 rounded-lg p-4">
                     <p className="text-green-300 text-sm font-medium mb-2">
                       <i className="fas fa-check-circle mr-1"></i>
-                      {totalActive} referral code{totalActive !== 1 ? 's' : ''} available to share
+                      {totalAvailable} referral slot{totalAvailable !== 1 ? 's' : ''} available
                     </p>
-                    <p className="text-gray-400 text-xs mb-3">Reach out to {client.name} and ask for a code. You&apos;ll get 50% off your first month&apos;s maintenance.</p>
+                    <p className="text-gray-400 text-xs mb-3">Reach out and ask for a code. You&apos;ll get 50% off your first month&apos;s maintenance.</p>
                     <button
                       onClick={requestReferral}
                       className="w-full py-2.5 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium flex items-center justify-center gap-2 transition-colors"
@@ -178,8 +177,8 @@ export default function ClientDetail() {
                   </div>
                 ) : (
                   <div className="bg-background/50 rounded-lg p-4 text-center">
-                    <p className="text-gray-400 text-sm">No active referrals available right now.</p>
-                    <p className="text-gray-500 text-xs mt-1">Check back later or contact Daniel directly.</p>
+                    <p className="text-gray-400 text-sm">All referral slots used for this year.</p>
+                    <p className="text-gray-500 text-xs mt-1">New slots reset next year, or contact Daniel directly.</p>
                   </div>
                 )}
               </>

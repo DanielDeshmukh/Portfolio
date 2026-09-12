@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { requireAuth } from '../../../lib/auth'
 import { getDb, initSchema } from '../../../lib/db'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(request) {
   if (!requireAuth(request)) {
     return NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 })
@@ -11,15 +13,18 @@ export async function GET(request) {
     await initSchema()
     const db = getDb()
 
-    const clients = await db.execute('SELECT COUNT(*) as count FROM clients')
-    const projects = await db.execute('SELECT COUNT(*) as count FROM client_projects')
-    const earnings = await db.execute('SELECT * FROM earnings ORDER BY created_at DESC')
-    const codes = await db.execute('SELECT * FROM referral_codes ORDER BY created_at DESC')
-    const uses = await db.execute('SELECT * FROM referral_uses ORDER BY used_at DESC')
+    const [clientsRes, projectsRes, earningsRes, codesRes, usesRes] = await Promise.all([
+      db.execute('SELECT * FROM clients'),
+      db.execute('SELECT * FROM client_projects'),
+      db.execute('SELECT * FROM earnings ORDER BY created_at DESC'),
+      db.execute('SELECT * FROM referral_codes'),
+      db.execute('SELECT * FROM referral_uses'),
+    ])
 
-    const totalEarnings = earnings.rows.reduce((sum, e) => sum + Number(e.amount || 0), 0)
-    const paidEarnings = earnings.rows.filter(e => e.status === 'paid').reduce((sum, e) => sum + Number(e.amount || 0), 0)
-    const pendingEarnings = earnings.rows.filter(e => e.status === 'pending').reduce((sum, e) => sum + Number(e.amount || 0), 0)
+    const allEarnings = earningsRes.rows
+    const totalEarnings = allEarnings.reduce((sum, e) => sum + Number(e.amount || 0), 0)
+    const paidEarnings = allEarnings.filter(e => e.status === 'paid').reduce((sum, e) => sum + Number(e.amount || 0), 0)
+    const pendingEarnings = allEarnings.filter(e => e.status === 'pending').reduce((sum, e) => sum + Number(e.amount || 0), 0)
 
     const dailyEarnings = await db.execute(
       `SELECT date(created_at) as day, SUM(amount) as total
@@ -30,10 +35,10 @@ export async function GET(request) {
     )
 
     const currentYear = new Date().getFullYear()
-    const activeCodes = codes.rows.filter(c => c.status === 'active' && c.year === currentYear)
-    const usedCodes = codes.rows.filter(c => c.status === 'used')
+    const activeCodes = codesRes.rows.filter(c => c.status === 'active' && c.year === currentYear)
+    const usedCodes = codesRes.rows.filter(c => c.status === 'used')
 
-    const recentEarnings = earnings.rows.slice(0, 10).map(e => ({
+    const recentEarnings = allEarnings.slice(0, 10).map(e => ({
       ...e,
       amount: Number(e.amount || 0),
     }))
@@ -41,15 +46,15 @@ export async function GET(request) {
     return NextResponse.json({
       ok: true,
       stats: {
-        totalClients: clients.rows.length,
-        totalProjects: projects.rows.length,
+        totalClients: clientsRes.rows.length,
+        totalProjects: projectsRes.rows.length,
         totalEarnings,
         paidEarnings,
         pendingEarnings,
-        totalCodes: codes.rows.length,
+        totalCodes: codesRes.rows.length,
         activeCodes: activeCodes.length,
         usedCodes: usedCodes.length,
-        totalReferrals: uses.rows.length,
+        totalReferrals: usesRes.rows.length,
         dailyEarnings: dailyEarnings.rows.map(d => ({ ...d, total: Number(d.total || 0) })),
         recentEarnings,
       },

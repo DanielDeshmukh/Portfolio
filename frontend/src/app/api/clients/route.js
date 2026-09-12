@@ -3,6 +3,8 @@ import { requireAuth } from '../../../lib/auth'
 import { getDb, initSchema } from '../../../lib/db'
 import crypto from 'crypto'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(request) {
   if (!requireAuth(request)) {
     return NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 })

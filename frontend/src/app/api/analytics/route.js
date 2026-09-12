@@ -30,6 +30,15 @@ export async function GET(request) {
     })
     const viewsThisWeek = parseInt(weekResult.rows[0].count)
 
+    const monthAgo = new Date()
+    monthAgo.setDate(monthAgo.getDate() - 30)
+    const monthAgoStr = monthAgo.toISOString().slice(0, 10)
+
+    const dailyResult = await db.execute({
+      sql: "SELECT date(viewed_at) as day, COUNT(*) as views FROM page_views WHERE date(viewed_at) >= ? GROUP BY date(viewed_at) ORDER BY day ASC",
+      args: [monthAgoStr],
+    })
+
     const byPathResult = await db.execute(
       'SELECT path, COUNT(*) as views FROM page_views GROUP BY path ORDER BY views DESC'
     )
@@ -38,14 +47,34 @@ export async function GET(request) {
       'SELECT code, COUNT(*) as clicks FROM referral_clicks GROUP BY code ORDER BY clicks DESC'
     )
 
+    const hourlyResult = await db.execute(
+      "SELECT CAST(strftime('%H', viewed_at) AS INTEGER) as hour, COUNT(*) as views FROM page_views GROUP BY hour ORDER BY hour ASC"
+    )
+
+    const byReferrerResult = await db.execute(
+      "SELECT CASE WHEN referrer IS NULL OR referrer = '' THEN 'Direct' ELSE referrer END as source, COUNT(*) as visits FROM page_views GROUP BY source ORDER BY visits DESC LIMIT 10"
+    )
+
+    const recentResult = await db.execute(
+      'SELECT path, referrer, user_agent, viewed_at FROM page_views ORDER BY viewed_at DESC LIMIT 20'
+    )
+
+    const uniqueIps = await db.execute('SELECT COUNT(DISTINCT ip_hash) as count FROM page_views')
+    const uniqueVisitors = parseInt(uniqueIps.rows[0].count)
+
     return NextResponse.json({
       ok: true,
       stats: {
         totalViews,
         viewsToday,
         viewsThisWeek,
+        uniqueVisitors,
         byPath: byPathResult.rows,
         referralClicks: referralClicksResult.rows,
+        dailyViews: dailyResult.rows,
+        hourlyViews: hourlyResult.rows,
+        byReferrer: byReferrerResult.rows,
+        recentActivity: recentResult.rows,
       },
     })
   } catch (err) {

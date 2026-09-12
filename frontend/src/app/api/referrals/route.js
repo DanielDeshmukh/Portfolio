@@ -247,29 +247,129 @@ export async function POST(request) {
       return NextResponse.json({ ok: true, message: 'All referral data cleared' })
     }
 
+    if (action === 'delete') {
+      const { code_id } = body
+      if (!code_id) {
+        return NextResponse.json({ ok: false, error: 'code_id required' }, { status: 400 })
+      }
+      await db.execute({ sql: 'DELETE FROM referral_uses WHERE code_id = ?', args: [code_id] })
+      await db.execute({ sql: 'DELETE FROM referral_codes WHERE id = ?', args: [code_id] })
+      return NextResponse.json({ ok: true, message: 'Code deleted' })
+    }
+
     if (action === 'mark-used') {
       const { code_id, referee_name, referee_phone } = body
       if (!code_id || !referee_name) {
         return NextResponse.json({ ok: false, error: 'code_id and referee_name required' }, { status: 400 })
       }
       const codeRow = await db.execute({
-        sql: 'SELECT * FROM referral_codes WHERE id = ? AND status = ?',
-        args: [code_id, 'active'],
+        sql: 'SELECT * FROM referral_codes WHERE id = ?',
+        args: [code_id],
       })
       if (codeRow.rows.length === 0) {
-        return NextResponse.json({ ok: false, error: 'Code not found or already used' }, { status: 400 })
+        return NextResponse.json({ ok: false, error: 'Code not found' }, { status: 400 })
       }
       const code = codeRow.rows[0]
+
+      if (code.status === 'used') {
+        return NextResponse.json({ ok: false, error: 'Code already used' }, { status: 400 })
+      }
+
       const useId = crypto.randomUUID()
+      const now = new Date().toISOString()
       await db.execute({
-        sql: 'INSERT INTO referral_uses (id, code_id, referee_name, referee_phone) VALUES (?, ?, ?, ?)',
-        args: [useId, code_id, referee_name, referee_phone || null],
+        sql: 'INSERT INTO referral_uses (id, code_id, referee_name, referee_phone, used_at) VALUES (?, ?, ?, ?, ?)',
+        args: [useId, code_id, referee_name, referee_phone || null, now],
       })
       await db.execute({
         sql: "UPDATE referral_codes SET status = 'used' WHERE id = ?",
         args: [code_id],
       })
-      return NextResponse.json({ ok: true, useId, message: 'Code marked as used' })
+
+      const allUsed = await db.execute({
+        sql: 'SELECT COUNT(*) as count FROM referral_uses WHERE code_id IN (SELECT id FROM referral_codes WHERE project_id = ? AND year = ?)',
+        args: [code.project_id, code.year],
+      })
+      const count = parseInt(allUsed.rows[0].count)
+
+      const firstUse = await db.execute({
+        sql: 'SELECT ru.used_at FROM referral_uses ru JOIN referral_codes rc ON ru.code_id = rc.id WHERE rc.project_id = ? AND rc.year = ? ORDER BY ru.used_at ASC LIMIT 1',
+        args: [code.project_id, code.year],
+      })
+
+      const discountsCreated = []
+
+      if (firstUse.rows.length > 0) {
+        const firstDate = new Date(firstUse.rows[0].used_at)
+
+        if (count >= 1) {
+          const discountMonth = new Date(firstDate)
+          discountMonth.setMonth(discountMonth.getMonth() + 1)
+          const monthStr = discountMonth.toISOString().slice(0, 7)
+          const exists = await db.execute({
+            sql: 'SELECT id FROM discount_ledger WHERE project_id = ? AND referral_use_id = ? AND discount_type = ?',
+            args: [code.project_id, useId, '50_next'],
+          })
+          if (exists.rows.length === 0) {
+            await db.execute({
+              sql: 'INSERT INTO discount_ledger (id, project_id, year, referral_use_id, discount_type, discount_month) VALUES (?, ?, ?, ?, ?, ?)',
+              args: [crypto.randomUUID(), code.project_id, code.year, useId, '50_next', monthStr],
+            })
+            discountsCreated.push({ type: '50_next', month: monthStr })
+          }
+        }
+
+        if (count >= 2) {
+          const discountMonth = new Date(firstDate)
+          discountMonth.setMonth(discountMonth.getMonth() + 2)
+          const monthStr = discountMonth.toISOString().slice(0, 7)
+          const exists = await db.execute({
+            sql: 'SELECT id FROM discount_ledger WHERE project_id = ? AND discount_type = ? AND discount_month = ?',
+            args: [code.project_id, '50_extends', monthStr],
+          })
+          if (exists.rows.length === 0) {
+            await db.execute({
+              sql: 'INSERT INTO discount_ledger (id, project_id, year, referral_use_id, discount_type, discount_month) VALUES (?, ?, ?, ?, ?, ?)',
+              args: [crypto.randomUUID(), code.project_id, code.year, useId, '50_extends', monthStr],
+            })
+            discountsCreated.push({ type: '50_extends', month: monthStr })
+          }
+        }
+
+        if (count >= 3) {
+          const extMonth = new Date(firstDate)
+          extMonth.setMonth(extMonth.getMonth() + 3)
+          const extMonthStr = extMonth.toISOString().slice(0, 7)
+          const existsExt = await db.execute({
+            sql: 'SELECT id FROM discount_ledger WHERE project_id = ? AND discount_type = ? AND discount_month = ?',
+            args: [code.project_id, '50_extends', extMonthStr],
+          })
+          if (existsExt.rows.length === 0) {
+            await db.execute({
+              sql: 'INSERT INTO discount_ledger (id, project_id, year, referral_use_id, discount_type, discount_month) VALUES (?, ?, ?, ?, ?, ?)',
+              args: [crypto.randomUUID(), code.project_id, code.year, useId, '50_extends', extMonthStr],
+            })
+            discountsCreated.push({ type: '50_extends', month: extMonthStr })
+          }
+
+          const bonusMonth = new Date(firstDate)
+          bonusMonth.setMonth(bonusMonth.getMonth() + 4)
+          const bonusMonthStr = bonusMonth.toISOString().slice(0, 7)
+          const existsBonus = await db.execute({
+            sql: 'SELECT id FROM discount_ledger WHERE project_id = ? AND discount_type = ? AND discount_month = ?',
+            args: [code.project_id, '100_bonus', bonusMonthStr],
+          })
+          if (existsBonus.rows.length === 0) {
+            await db.execute({
+              sql: 'INSERT INTO discount_ledger (id, project_id, year, referral_use_id, discount_type, discount_month) VALUES (?, ?, ?, ?, ?, ?)',
+              args: [crypto.randomUUID(), code.project_id, code.year, useId, '100_bonus', bonusMonthStr],
+            })
+            discountsCreated.push({ type: '100_bonus', month: bonusMonthStr })
+          }
+        }
+      }
+
+      return NextResponse.json({ ok: true, useId, count, discounts: discountsCreated, message: 'Code marked as used' })
     }
 
     return NextResponse.json({ ok: false, error: 'Invalid action' }, { status: 400 })

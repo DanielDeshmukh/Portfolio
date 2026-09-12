@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-const BASE_URL = 'https://danieldeshmukh-portfolio.vercel.app/hire'
+const BASE_URL = 'https://danieldeshmukh-portfolio.vercel.app/ref'
 const API = '/api'
 
 function authHeaders() {
@@ -20,6 +20,8 @@ export default function AdminReferralLinks() {
   const [generating, setGenerating] = useState(false)
   const [toast, setToast] = useState(null)
   const [newCode, setNewCode] = useState(null)
+  const [markUsedId, setMarkUsedId] = useState(null)
+  const [markForm, setMarkForm] = useState({ name: '', phone: '' })
 
   useEffect(() => {
     fetch(`${API}/projects`, { headers: authHeaders() })
@@ -28,27 +30,28 @@ export default function AdminReferralLinks() {
       .catch(() => {})
   }, [])
 
-  useEffect(() => {
-    if (!selectedProject) { setReferralData(null); return }
+  function loadReferrals() {
+    if (!selectedProject) return
     setLoading(true)
     const year = new Date().getFullYear()
     fetch(`${API}/referrals?project_id=${selectedProject}&year=${year}`, { headers: authHeaders() })
       .then(r => r.json())
       .then(data => { setReferralData(data); setLoading(false) })
       .catch(() => { setLoading(false) })
-  }, [selectedProject])
+  }
+
+  useEffect(() => { loadReferrals() }, [selectedProject])
 
   function showToast(msg) {
     setToast(msg)
     setTimeout(() => setToast(null), 2500)
   }
 
-  const buildLink = (code) => `${BASE_URL}?ref=${code}`
+  const buildLink = (code) => `${BASE_URL}/${code}`
 
   async function copyToClipboard(text) {
     try {
       await navigator.clipboard.writeText(text)
-      showToast('Copied to clipboard')
     } catch {
       const ta = document.createElement('textarea')
       ta.value = text
@@ -56,8 +59,8 @@ export default function AdminReferralLinks() {
       ta.select()
       document.execCommand('copy')
       document.body.removeChild(ta)
-      showToast('Copied to clipboard')
     }
+    showToast('Copied to clipboard')
   }
 
   async function handleGenerate() {
@@ -72,20 +75,63 @@ export default function AdminReferralLinks() {
       const data = await res.json()
       if (data.ok && data.codes?.length > 0) {
         const code = data.codes[0]
-        const link = buildLink(code.code)
-        setNewCode({ code: code.code, link })
+        setNewCode({ code: code.code, link: buildLink(code.code), slot: code.slot })
         showToast('Code generated')
-        const year = new Date().getFullYear()
-        fetch(`${API}/referrals?project_id=${selectedProject}&year=${year}`, { headers: authHeaders() })
-          .then(r => r.json())
-          .then(d => setReferralData(d))
+        loadReferrals()
       } else {
-        showToast(data.error || 'Failed to generate')
+        showToast(data.error || 'Failed')
       }
     } catch {
-      showToast('Failed to generate code')
+      showToast('Failed to generate')
     }
     setGenerating(false)
+  }
+
+  async function handleMarkUsed(codeId) {
+    if (!markForm.name.trim()) { showToast('Name required'); return }
+    try {
+      const res = await fetch(`${API}/referrals`, {
+        method: 'POST',
+        headers: authHeaders(),
+        body: JSON.stringify({
+          action: 'mark-used',
+          code_id: codeId,
+          referee_name: markForm.name.trim(),
+          referee_phone: markForm.phone.trim() || null,
+        }),
+      })
+      const data = await res.json()
+      if (data.ok) {
+        showToast('Code marked as used')
+        setMarkUsedId(null)
+        setMarkForm({ name: '', phone: '' })
+        loadReferrals()
+      } else {
+        showToast(data.error || 'Failed')
+      }
+    } catch {
+      showToast('Failed')
+    }
+  }
+
+  async function handleDelete(codeId) {
+    if (!confirm('Delete this referral code permanently?')) return
+    try {
+      const res = await fetch(`${API}/referrals`, {
+        method: 'POST',
+        headers: authHeaders(),
+        body: JSON.stringify({ action: 'delete', code_id: codeId }),
+      })
+      const data = await res.json()
+      if (data.ok) {
+        showToast('Code deleted')
+        loadReferrals()
+      } else {
+        showToast(data.error || 'Failed')
+      }
+    } catch {
+      showToast('Failed')
+    }
   }
 
   const codes = referralData?.codes || []
@@ -98,7 +144,7 @@ export default function AdminReferralLinks() {
   return (
     <div className="space-y-8">
       {toast && (
-        <div className="fixed top-6 right-6 z-[100] bg-green-600 text-white px-4 py-2.5 rounded-lg shadow-lg flex items-center gap-2 text-sm font-medium animate-in slide-in-from-top-2">
+        <div className="fixed top-6 right-6 z-[100] bg-green-600 text-white px-4 py-2.5 rounded-lg shadow-lg flex items-center gap-2 text-sm font-medium">
           <i className="fas fa-check-circle"></i>
           {toast}
         </div>
@@ -115,7 +161,7 @@ export default function AdminReferralLinks() {
         </label>
         <select
           value={selectedProject}
-          onChange={(e) => { setSelectedProject(e.target.value); setNewCode(null) }}
+          onChange={(e) => { setSelectedProject(e.target.value); setNewCode(null); setMarkUsedId(null) }}
           className="w-full max-w-lg bg-background border border-slate rounded-lg px-4 py-3 text-gray-100 focus:outline-none focus:border-primary transition-colors text-sm"
         >
           <option value="">-- Choose a project --</option>
@@ -160,22 +206,23 @@ export default function AdminReferralLinks() {
                   <i className="fas fa-copy"></i>Copy
                 </button>
               </div>
-              <div className="mt-3 flex items-center gap-3 bg-background rounded-lg p-3">
+              <div className="mt-2 flex items-center gap-3 bg-background rounded-lg p-3">
                 <code className="flex-1 font-mono text-xs text-gray-300 break-all">{newCode.link}</code>
                 <button
                   onClick={() => copyToClipboard(newCode.link)}
                   className="shrink-0 px-3 py-1.5 text-xs font-medium rounded-lg bg-primary/15 text-primary hover:bg-primary/25 border border-primary/30 transition-colors flex items-center gap-1.5"
                 >
-                  <i className="fas fa-link"></i>Copy Link
+                  <i className="fas fa-link"></i>Link
                 </button>
               </div>
+              <p className="text-xs text-gray-500 mt-2"><i className="fas fa-info-circle mr-1"></i>Share this link with the referrer. When someone visits it, they&apos;ll see the code to mention when contacting you.</p>
             </div>
           )}
 
           <div className="bg-secondary/50 border border-slate/50 rounded-xl p-6">
             <div className="flex items-center justify-between mb-5">
               <h2 className="text-lg font-heading font-semibold text-white">
-                <i className="fas fa-ticket-alt mr-2 text-primary"></i>Codes ({selectedName})
+                <i className="fas fa-ticket-alt mr-2 text-primary"></i>Codes
               </h2>
               <button
                 onClick={handleGenerate}
@@ -192,23 +239,23 @@ export default function AdminReferralLinks() {
             </div>
 
             {loading ? (
-              <p className="text-gray-400 text-sm py-4">Loading...</p>
+              <p className="text-gray-400 text-sm py-4"><i className="fas fa-spinner fa-spin mr-2"></i>Loading...</p>
             ) : codes.length === 0 ? (
               <div className="text-center py-10">
                 <i className="fas fa-ticket-alt text-3xl text-gray-600 mb-3"></i>
                 <p className="text-gray-400 text-sm">No codes generated yet</p>
-                <p className="text-gray-500 text-xs mt-1">Click "Generate Code" to create your first referral code</p>
               </div>
             ) : (
               <div className="space-y-3">
                 {codes.map(code => {
                   const codeUses = uses.filter(u => u.code_id === code.id)
                   const link = buildLink(code.code)
+                  const isMarking = markUsedId === code.id
                   return (
                     <div key={code.id} className="bg-background/50 border border-slate/30 rounded-lg p-4">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start gap-3">
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-1.5">
+                          <div className="flex items-center gap-2 mb-1.5 flex-wrap">
                             <code className="font-mono text-sm text-primary font-semibold">{code.code}</code>
                             <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded-full flex items-center gap-1 ${
                               code.status === 'active'
@@ -228,7 +275,7 @@ export default function AdminReferralLinks() {
                             </div>
                           )}
                         </div>
-                        <div className="flex gap-2 shrink-0">
+                        <div className="flex gap-2 shrink-0 flex-wrap">
                           <button
                             onClick={() => copyToClipboard(code.code)}
                             className="px-3 py-1.5 text-xs font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary/20 border border-primary/20 transition-colors flex items-center gap-1.5"
@@ -241,16 +288,51 @@ export default function AdminReferralLinks() {
                           >
                             <i className="fas fa-link"></i>Link
                           </button>
-                          {navigator.share && (
+                          {code.status === 'active' && (
                             <button
-                              onClick={() => navigator.share({ title: `Referral: ${code.code}`, url: link })}
-                              className="px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 border border-slate-600/50 transition-colors flex items-center gap-1.5"
+                              onClick={() => { setMarkUsedId(isMarking ? null : code.id); setMarkForm({ name: '', phone: '' }) }}
+                              className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors flex items-center gap-1.5 ${
+                                isMarking ? 'bg-green-600 text-white border-green-600' : 'bg-green-900/20 text-green-400 border-green-500/30 hover:bg-green-900/40'
+                              }`}
                             >
-                              <i className="fas fa-share-alt"></i>
+                              <i className="fas fa-check"></i>Mark Used
                             </button>
                           )}
+                          <button
+                            onClick={() => handleDelete(code.id)}
+                            className="px-3 py-1.5 text-xs font-medium rounded-lg bg-red-900/20 text-red-400 border border-red-500/30 hover:bg-red-900/40 transition-colors flex items-center gap-1.5"
+                          >
+                            <i className="fas fa-trash"></i>
+                          </button>
                         </div>
                       </div>
+
+                      {isMarking && (
+                        <div className="mt-4 pt-4 border-t border-slate/30">
+                          <p className="text-xs text-gray-400 mb-3"><i className="fas fa-info-circle mr-1"></i>Enter details of the person who was referred. 50% discount will apply to {selectedName}&apos;s next month payment.</p>
+                          <div className="flex flex-col sm:flex-row gap-2">
+                            <input
+                              value={markForm.name}
+                              onChange={e => setMarkForm({ ...markForm, name: e.target.value })}
+                              placeholder="Referee name *"
+                              className="flex-1 px-3 py-2 bg-background rounded-lg border border-slate text-sm text-gray-100 focus:border-primary outline-none"
+                            />
+                            <input
+                              value={markForm.phone}
+                              onChange={e => setMarkForm({ ...markForm, phone: e.target.value })}
+                              placeholder="Phone (optional)"
+                              className="flex-1 px-3 py-2 bg-background rounded-lg border border-slate text-sm text-gray-100 focus:border-primary outline-none"
+                            />
+                            <button
+                              onClick={() => handleMarkUsed(code.id)}
+                              disabled={!markForm.name.trim()}
+                              className="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2"
+                            >
+                              <i className="fas fa-check"></i>Confirm
+                            </button>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )
                 })}

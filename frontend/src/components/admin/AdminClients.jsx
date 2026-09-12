@@ -75,7 +75,7 @@ export default function AdminClients() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
         <h1 className="text-2xl font-heading font-bold text-white">Clients</h1>
         <button
           onClick={openAdd}
@@ -92,41 +92,43 @@ export default function AdminClients() {
       ) : (
         <div className="space-y-3">
           {clients.map(client => (
-            <div key={client.id} className="card border border-slate flex items-center justify-between p-4">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center text-xs font-bold text-gray-300 uppercase flex-shrink-0">
-                  {client.name?.slice(0, 2)}
-                </div>
-                <div>
-                  <Link href={`/admin/clients/${client.id}`} className="font-semibold text-gray-200 hover:text-primary transition">
-                    {client.name}
-                  </Link>
-                  <div className="flex gap-4 text-xs text-gray-400 mt-0.5">
-                    {client.phone && <span><i className="fas fa-phone mr-1"></i>{client.phone}</span>}
-                    <span><i className="fas fa-folder mr-1"></i>{client.project_count || 0} projects</span>
-                    <span><i className="fas fa-share-alt mr-1"></i>{client.total_referrals || 0} referrals</span>
+            <div key={client.id} className="card border border-slate p-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center text-xs font-bold text-gray-300 uppercase flex-shrink-0">
+                    {client.name?.slice(0, 2)}
+                  </div>
+                  <div>
+                    <Link href={`/admin/clients/${client.id}`} className="font-semibold text-gray-200 hover:text-primary transition">
+                      {client.name}
+                    </Link>
+                    <div className="flex flex-wrap gap-x-4 gap-y-0.5 text-xs text-gray-400 mt-0.5">
+                      {client.phone && <span><i className="fas fa-phone mr-1"></i>{client.phone}</span>}
+                      <span><i className="fas fa-folder mr-1"></i>{client.project_count || 0} projects</span>
+                      <span><i className="fas fa-share-alt mr-1"></i>{client.total_referrals || 0} referrals</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="flex gap-2">
-                <Link
-                  href={`/admin/clients/${client.id}`}
-                  className="px-3 py-1 text-xs border border-slate rounded-md text-gray-300 hover:border-primary hover:text-primary transition"
-                >
-                  View
-                </Link>
-                <button
-                  onClick={() => openEdit(client)}
-                  className="px-3 py-1 text-xs border border-slate rounded-md text-gray-300 hover:border-primary hover:text-primary transition"
-                >
-                  Edit
-                </button>
-                <button
-                  onClick={() => handleDelete(client.id)}
-                  className="px-3 py-1 text-xs border border-red-500/30 rounded-md text-red-400 hover:bg-red-900/20 transition"
-                >
-                  Delete
-                </button>
+                <div className="flex gap-2 sm:flex-shrink-0">
+                  <Link
+                    href={`/admin/clients/${client.id}`}
+                    className="px-3 py-1 text-xs border border-slate rounded-md text-gray-300 hover:border-primary hover:text-primary transition"
+                  >
+                    View
+                  </Link>
+                  <button
+                    onClick={() => openEdit(client)}
+                    className="px-3 py-1 text-xs border border-slate rounded-md text-gray-300 hover:border-primary hover:text-primary transition"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => handleDelete(client.id)}
+                    className="px-3 py-1 text-xs border border-red-500/30 rounded-md text-red-400 hover:bg-red-900/20 transition"
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
             </div>
           ))}

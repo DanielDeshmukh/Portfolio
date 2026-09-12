@@ -131,7 +131,7 @@ export default function AdminEarnings() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
         <h1 className="text-2xl font-heading font-bold text-white">Earnings</h1>
         <button
           onClick={openAdd}
@@ -141,7 +141,7 @@ export default function AdminEarnings() {
         </button>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
         <div className="card border border-slate p-4">
           <div className="text-xs text-gray-400 mb-1">Total Earnings</div>
           <div className="text-2xl font-heading font-bold text-white">{formatCurrency(totalEarnings)}</div>
@@ -162,53 +162,55 @@ export default function AdminEarnings() {
         </div>
       ) : (
         <div className="card border border-slate overflow-hidden mb-6">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-slate bg-secondary/50">
-                <th className="text-left px-4 py-3 text-gray-400 font-medium">Client</th>
-                <th className="text-left px-4 py-3 text-gray-400 font-medium">Project</th>
-                <th className="text-right px-4 py-3 text-gray-400 font-medium">Amount</th>
-                <th className="text-left px-4 py-3 text-gray-400 font-medium">Type</th>
-                <th className="text-left px-4 py-3 text-gray-400 font-medium">Status</th>
-                <th className="text-left px-4 py-3 text-gray-400 font-medium">Date</th>
-                <th className="text-right px-4 py-3 text-gray-400 font-medium">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {earnings.map(e => (
-                <tr key={e.id} className="border-b border-slate/50 hover:bg-secondary/30 transition">
-                  <td className="px-4 py-3 text-gray-200">{e.client_name || '-'}</td>
-                  <td className="px-4 py-3 text-gray-300">{e.project_name || '-'}</td>
-                  <td className="px-4 py-3 text-right font-medium text-white">{formatCurrency(e.amount)}</td>
-                  <td className="px-4 py-3 text-gray-300">{TYPE_LABELS[e.type] || e.type}</td>
-                  <td className="px-4 py-3">
-                    <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${STATUS_STYLES[e.status] || ''}`}>
-                      {e.status}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 text-gray-400 text-xs">
-                    {e.created_at ? new Date(e.created_at).toLocaleDateString('en-IN') : '-'}
-                  </td>
-                  <td className="px-4 py-3 text-right">
-                    <div className="flex gap-2 justify-end">
-                      <button
-                        onClick={() => openEdit(e)}
-                        className="px-3 py-1 text-xs border border-slate rounded-md text-gray-300 hover:border-primary hover:text-primary transition"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => handleDelete(e.id)}
-                        className="px-3 py-1 text-xs border border-red-500/30 rounded-md text-red-400 hover:bg-red-900/20 transition"
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  </td>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-slate bg-secondary/50">
+                  <th className="text-left px-4 py-3 text-gray-400 font-medium">Client</th>
+                  <th className="text-left px-4 py-3 text-gray-400 font-medium hidden md:table-cell">Project</th>
+                  <th className="text-right px-4 py-3 text-gray-400 font-medium">Amount</th>
+                  <th className="text-left px-4 py-3 text-gray-400 font-medium hidden sm:table-cell">Type</th>
+                  <th className="text-left px-4 py-3 text-gray-400 font-medium">Status</th>
+                  <th className="text-left px-4 py-3 text-gray-400 font-medium hidden lg:table-cell">Date</th>
+                  <th className="text-right px-4 py-3 text-gray-400 font-medium">Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {earnings.map(e => (
+                  <tr key={e.id} className="border-b border-slate/50 hover:bg-secondary/30 transition">
+                    <td className="px-4 py-3 text-gray-200">{e.client_name || '-'}</td>
+                    <td className="px-4 py-3 text-gray-300 hidden md:table-cell">{e.project_name || '-'}</td>
+                    <td className="px-4 py-3 text-right font-medium text-white">{formatCurrency(e.amount)}</td>
+                    <td className="px-4 py-3 text-gray-300 hidden sm:table-cell">{TYPE_LABELS[e.type] || e.type}</td>
+                    <td className="px-4 py-3">
+                      <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${STATUS_STYLES[e.status] || ''}`}>
+                        {e.status}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-gray-400 text-xs hidden lg:table-cell">
+                      {e.created_at ? new Date(e.created_at).toLocaleDateString('en-IN') : '-'}
+                    </td>
+                    <td className="px-4 py-3 text-right">
+                      <div className="flex gap-2 justify-end">
+                        <button
+                          onClick={() => openEdit(e)}
+                          className="px-3 py-1 text-xs border border-slate rounded-md text-gray-300 hover:border-primary hover:text-primary transition"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDelete(e.id)}
+                          className="px-3 py-1 text-xs border border-red-500/30 rounded-md text-red-400 hover:bg-red-900/20 transition"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 

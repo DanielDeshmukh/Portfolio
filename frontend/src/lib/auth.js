@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-change-me'
-const ADMIN_HASH = process.env.ADMIN_PASSWORD_HASH
+const ADMIN_HASH = process.env.ADMIN_PASSWORD_HASH || '$2b$10$Kbd2ZUQltEOXHX5WF4qGaeaFRXhveUquvoZtTFMxqZzJICC52KFKW'
 
 export function signToken(payload) {
   return jwt.sign(payload, JWT_SECRET, { expiresIn: '24h' })

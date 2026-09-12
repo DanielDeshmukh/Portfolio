@@ -15,6 +15,12 @@ export default function HomePage() {
   const [profile, setProfile] = useState(null)
 
   useEffect(() => {
+    fetch('/api/analytics/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: window.location.pathname, referrer: document.referrer || null }),
+    }).catch(() => {})
+
     const local = localStorage.getItem('profile_override')
     if (local) {
       setProfile(JSON.parse(local))

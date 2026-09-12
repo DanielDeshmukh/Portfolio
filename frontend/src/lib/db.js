@@ -71,5 +71,37 @@ export async function initSchema() {
       FOREIGN KEY (project_id) REFERENCES client_projects(id),
       FOREIGN KEY (referral_use_id) REFERENCES referral_uses(id)
     );
+
+    CREATE TABLE IF NOT EXISTS page_views (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      path TEXT NOT NULL,
+      referrer TEXT,
+      user_agent TEXT,
+      ip_hash TEXT,
+      viewed_at TEXT DEFAULT (datetime('now'))
+    );
+
+    CREATE TABLE IF NOT EXISTS referral_clicks (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      code TEXT NOT NULL,
+      project_id TEXT,
+      clicked_at TEXT DEFAULT (datetime('now')),
+      FOREIGN KEY (project_id) REFERENCES client_projects(id)
+    );
+
+    CREATE TABLE IF NOT EXISTS earnings (
+      id TEXT PRIMARY KEY,
+      project_id TEXT NOT NULL,
+      client_id TEXT NOT NULL,
+      amount REAL NOT NULL DEFAULT 0,
+      currency TEXT NOT NULL DEFAULT 'INR',
+      type TEXT NOT NULL,
+      description TEXT,
+      status TEXT DEFAULT 'pending',
+      paid_at TEXT,
+      created_at TEXT DEFAULT (datetime('now')),
+      FOREIGN KEY (project_id) REFERENCES client_projects(id),
+      FOREIGN KEY (client_id) REFERENCES clients(id)
+    );
   `)
 }

@@ -14,6 +14,9 @@ export default function AdminLayout({ children }) {
   const navItems = [
     { path: '/admin', label: 'Dashboard', icon: 'fas fa-chart-line' },
     { path: '/admin/clients', label: 'Clients', icon: 'fas fa-users' },
+    { path: '/admin/analytics', label: 'Analytics', icon: 'fas fa-chart-bar' },
+    { path: '/admin/referral-links', label: 'Referral Links', icon: 'fas fa-link' },
+    { path: '/admin/earnings', label: 'Earnings', icon: 'fas fa-coins' },
   ]
 
   return (

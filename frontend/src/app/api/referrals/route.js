@@ -107,23 +107,22 @@ export async function POST(request) {
         args: [project_id],
       })
       const projectName = projRow.rows[0]?.name || 'PROJECT'
-      for (let slot = 1; slot <= 3; slot++) {
-        let code
-        let attempts = 0
-        do {
-          code = generateCode(projectName)
-          attempts++
-        } while (attempts < 10)
+      const nextSlot = parseInt(existing.rows[0].count) + 1
+      let code
+      let attempts = 0
+      do {
+        code = generateCode(projectName)
+        attempts++
+      } while (attempts < 10)
 
-        const id = crypto.randomUUID()
-        await db.execute({
-          sql: 'INSERT INTO referral_codes (id, project_id, code, year, slot) VALUES (?, ?, ?, ?, ?)',
-          args: [id, project_id, code, yr, slot],
-        })
-        codes.push({ id, code, slot })
-      }
+      const id = crypto.randomUUID()
+      await db.execute({
+        sql: 'INSERT INTO referral_codes (id, project_id, code, year, slot) VALUES (?, ?, ?, ?, ?)',
+        args: [id, project_id, code, yr, nextSlot],
+      })
+      codes.push({ id, code, slot: nextSlot })
 
-      return NextResponse.json({ ok: true, codes, message: '3 codes generated' })
+      return NextResponse.json({ ok: true, codes, message: 'Code generated' })
     }
 
     if (action === 'apply') {
@@ -239,6 +238,38 @@ export async function POST(request) {
       }
 
       return NextResponse.json({ ok: true, useId, count, message: 'Referral applied' })
+    }
+
+    if (action === 'purge') {
+      await db.execute('DELETE FROM referral_uses')
+      await db.execute('DELETE FROM referral_codes')
+      await db.execute('DELETE FROM discount_ledger')
+      return NextResponse.json({ ok: true, message: 'All referral data cleared' })
+    }
+
+    if (action === 'mark-used') {
+      const { code_id, referee_name, referee_phone } = body
+      if (!code_id || !referee_name) {
+        return NextResponse.json({ ok: false, error: 'code_id and referee_name required' }, { status: 400 })
+      }
+      const codeRow = await db.execute({
+        sql: 'SELECT * FROM referral_codes WHERE id = ? AND status = ?',
+        args: [code_id, 'active'],
+      })
+      if (codeRow.rows.length === 0) {
+        return NextResponse.json({ ok: false, error: 'Code not found or already used' }, { status: 400 })
+      }
+      const code = codeRow.rows[0]
+      const useId = crypto.randomUUID()
+      await db.execute({
+        sql: 'INSERT INTO referral_uses (id, code_id, referee_name, referee_phone) VALUES (?, ?, ?, ?)',
+        args: [useId, code_id, referee_name, referee_phone || null],
+      })
+      await db.execute({
+        sql: "UPDATE referral_codes SET status = 'used' WHERE id = ?",
+        args: [code_id],
+      })
+      return NextResponse.json({ ok: true, useId, message: 'Code marked as used' })
     }
 
     return NextResponse.json({ ok: false, error: 'Invalid action' }, { status: 400 })

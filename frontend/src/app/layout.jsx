@@ -2,8 +2,8 @@ import './globals.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
 export const metadata = {
-  title: 'Daniel Shashank Deshmukh - Portfolio',
-  description: 'Personal portfolio of Daniel Shashank Deshmukh - Full Stack Developer',
+  title: 'Referral Links - Daniel Shashank Deshmukh',
+  description: 'Referral links of Daniel Shashank Deshmukh',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

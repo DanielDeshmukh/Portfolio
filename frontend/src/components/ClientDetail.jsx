@@ -23,12 +23,15 @@ export default function ClientDetail() {
   }, [id])
 
   const totalAvailable = refInfo ? refInfo.reduce((s, p) => s + parseInt(p.available || 0), 0) : 0
+  const hasPhone = client?.contact?.phone
 
   function requestReferral() {
+    const phone = client?.contact?.phone?.replace(/[^0-9]/g, '') || ''
     const msg = encodeURIComponent(
       `Hi ${client?.name} team, I found Daniel through his portfolio and I'm interested in his services. Could you share a referral code with me? It would give me 50% off the first month's maintenance. Thank you!`
     )
-    window.open(`https://wa.me/?text=${msg}`, '_blank', 'noopener,noreferrer')
+    const url = phone ? `https://wa.me/${phone}?text=${msg}` : `https://wa.me/?text=${msg}`
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   if (!client) return null
@@ -167,13 +170,17 @@ export default function ClientDetail() {
                       {totalAvailable} referral slot{totalAvailable !== 1 ? 's' : ''} available
                     </p>
                     <p className="text-gray-400 text-xs mb-3">Reach out and ask for a code. You&apos;ll get 50% off your first month&apos;s maintenance.</p>
-                    <button
-                      onClick={requestReferral}
-                      className="w-full py-2.5 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium flex items-center justify-center gap-2 transition-colors"
-                    >
-                      <i className="fab fa-whatsapp text-base"></i>
-                      Ask {client.name.split(' ')[0]} for a Referral
-                    </button>
+                    {hasPhone ? (
+                      <button
+                        onClick={requestReferral}
+                        className="w-full py-2.5 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium flex items-center justify-center gap-2 transition-colors"
+                      >
+                        <i className="fab fa-whatsapp text-base"></i>
+                        Ask {client.name.split(' ')[0]} for a Referral
+                      </button>
+                    ) : (
+                      <p className="text-gray-500 text-xs text-center italic">Contact {client.name} directly to ask for a referral code.</p>
+                    )}
                   </div>
                 ) : (
                   <div className="bg-background/50 rounded-lg p-4 text-center">

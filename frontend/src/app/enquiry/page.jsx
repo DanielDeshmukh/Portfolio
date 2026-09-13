@@ -136,40 +136,16 @@ function EnquiryForm() {
           {field('Service Needed', 'service', 'select', { required: true })}
           {field('Project Details', 'details', 'textarea', { required: true, placeholder: 'Describe your project, requirements, timeline, budget...' })}
 
-          <div className="relative">
+          <div>
             <label className="block text-sm font-medium text-gray-300 mb-1.5">
               Referral Code
-              <span className="relative ml-1.5 inline-block">
-                <button
-                  type="button"
-                  onClick={() => setShowInfo(!showInfo)}
-                  className="w-4 h-4 rounded-full bg-primary/20 border border-primary/40 text-primary text-[10px] font-bold inline-flex items-center justify-center hover:bg-primary/30 transition-colors"
-                >
-                  i
-                </button>
-                {showInfo && (
-                  <div className="absolute left-0 top-full mt-2 w-72 sm:w-80 sm:left-6 sm:top-1/2 sm:-translate-y-1/2 bg-[#1e293b] border border-slate rounded-lg p-4 text-xs text-gray-300 shadow-xl z-20" style={{ backgroundColor: '#1e293b' }}>
-                    <button type="button" onClick={() => setShowInfo(false)} className="absolute top-2 right-2 text-gray-500 hover:text-gray-300">
-                      <i className="fas fa-times"></i>
-                    </button>
-
-                    <p className="mb-2">
-                      <span className="text-primary font-semibold">Have a referral code?</span> Enter it above and you&apos;ll get{' '}
-                      <span className="text-green-400 font-semibold">50% off your first month&apos;s maintenance</span>.
-                    </p>
-
-                    <div className="border-t border-slate/50 my-3"></div>
-
-                    <p className="mb-2">
-                      <span className="text-gray-200 font-semibold">Don&apos;t have a code?</span> No worries — you can ask an existing client for one.
-                    </p>
-                    <p className="mb-1 text-gray-400">
-                      Visit the <a href="/#clients" onClick={() => setShowInfo(false)} className="text-primary hover:underline font-medium">Clients page</a>, click on a client you know, and ask them for a referral code.
-                    </p>
-                    <p className="text-gray-500 text-[11px] italic">Each client has a limited number of referral codes to share.</p>
-                  </div>
-                )}
-              </span>
+              <button
+                type="button"
+                onClick={() => setShowInfo(true)}
+                className="ml-1.5 w-4 h-4 rounded-full bg-primary/20 border border-primary/40 text-primary text-[10px] font-bold inline-flex items-center justify-center hover:bg-primary/30 transition-colors"
+              >
+                i
+              </button>
             </label>
             <input
               type="text"
@@ -182,6 +158,38 @@ function EnquiryForm() {
               <p className="text-green-400 text-xs mt-1.5"><i className="fas fa-check-circle mr-1"></i>Referral code pre-filled from your link</p>
             )}
           </div>
+
+          {showInfo && (
+            <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4 z-50" onClick={() => setShowInfo(false)}>
+              <div className="bg-[#1e293b] border border-slate rounded-2xl p-6 max-w-sm w-full shadow-2xl" style={{ backgroundColor: '#1e293b' }} onClick={e => e.stopPropagation()}>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-base font-heading font-semibold text-white">Referral Code</h3>
+                  <button type="button" onClick={() => setShowInfo(false)} className="w-7 h-7 rounded-full bg-slate/50 flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+                    <i className="fas fa-times text-xs"></i>
+                  </button>
+                </div>
+
+                <div className="space-y-4 text-sm text-gray-300">
+                  <div className="bg-primary/10 border border-primary/20 rounded-xl p-4">
+                    <p className="font-semibold text-primary mb-1"><i className="fas fa-tag mr-1.5"></i>Have a code?</p>
+                    <p>Enter it above and you&apos;ll get <span className="text-green-400 font-semibold">50% off your first month&apos;s maintenance</span>.</p>
+                  </div>
+
+                  <div className="bg-background/50 rounded-xl p-4">
+                    <p className="font-semibold text-gray-200 mb-1"><i className="fas fa-search mr-1.5"></i>Don&apos;t have a code?</p>
+                    <p className="text-gray-400 mb-2">Ask an existing client for one. Each client has a limited number of referral codes to share.</p>
+                    <a
+                      href="/#clients"
+                      onClick={() => setShowInfo(false)}
+                      className="inline-flex items-center gap-1.5 text-primary hover:underline font-medium text-xs"
+                    >
+                      <i className="fas fa-users"></i>Visit Clients page
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           <button
             type="submit"

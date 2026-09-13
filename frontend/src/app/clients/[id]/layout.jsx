@@ -43,7 +43,7 @@ export async function generateMetadata({ params }) {
       ],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title,
       description,
       images: [client.logo || 'https://danieldeshmukh-portfolio.vercel.app/og-image.png'],

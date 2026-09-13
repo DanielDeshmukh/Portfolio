@@ -203,35 +203,19 @@ export async function POST(request) {
         }
 
         if (count >= 3) {
-          const extMonth = new Date(firstDate)
-          extMonth.setMonth(extMonth.getMonth() + 3)
-          const extMonthStr = extMonth.toISOString().slice(0, 7)
+          const freeMonth = new Date(firstDate)
+          freeMonth.setMonth(freeMonth.getMonth() + 3)
+          const freeMonthStr = freeMonth.toISOString().slice(0, 7)
 
-          const existingExt = await db.execute({
+          const existingFree = await db.execute({
             sql: 'SELECT id FROM discount_ledger WHERE project_id = ? AND discount_type = ? AND discount_month = ?',
-            args: [code.project_id, '50_extends', extMonthStr],
+            args: [code.project_id, '100_free', freeMonthStr],
           })
 
-          if (existingExt.rows.length === 0) {
+          if (existingFree.rows.length === 0) {
             await db.execute({
               sql: 'INSERT INTO discount_ledger (id, project_id, year, referral_use_id, discount_type, discount_month) VALUES (?, ?, ?, ?, ?, ?)',
-              args: [crypto.randomUUID(), code.project_id, code.year, useId, '50_extends', extMonthStr],
-            })
-          }
-
-          const bonusMonth = new Date(firstDate)
-          bonusMonth.setMonth(bonusMonth.getMonth() + 4)
-          const bonusMonthStr = bonusMonth.toISOString().slice(0, 7)
-
-          const existingBonus = await db.execute({
-            sql: 'SELECT id FROM discount_ledger WHERE project_id = ? AND discount_type = ? AND discount_month = ?',
-            args: [code.project_id, '100_bonus', bonusMonthStr],
-          })
-
-          if (existingBonus.rows.length === 0) {
-            await db.execute({
-              sql: 'INSERT INTO discount_ledger (id, project_id, year, referral_use_id, discount_type, discount_month) VALUES (?, ?, ?, ?, ?, ?)',
-              args: [crypto.randomUUID(), code.project_id, code.year, useId, '100_bonus', bonusMonthStr],
+              args: [crypto.randomUUID(), code.project_id, code.year, useId, '100_free', freeMonthStr],
             })
           }
         }
@@ -337,34 +321,19 @@ export async function POST(request) {
         }
 
         if (count >= 3) {
-          const extMonth = new Date(firstDate)
-          extMonth.setMonth(extMonth.getMonth() + 3)
-          const extMonthStr = extMonth.toISOString().slice(0, 7)
-          const existsExt = await db.execute({
+          const freeMonth = new Date(firstDate)
+          freeMonth.setMonth(freeMonth.getMonth() + 3)
+          const freeMonthStr = freeMonth.toISOString().slice(0, 7)
+          const existsFree = await db.execute({
             sql: 'SELECT id FROM discount_ledger WHERE project_id = ? AND discount_type = ? AND discount_month = ?',
-            args: [code.project_id, '50_extends', extMonthStr],
+            args: [code.project_id, '100_free', freeMonthStr],
           })
-          if (existsExt.rows.length === 0) {
+          if (existsFree.rows.length === 0) {
             await db.execute({
               sql: 'INSERT INTO discount_ledger (id, project_id, year, referral_use_id, discount_type, discount_month) VALUES (?, ?, ?, ?, ?, ?)',
-              args: [crypto.randomUUID(), code.project_id, code.year, useId, '50_extends', extMonthStr],
+              args: [crypto.randomUUID(), code.project_id, code.year, useId, '100_free', freeMonthStr],
             })
-            discountsCreated.push({ type: '50_extends', month: extMonthStr })
-          }
-
-          const bonusMonth = new Date(firstDate)
-          bonusMonth.setMonth(bonusMonth.getMonth() + 4)
-          const bonusMonthStr = bonusMonth.toISOString().slice(0, 7)
-          const existsBonus = await db.execute({
-            sql: 'SELECT id FROM discount_ledger WHERE project_id = ? AND discount_type = ? AND discount_month = ?',
-            args: [code.project_id, '100_bonus', bonusMonthStr],
-          })
-          if (existsBonus.rows.length === 0) {
-            await db.execute({
-              sql: 'INSERT INTO discount_ledger (id, project_id, year, referral_use_id, discount_type, discount_month) VALUES (?, ?, ?, ?, ?, ?)',
-              args: [crypto.randomUUID(), code.project_id, code.year, useId, '100_bonus', bonusMonthStr],
-            })
-            discountsCreated.push({ type: '100_bonus', month: bonusMonthStr })
+            discountsCreated.push({ type: '100_free', month: freeMonthStr })
           }
         }
       }

@@ -1,19 +1,13 @@
-import { readFileSync } from 'fs'
-import { join } from 'path'
+import clientsData from '../../../../public/data/clients.json'
+
+const clients = clientsData.clients || []
 
 function getClientByReferralCode(code) {
-  try {
-    const data = readFileSync(join(process.cwd(), 'public', 'data', 'clients.json'), 'utf-8')
-    const clients = JSON.parse(data).clients
-    const codeLower = code.toLowerCase()
-    return clients.find(c => {
-      const idClean = c.id.replace(/-/g, '').toLowerCase()
-      const nameClean = c.name.replace(/\s+/g, '').toLowerCase()
-      return codeLower.startsWith(idClean) || codeLower.startsWith(nameClean)
-    }) || null
-  } catch {
-    return null
-  }
+  const codeLower = code.toLowerCase()
+  return clients.find(c => {
+    const idClean = c.id.replace(/-/g, '').toLowerCase()
+    return codeLower.startsWith(idClean)
+  }) || null
 }
 
 export async function generateMetadata({ params }) {
@@ -22,7 +16,7 @@ export async function generateMetadata({ params }) {
 
   if (!client) {
     return {
-      title: 'Referral Link | Daniel Deshmukh',
+      title: 'Referral Link',
       description: 'Use this referral link to get a discount on Daniel Deshmukh\'s development services.',
       openGraph: {
         title: 'Referral Link | Daniel Deshmukh',
@@ -39,14 +33,14 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const title = `Referral from ${client.name} | Daniel Deshmukh`
+  const title = `Referral from ${client.name}`
   const description = `${client.name} referred you to Daniel Shashank Deshmukh. Use this referral code to get 50% off your first month's maintenance.`
 
   return {
     title,
     description,
     openGraph: {
-      title,
+      title: `${client.name} Referred You | Daniel Deshmukh`,
       description,
       url: `https://danieldeshmukh-portfolio.vercel.app/ref/${code}`,
       images: [
@@ -60,7 +54,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: `${client.name} Referred You | Daniel Deshmukh`,
       description,
       images: [client.logo || 'https://danieldeshmukh-portfolio.vercel.app/og-image.png'],
     },

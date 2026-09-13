@@ -1,14 +1,9 @@
-import { readFileSync } from 'fs'
-import { join } from 'path'
+import clientsData from '../../../../public/data/clients.json'
+
+const clients = clientsData.clients || []
 
 function getClient(id) {
-  try {
-    const data = readFileSync(join(process.cwd(), 'public', 'data', 'clients.json'), 'utf-8')
-    const clients = JSON.parse(data).clients
-    return clients.find(c => c.id === id) || null
-  } catch {
-    return null
-  }
+  return clients.find(c => c.id === id) || null
 }
 
 export async function generateMetadata({ params }) {
@@ -23,14 +18,14 @@ export async function generateMetadata({ params }) {
   }
 
   const projectNames = client.projects?.map(p => p.name).join(', ') || 'custom software'
-  const title = `${client.name} | Client Portfolio`
-  const description = `${client.name} — ${client.description || projectNames}. Built by Daniel Shashank Deshmukh.`
+  const title = client.name
+  const description = `${client.description || projectNames} — Built by Daniel Shashank Deshmukh.`
 
   return {
     title,
     description,
     openGraph: {
-      title,
+      title: `${client.name} | Daniel Deshmukh`,
       description,
       url: `https://danieldeshmukh-portfolio.vercel.app/clients/${client.id}`,
       images: [
@@ -44,7 +39,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: `${client.name} | Daniel Deshmukh`,
       description,
       images: [client.logo || 'https://danieldeshmukh-portfolio.vercel.app/og-image.png'],
     },

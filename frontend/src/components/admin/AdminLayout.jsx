@@ -17,6 +17,7 @@ export default function AdminLayout({ children }) {
     { path: '/admin', label: 'Dashboard', icon: 'fas fa-chart-line' },
     { path: '/admin/clients', label: 'Clients', icon: 'fas fa-users' },
     { path: '/admin/referral-links', label: 'Referral Links', icon: 'fas fa-link' },
+    { path: '/admin/messages', label: 'Messages', icon: 'fas fa-paper-plane' },
   ]
 
   const sidebarContent = (

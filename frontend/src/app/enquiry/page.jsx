@@ -7,6 +7,7 @@ export const metadata = {
   description:
     'Get in touch with Daniel Shashank Deshmukh for web development, mobile apps, POS systems, and custom software solutions. Send your project details directly via WhatsApp.',
   openGraph: {
+    type: 'website',
     title: 'Enquiry | Daniel Deshmukh',
     description:
       'Get in touch for web development, mobile apps, POS systems, and custom software solutions.',

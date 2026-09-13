@@ -19,6 +19,7 @@ export async function generateMetadata({ params }) {
       title: 'Referral Link',
       description: 'Use this referral link to get a discount on Daniel Deshmukh\'s development services.',
       openGraph: {
+        type: 'website',
         title: 'Referral Link | Daniel Deshmukh',
         description: 'Use this referral link to get a discount on Daniel Deshmukh\'s development services.',
         url: `https://danieldeshmukh-portfolio.vercel.app/ref/${code}`,
@@ -40,6 +41,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     openGraph: {
+      type: 'website',
       title: `${client.name} Referred You | Daniel Deshmukh`,
       description,
       url: `https://danieldeshmukh-portfolio.vercel.app/ref/${code}`,

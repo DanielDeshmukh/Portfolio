@@ -25,6 +25,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     openGraph: {
+      type: 'website',
       title: `${client.name} | Daniel Deshmukh`,
       description,
       url: `https://danieldeshmukh-portfolio.vercel.app/clients/${client.id}`,

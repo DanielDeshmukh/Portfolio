@@ -7,6 +7,7 @@ export const metadata = {
   description:
     'Full-stack developer specializing in web apps, POS systems, and mobile applications. Building production-grade software for businesses across India.',
   openGraph: {
+    type: 'website',
     title: 'Daniel Shashank Deshmukh | Full-Stack Developer',
     description:
       'Full-stack developer specializing in web apps, POS systems, and mobile applications.',

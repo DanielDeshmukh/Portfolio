@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { FaXTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa6'
+import { HiOutlineEnvelope, HiOutlineMapPin } from 'react-icons/hi2'
 
 export default function Footer() {
   return (
@@ -11,13 +13,13 @@ export default function Footer() {
             <p className="text-xs text-gray-500 mb-5">Full-Stack Developer</p>
             <div className="flex items-center gap-3">
               <a href="https://x.com/DeshmukhDa71837" target="_blank" rel="noreferrer" aria-label="X" className="w-9 h-9 rounded-full border border-slate/60 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary transition-all">
-                <i className="fab fa-x-twitter text-sm"></i>
+                <FaXTwitter size={14} />
               </a>
               <a href="https://github.com/DanielDeshmukh" target="_blank" rel="noreferrer" aria-label="GitHub" className="w-9 h-9 rounded-full border border-slate/60 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary transition-all">
-                <i className="fab fa-github text-sm"></i>
+                <FaGithub size={15} />
               </a>
               <a href="https://www.linkedin.com/in/daniel-deshmukh-7b08602b2" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-full border border-slate/60 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary transition-all">
-                <i className="fab fa-linkedin-in text-sm"></i>
+                <FaLinkedinIn size={14} />
               </a>
             </div>
           </div>
@@ -34,10 +36,11 @@ export default function Footer() {
 
           <div>
             <p className="text-[11px] font-semibold text-gray-500 uppercase tracking-widest mb-4">Contact</p>
-            <a href="mailto:deshmukhdaniel2005@gmail.com" className="text-sm text-gray-300 hover:text-primary transition-colors break-all">
+            <a href="mailto:deshmukhdaniel2005@gmail.com" className="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors break-all">
+              <HiOutlineEnvelope size={16} className="shrink-0 text-gray-500" />
               deshmukhdaniel2005@gmail.com
             </a>
-            <div className="flex items-center gap-2 mt-3">
+            <div className="flex items-center gap-2 mt-4">
               <span className="w-2 h-2 rounded-full bg-green-500"></span>
               <span className="text-xs text-gray-500">Available for projects</span>
             </div>
@@ -45,8 +48,11 @@ export default function Footer() {
 
           <div>
             <p className="text-[11px] font-semibold text-gray-500 uppercase tracking-widest mb-4">Based In</p>
-            <p className="text-sm text-gray-300">Mumbai, India</p>
-            <p className="text-xs text-gray-500 mt-2">Remote-Friendly</p>
+            <div className="flex items-center gap-2">
+              <HiOutlineMapPin size={16} className="text-gray-500 shrink-0" />
+              <p className="text-sm text-gray-300">Mumbai, India</p>
+            </div>
+            <p className="text-xs text-gray-500 mt-2 ml-6">Remote-Friendly</p>
           </div>
 
         </div>

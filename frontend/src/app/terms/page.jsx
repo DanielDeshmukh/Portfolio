@@ -29,7 +29,9 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-heading font-semibold text-white mb-3">3. Intellectual Property</h2>
             <div className="space-y-3">
-              <p>Upon full payment, the Client receives <strong className="text-white">full ownership</strong> of the source code, design files, and all deliverables created for the project.</p>
+              <p>The Freelancer retains <strong className="text-white">full ownership</strong> of all source code, design files, frameworks, and reusable components developed during the project.</p>
+              <p>The Client is granted a <strong className="text-white">perpetual, non-exclusive license</strong> to use the deliverables for their business operations as long as the maintenance subscription remains active.</p>
+              <p>Upon termination of the maintenance agreement, the license remains in effect for the last delivered version, but the Freelancer is not obligated to provide further updates, support, or access to future versions.</p>
               <p>The Freelancer reserves the right to showcase the project in the portfolio and on social media, unless the Client requests otherwise in writing.</p>
             </div>
           </section>

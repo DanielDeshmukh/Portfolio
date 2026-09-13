@@ -16,7 +16,6 @@ export default function Navbar(){
     ['Projects', '/#projects'],
     ['Certifications', '/#certifications'],
     ['Resume', '/#resume'],
-    ['Contact', '/#contact'],
     ['Enquiry', '/enquiry']
   ]
 

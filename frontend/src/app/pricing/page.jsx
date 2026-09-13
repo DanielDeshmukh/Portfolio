@@ -60,9 +60,9 @@ export default function PricingPage() {
               <div className="bg-secondary/50 border border-slate/50 rounded-xl p-5">
                 <h3 className="text-sm font-semibold text-white mb-2">Development Payment</h3>
                 <ul className="space-y-1.5 text-sm text-gray-300">
-                  <li>• Upfront advance required before work begins</li>
-                  <li>• Remaining amount due on project delivery</li>
-                  <li>• Upfront advance is non-refundable</li>
+                  <li>• 20% advance payment required at contract signing</li>
+                  <li>• Remaining 80% due on project delivery</li>
+                  <li>• Advance is non-refundable once work begins</li>
                 </ul>
               </div>
               <div className="bg-secondary/50 border border-slate/50 rounded-xl p-5">
@@ -78,10 +78,45 @@ export default function PricingPage() {
 
           <section>
             <h2 className="text-xl font-heading font-semibold text-primary mb-4">
+              <i className="fas fa-shield-halved mr-2"></i>Deadline Protection
+            </h2>
+            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+              Both parties are protected when it comes to project timelines:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-secondary/50 border border-slate/50 rounded-xl p-5">
+                <h3 className="text-sm font-semibold text-white mb-2">
+                  <i className="fas fa-user-tie text-primary mr-1"></i> If I Miss the Deadline
+                </h3>
+                <ul className="space-y-1.5 text-sm text-gray-300">
+                  <li>• Free maintenance extension covering the delay period</li>
+                  <li>• Or a partial refund proportional to the delay</li>
+                  <li>• You choose which option works best for you</li>
+                </ul>
+              </div>
+              <div className="bg-secondary/50 border border-slate/50 rounded-xl p-5">
+                <h3 className="text-sm font-semibold text-white mb-2">
+                  <i className="fas fa-user text-primary mr-1"></i> If You Delay Feedback
+                </h3>
+                <ul className="space-y-1.5 text-sm text-gray-300">
+                  <li>• Project deadline extends by the number of delay days</li>
+                  <li>• Delay is counted from the date feedback is requested</li>
+                  <li>• Either party can cancel if delay exceeds 30 days</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 mt-3">
+              <i className="fas fa-info-circle mr-1"></i>
+              Timelines and deadlines are documented in the project proposal before work begins.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-heading font-semibold text-primary mb-4">
               <i className="fas fa-gift mr-2"></i>Referral Program
             </h2>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Existing clients can earn maintenance discounts by referring new clients. Each client receives up to 3 referral codes per year. Discounts are applied automatically when a referred client signs up. Visit the <a href="/#clients" className="text-primary hover:underline">Clients</a> section for more details.
+              Existing clients can earn maintenance discounts by referring new clients. Each client receives up to 3 referral codes per year. Discounts are applied automatically when a referred client signs up. Visit the <a href="/referral-program" className="text-primary hover:underline">Referral Program</a> page for full details.
             </p>
           </section>
         </div>

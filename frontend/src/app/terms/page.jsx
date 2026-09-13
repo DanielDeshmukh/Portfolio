@@ -38,14 +38,32 @@ export default function TermsPage() {
             <h2 className="text-lg font-heading font-semibold text-white mb-3">4. Payments</h2>
             <div className="space-y-3">
               <p>All payments are to be made via <strong className="text-white">UPI or Bank Transfer</strong> to the account details provided in the invoice.</p>
-              <p>Development payments: Advance (non-refundable) + final payment on delivery.</p>
+              <p>Development payments: 20% advance at contract signing (non-refundable), 80% on delivery.</p>
               <p>Maintenance payments: Monthly, due at the start of each billing cycle. See the <a href="/refund" className="text-primary hover:underline">Refund &amp; Cancellation Policy</a> for details.</p>
               <p>GST is not applicable as the Freelancer is not registered under GST (annual turnover below the ₹20 lakh threshold as per the <strong className="text-white">CGST Act, 2017</strong>).</p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-lg font-heading font-semibold text-white mb-3">5. Limitation of Liability</h2>
+            <h2 className="text-lg font-heading font-semibold text-white mb-3">5. Project Deadlines</h2>
+            <div className="space-y-3">
+              <p>Project timelines and deadlines are documented in the project proposal and agreed upon by both parties before work begins. The following protections apply:</p>
+              <p><strong className="text-white">If the Freelancer misses the deadline:</strong></p>
+              <ul className="list-disc list-inside space-y-1 ml-4">
+                <li>The Client may request free maintenance extension covering the delay period, OR a partial refund proportional to the delay</li>
+                <li>The Client chooses which option to apply</li>
+              </ul>
+              <p><strong className="text-white">If the Client delays feedback or approvals:</strong></p>
+              <ul className="list-disc list-inside space-y-1 ml-4">
+                <li>The project deadline extends automatically by the number of days of delay</li>
+                <li>Delay is counted from the date feedback or approval is requested by the Freelancer</li>
+                <li>Either party may terminate the project if the Client delay exceeds 30 consecutive days</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-heading font-semibold text-white mb-3">6. Limitation of Liability</h2>
             <div className="space-y-3">
               <p>The Freelancer will use reasonable efforts to deliver quality work. However, the Freelancer is not liable for:</p>
               <ul className="list-disc list-inside space-y-1 ml-4">
@@ -58,14 +76,14 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-heading font-semibold text-white mb-3">6. Confidentiality</h2>
+            <h2 className="text-lg font-heading font-semibold text-white mb-3">7. Confidentiality</h2>
             <p>
               Both parties agree to keep confidential any proprietary information shared during the project. This includes business data, login credentials, API keys, and project-specific details. This obligation survives the termination of the agreement.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-heading font-semibold text-white mb-3">7. Termination</h2>
+            <h2 className="text-lg font-heading font-semibold text-white mb-3">8. Termination</h2>
             <div className="space-y-3">
               <p>Either party may terminate the agreement with written notice. Upon termination:</p>
               <ul className="list-disc list-inside space-y-1 ml-4">
@@ -77,7 +95,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-heading font-semibold text-white mb-3">8. Governing Law</h2>
+            <h2 className="text-lg font-heading font-semibold text-white mb-3">9. Governing Law</h2>
             <p>
               These terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Mumbai, Maharashtra. Relevant legislation includes the <strong className="text-white">Indian Contract Act, 1872</strong>, the <strong className="text-white">Information Technology Act, 2000</strong>, and the <strong className="text-white">Consumer Protection Act, 2019</strong>.
             </p>

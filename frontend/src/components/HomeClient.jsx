@@ -8,7 +8,6 @@ import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Certifications from '../components/Certifications'
 import Resume from '../components/Resume'
-import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import { loadProfile } from '../utils/loadData'
 
@@ -57,7 +56,6 @@ export default function HomeClient({ initialProfile }) {
         <Projects />
         <Certifications />
         <Resume />
-        <Contact profile={profile} />
       </main>
       <Footer />
     </div>

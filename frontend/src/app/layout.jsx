@@ -2,7 +2,6 @@ import './globals.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const SITE_URL = 'https://danieldeshmukh-portfolio.vercel.app'
-const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -27,30 +26,6 @@ export const metadata = {
   ],
   authors: [{ name: 'Daniel Shashank Deshmukh' }],
   creator: 'Daniel Shashank Deshmukh',
-  openGraph: {
-    type: 'website',
-    locale: 'en_IN',
-    url: SITE_URL,
-    siteName: 'Daniel Deshmukh',
-    title: 'Daniel Shashank Deshmukh | Full-Stack Developer',
-    description:
-      'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: 'Daniel Shashank Deshmukh - Full-Stack Developer',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Daniel Shashank Deshmukh | Full-Stack Developer',
-    description:
-      'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
-    images: [OG_IMAGE],
-  },
   robots: {
     index: true,
     follow: true,

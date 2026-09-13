@@ -1,9 +1,67 @@
 import './globals.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
+const SITE_URL = 'https://danieldeshmukh-portfolio.vercel.app'
+const OG_IMAGE = `${SITE_URL}/og-image.png`
+
 export const metadata = {
-  title: 'Referral Links - Daniel Shashank Deshmukh',
-  description: 'Referral links of Daniel Shashank Deshmukh',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Daniel Shashank Deshmukh | Full-Stack Developer & Software Engineer',
+    template: '%s | Daniel Deshmukh',
+  },
+  description:
+    'Full-stack developer specializing in web apps, POS systems, and mobile applications. Building production-grade software for businesses across India.',
+  keywords: [
+    'Daniel Deshmukh',
+    'full-stack developer',
+    'web developer India',
+    'React developer',
+    'Next.js developer',
+    'POS system',
+    'freelance developer',
+    'software engineer',
+    'Node.js',
+    'React Native',
+    'portfolio',
+  ],
+  authors: [{ name: 'Daniel Shashank Deshmukh' }],
+  creator: 'Daniel Shashank Deshmukh',
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: SITE_URL,
+    siteName: 'Daniel Deshmukh',
+    title: 'Daniel Shashank Deshmukh | Full-Stack Developer',
+    description:
+      'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Daniel Shashank Deshmukh - Full-Stack Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Daniel Shashank Deshmukh | Full-Stack Developer',
+    description:
+      'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
+    images: [OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
@@ -20,6 +78,66 @@ export const viewport = {
 }
 
 export default function RootLayout({ children }) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Daniel Shashank Deshmukh',
+    url: SITE_URL,
+    jobTitle: 'Full-Stack Developer',
+    description:
+      'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
+    sameAs: [
+      'https://github.com/DanielDeshmukh',
+      'https://linkedin.com/in/daniel-deshmukh',
+    ],
+    knowsAbout: [
+      'React',
+      'Next.js',
+      'Node.js',
+      'React Native',
+      'JavaScript',
+      'TypeScript',
+      'Python',
+      'PostgreSQL',
+      'MongoDB',
+      'Tailwind CSS',
+      'REST APIs',
+      'Web Development',
+      'Mobile App Development',
+      'POS Systems',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Development Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Web Development',
+            description: 'Custom web applications built with modern frameworks',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Mobile App Development',
+            description: 'Cross-platform mobile applications',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'POS & Billing Systems',
+            description: 'Point-of-sale and inventory management systems',
+          },
+        },
+      ],
+    },
+  }
+
   return (
     <html lang="en">
       <head>
@@ -30,18 +148,24 @@ export default function RootLayout({ children }) {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body>
         {children}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            if ('serviceWorker' in navigator) {
-              window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').catch(() => {});
-              });
-            }
-          `
-        }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                  navigator.serviceWorker.register('/sw.js').catch(() => {});
+                });
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   )

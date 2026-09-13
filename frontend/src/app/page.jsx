@@ -1,63 +1,34 @@
-'use client'
-import { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Clients from '../components/Clients'
-import Skills from '../components/Skills'
-import Projects from '../components/Projects'
-import Certifications from '../components/Certifications'
-import Resume from '../components/Resume'
-import Contact from '../components/Contact'
-import { loadProfile } from '../utils/loadData'
+import { readFileSync } from 'fs'
+import { join } from 'path'
+import HomeClient from '../components/HomeClient'
+
+export const metadata = {
+  title: 'Daniel Shashank Deshmukh | Full-Stack Developer & Software Engineer',
+  description:
+    'Full-stack developer specializing in web apps, POS systems, and mobile applications. Building production-grade software for businesses across India.',
+  openGraph: {
+    title: 'Daniel Shashank Deshmukh | Full-Stack Developer',
+    description:
+      'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
+    url: 'https://danieldeshmukh-portfolio.vercel.app',
+  },
+  twitter: {
+    title: 'Daniel Shashank Deshmukh | Full-Stack Developer',
+    description:
+      'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
+  },
+}
+
+function getProfile() {
+  try {
+    const data = readFileSync(join(process.cwd(), 'public', 'data', 'profile.json'), 'utf-8')
+    return JSON.parse(data)
+  } catch {
+    return null
+  }
+}
 
 export default function HomePage() {
-  const [profile, setProfile] = useState(null)
-
-  useEffect(() => {
-    fetch('/api/analytics/track', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: window.location.pathname, referrer: document.referrer || null }),
-    }).catch(() => {})
-
-    const local = localStorage.getItem('profile_override')
-    if (local) {
-      setProfile(JSON.parse(local))
-    } else {
-      loadProfile().then(setProfile)
-    }
-  }, [])
-
-  useEffect(() => {
-    const hash = window.location.hash
-    if (!hash) return
-    const scrollTo = () => {
-      const el = document.querySelector(hash)
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
-    }
-    const t = setTimeout(scrollTo, 150)
-    return () => clearTimeout(t)
-  }, [profile])
-
-  function saveProfile(updated) {
-    setProfile(updated)
-    localStorage.setItem('profile_override', JSON.stringify(updated))
-  }
-
-  return (
-    <div className="min-h-screen bg-background text-gray-100">
-      <Navbar />
-      <main className="max-w-6xl mx-auto px-6 pt-20 pb-20">
-        <Hero profile={profile} />
-        <About profile={profile} />
-        <Clients />
-        <Skills profile={profile} onSave={saveProfile} />
-        <Projects />
-        <Certifications />
-        <Resume />
-        <Contact profile={profile} />
-      </main>
-    </div>
-  )
+  const profile = getProfile()
+  return <HomeClient initialProfile={profile} />
 }

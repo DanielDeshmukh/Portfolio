@@ -147,9 +147,9 @@ export default function ClientDetail() {
               <>
                 <div className="space-y-2 mb-4">
                   {refInfo.map((p, i) => (
-                    <div key={i} className="flex items-center justify-between bg-background/50 rounded-lg px-4 py-2.5">
-                      <span className="text-sm text-gray-300">{p.project_name}</span>
-                      <div className="flex items-center gap-2">
+                    <div key={i} className="flex items-center justify-between gap-3 bg-background/50 rounded-lg px-4 py-2.5">
+                      <span className="text-sm text-gray-300 truncate">{p.project_name}</span>
+                      <div className="flex items-center gap-2 shrink-0">
                         {p.available > 0 ? (
                           <span className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-green-500/15 text-green-400 border border-green-500/30 flex items-center gap-1">
                             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>

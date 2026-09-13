@@ -33,13 +33,20 @@ export async function generateMetadata({ params }) {
       title,
       description,
       url: `https://danieldeshmukh-portfolio.vercel.app/clients/${client.id}`,
-      images: client.logo ? [{ url: client.logo, width: 200, height: 200, alt: client.name }] : undefined,
+      images: [
+        {
+          url: client.logo || 'https://danieldeshmukh-portfolio.vercel.app/og-image.png',
+          width: 200,
+          height: 200,
+          alt: client.name,
+        },
+      ],
     },
     twitter: {
       card: 'summary',
       title,
       description,
-      images: client.logo ? [client.logo] : undefined,
+      images: [client.logo || 'https://danieldeshmukh-portfolio.vercel.app/og-image.png'],
     },
   }
 }

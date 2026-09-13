@@ -11,11 +11,21 @@ export const metadata = {
     description:
       'Get in touch for web development, mobile apps, POS systems, and custom software solutions.',
     url: 'https://danieldeshmukh-portfolio.vercel.app/enquiry',
+    images: [
+      {
+        url: 'https://danieldeshmukh-portfolio.vercel.app/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Daniel Shashank Deshmukh - Full-Stack Developer',
+      },
+    ],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Enquiry | Daniel Deshmukh',
     description:
       'Get in touch for web development, mobile apps, POS systems, and custom software solutions.',
+    images: ['https://danieldeshmukh-portfolio.vercel.app/og-image.png'],
   },
 }
 

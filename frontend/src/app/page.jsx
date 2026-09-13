@@ -11,11 +11,21 @@ export const metadata = {
     description:
       'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
     url: 'https://danieldeshmukh-portfolio.vercel.app',
+    images: [
+      {
+        url: 'https://danieldeshmukh-portfolio.vercel.app/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Daniel Shashank Deshmukh - Full-Stack Developer',
+      },
+    ],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Daniel Shashank Deshmukh | Full-Stack Developer',
     description:
       'Full-stack developer specializing in web apps, POS systems, and mobile applications.',
+    images: ['https://danieldeshmukh-portfolio.vercel.app/og-image.png'],
   },
 }
 

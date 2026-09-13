@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 import EnquiryForm from '../../components/EnquiryForm'
 
 export const metadata = {
@@ -45,6 +46,7 @@ export default function EnquiryPage() {
           <EnquiryForm />
         </Suspense>
       </main>
+      <Footer />
     </div>
   )
 }

@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "id": "pydecay",
+      "name": "PyDecay",
+      "description": "Data exploration and decay pattern analysis tool.",
+      "tech": [],
+      "github": "https://github.com/DanielDeshmukh/pydecay",
+      "live": "https://pydecay-model-remains.vercel.app/",
+      "status": "deployed",
+      "progress": 100,
+      "images": []
+    },
+    {
       "id": "babujichaay",
       "name": "Babuji Chaay",
       "description": "Full-stack POS and inventory management system for cafés and tea stalls with real client deployment.",

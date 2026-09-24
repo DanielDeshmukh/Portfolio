@@ -20,15 +20,11 @@
       "images": [
         {
           "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233209/portfolio/images/pydecay-logo.png",
-          "caption": "PyDecay GitHub repository — 77 commits, MIT license, 15 topic tags covering nuclear physics, decay chains, and scientific computing."
-        },
-        {
-          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233237/portfolio/images/pydecay-logo-alt.png",
           "caption": "PyDecay branding — crosshair logo and wordmark on dark background."
         },
         {
-          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233244/portfolio/images/pydecay-github-repo.png",
-          "caption": "Playground — interactive single-isotope decay simulator with I-131 selected, showing activity remaining (500 Bq at 1 half-life) and generated Python code."
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233237/portfolio/images/pydecay-logo-alt.png",
+          "caption": "Terminal verification — pip install pydecay succeeds and imports version 0.5.1 with all dependencies satisfied."
         },
         {
           "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233219/portfolio/images/pydecay-hero.png",
@@ -40,7 +36,7 @@
         },
         {
           "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233232/portfolio/images/pydecay-terminal-install.png",
-          "caption": "Terminal verification — pip install pydecay succeeds and imports version 0.5.1 with all dependencies satisfied."
+          "caption": "Playground — interactive single-isotope decay simulator with I-131 selected, showing activity remaining (500 Bq at 1 half-life) and generated Python code."
         },
         {
           "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233235/portfolio/images/pydecay-pypi-page.png",
@@ -52,7 +48,7 @@
         },
         {
           "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233244/portfolio/images/pydecay-github-repo.png",
-          "caption": "GitHub repository — project structure with data, docs, examples, landingpage, src, and tests directories under CI-gated workflows."
+          "caption": "PyDecay GitHub repository — 77 commits, MIT license, 15 topic tags covering nuclear physics, decay chains, and scientific computing."
         }
       ]
     },

@@ -3,13 +3,58 @@
     {
       "id": "pydecay",
       "name": "PyDecay",
-      "description": "Data exploration and decay pattern analysis tool.",
-      "tech": [],
+      "description": "Radioactive decay mathematics for Python — analytical single-isotope decay, Bateman chains with branching, multi-nuclide inventories, ICRP-107 nuclide data, radiation spectra, and activity unit conversions.",
+      "tech": [
+        "Python",
+        "NumPy",
+        "SciPy",
+        "Pint",
+        "PyPI",
+        "Next.js",
+        "Vercel"
+      ],
       "github": "https://github.com/DanielDeshmukh/pydecay",
       "live": "https://pydecay-model-remains.vercel.app/",
       "status": "deployed",
       "progress": 100,
-      "images": []
+      "images": [
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233209/portfolio/images/pydecay-logo.png",
+          "caption": "PyDecay GitHub repository — 77 commits, MIT license, 15 topic tags covering nuclear physics, decay chains, and scientific computing."
+        },
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233237/portfolio/images/pydecay-logo-alt.png",
+          "caption": "PyDecay branding — crosshair logo and wordmark on dark background."
+        },
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233244/portfolio/images/pydecay-github-repo.png",
+          "caption": "Playground — interactive single-isotope decay simulator with I-131 selected, showing activity remaining (500 Bq at 1 half-life) and generated Python code."
+        },
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233219/portfolio/images/pydecay-hero.png",
+          "caption": "Landing page hero — 'Model what remains.' with animated activity decay curve A(t) and calls-to-action for Docs and Playground."
+        },
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233212/portfolio/images/pydecay-periodic-table.png",
+          "caption": "Overview page — interactive periodic table of 118 elements with element detail panel showing atomic mass, electron configuration, and melting point."
+        },
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233232/portfolio/images/pydecay-terminal-install.png",
+          "caption": "Terminal verification — pip install pydecay succeeds and imports version 0.5.1 with all dependencies satisfied."
+        },
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233235/portfolio/images/pydecay-pypi-page.png",
+          "caption": "PyPI package page — pydecay 0.5.0 with MIT license, Python 3.10–3.13 support, >90% coverage, and full table of contents."
+        },
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233222/portfolio/images/pydecay-docs.png",
+          "caption": "Documentation site — 11-section guide covering Installation, User guide, Decay chains, Branching, Spectra, Solver strategy, and Verification."
+        },
+        {
+          "file": "https://res.cloudinary.com/vubrrgip/image/upload/v1790233244/portfolio/images/pydecay-github-repo.png",
+          "caption": "GitHub repository — project structure with data, docs, examples, landingpage, src, and tests directories under CI-gated workflows."
+        }
+      ]
     },
     {
       "id": "babujichaay",
